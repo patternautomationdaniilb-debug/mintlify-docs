@@ -12,8 +12,8 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Neuro AI",
-          "icon": "book-open-cover",
+          "anchor": "Home",
+          "icon": "house",
           "color": {
             "light": "#1545a3",
             "dark": "#1545a3"
