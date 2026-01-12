@@ -3,9 +3,9 @@
   "theme": "mint",
   "name": "Mint Starter Kit",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#146eaf",
+    "light": "#038af1",
+    "dark": "#0b0f80"
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -183,7 +183,7 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:info@patternautomation.com"
       }
     ],
     "primary": {
@@ -206,9 +206,13 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "github": "https://github.com/PATTERN-AUTOMATION-LAB",
+      "linkedin": "https://www.linkedin.com/in/daniil-biryukov-a283b81b6/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      "website": "https://www.patternautomation.com/neuro-ai",
+      "instagram": "https://www.instagram.com/tryneuroai?igsh=ZHVxdmt0MGY0aWZm&utm_source=qr"
     }
+  },
+  "appearance": {
+    "default": "system"
   }
 }
