@@ -30,25 +30,13 @@
     "languages": [
       {
         "language": "en",
-        "global": {
-          "languages": [
-            {
-              "language": "en",
-              "href": "/en/"
-            }
-          ]
-        },
         "tabs": [
           {
             "tab": "Introduction",
-            "groups": [
-              {
-                "group": "First Steps",
-                "pages": [
-                  "index",
-                  "quickstart"
-                ]
-              },
+            "pages": [
+              "introduction/what-is-neuro",
+              "index",
+              "quickstart",
               {
                 "group": "Features",
                 "pages": [
@@ -56,12 +44,10 @@
                   {
                     "group": "Chats",
                     "pages": [
-                      "introduction/features/chat",
-                      "introduction/features/chats/chat",
+                      "introduction/features/chat/overview",
                       "introduction/features/chat/slides",
                       "introduction/features/chat/data",
                       "introduction/features/chat/docs",
-                      "introduction/feautures",
                       "introduction/features/chat/video",
                       "introduction/features/chat/research",
                       "introduction/features/chat/image"
@@ -70,10 +56,9 @@
                   {
                     "group": "Agents",
                     "pages": [
-                      "introduction/features/agents/tools",
-                      "introduction/features/agent",
+                      "introduction/features/agents/overview",
                       "introduction/features/agents/persona",
-                      "introduction/features/agents/tools-1",
+                      "introduction/features/agents/tools",
                       "introduction/features/agents/apps",
                       "introduction/features/agents/knowledge",
                       "introduction/features/agents/tasks"
@@ -82,37 +67,30 @@
                   {
                     "group": "Tasks",
                     "pages": [
-                      "introduction/features/tasks/overview",
-                      "introduction/features/task"
+                      "introduction/features/tasks/overview"
                     ]
                   }
                 ]
               },
               {
-                "group": "Settings in Neuro",
+                "group": "General Settings",
                 "pages": [
                   "introduction/general-settings/settings",
-                  {
-                    "group": "Settings",
-                    "pages": [
-                      "introduction/general-settings/plan",
-                      "introduction/general-settings/billing",
-                      "en/introduction/general-settings/usage",
-                      "introduction/general-settings/memmory",
-                      "introduction/general-settings/knowleadge-base",
-                      "introduction/general-settings/apps",
-                      "introduction/general-settings/status"
-                    ]
-                  },
-                  "essentials/settings"
+                  "introduction/general-settings/plan",
+                  "introduction/general-settings/billing",
+                  "introduction/general-settings/usage",
+                  "introduction/general-settings/memory",
+                  "introduction/general-settings/knowledge-base",
+                  "introduction/general-settings/apps",
+                  "introduction/general-settings/status"
                 ]
-              }
+              },
+              "development"
             ]
           },
           {
             "tab": "Guides",
-            "pages": [
-              "en/guides/overview",
+            "groups": [
               {
                 "group": "Apps",
                 "pages": []
@@ -217,15 +195,15 @@
   },
   "contextual": {
     "options": [
-      "copy",
-      "view",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
-    ]
+     "copy",
+     "view",
+     "chatgpt",
+     "claude",
+     "perplexity",
+     "mcp",
+     "cursor",
+     "vscode"
+   ]
   },
   "footer": {
     "socials": {
