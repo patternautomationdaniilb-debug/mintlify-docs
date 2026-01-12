@@ -8,7 +8,7 @@
     "dark": "#15803D"
   },
   "favicon": "/favicon.svg",
-  "navigation": { 
+  "navigation": {
     "global": {
       "anchors": [
         {
@@ -34,7 +34,7 @@
           "languages": [
             {
               "language": "en",
-              "href": ""
+              "href": "/en/"
             }
           ]
         },
@@ -208,15 +208,15 @@
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {
