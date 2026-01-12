@@ -88,11 +88,11 @@
                 "pages": [
                   "introduction/general-settings/settings",
                   {
-                    "group": "General Settings",
+                    "group": "Settings",
                     "pages": [
                       "introduction/general-settings/plan",
-                      "en/introduction/general-settings/usage",
                       "introduction/general-settings/billing",
+                      "en/introduction/general-settings/usage",
                       "introduction/general-settings/memmory",
                       "introduction/general-settings/knowleadge-base",
                       "introduction/general-settings/apps",
