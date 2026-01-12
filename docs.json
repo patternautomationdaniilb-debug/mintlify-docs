@@ -1,0 +1,228 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Mint Starter Kit",
+  "colors": {
+    "primary": "#16A34A",
+    "light": "#07C983",
+    "dark": "#15803D"
+  },
+  "favicon": "/favicon.svg",
+  "navigation": {
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Neuro AI",
+          "icon": "book-open-cover",
+          "color": {
+            "light": "#1545a3",
+            "dark": "#1545a3"
+          },
+          "href": "https://www.patternautomation.com/neuro-ai"
+        },
+        {
+          "anchor": "Blog",
+          "icon": "newspaper",
+          "href": "https://mintlify.com/blog"
+        }
+      ]
+    },
+    "languages": [
+      {
+        "language": "en",
+        "global": {
+          "languages": [
+            {
+              "language": "en",
+              "href": ""
+            }
+          ]
+        },
+        "tabs": [
+          {
+            "tab": "Introduction",
+            "pages": [
+              "introduction/what-is-neuro",
+              "index",
+              "quickstart",
+              {
+                "group": "Features",
+                "pages": [
+                  "introduction/features/overview",
+                  {
+                    "group": "Chats",
+                    "pages": [
+                      "introduction/features/chat",
+                      "introduction/features/chats/chat",
+                      "introduction/features/chat/slides",
+                      "introduction/features/chat/data",
+                      "introduction/features/chat/docs",
+                      "introduction/feautures",
+                      "introduction/features/chat/video",
+                      "introduction/features/chat/research",
+                      "introduction/features/chat/image"
+                    ]
+                  },
+                  {
+                    "group": "Agents",
+                    "pages": [
+                      "introduction/features/agents/tools",
+                      "introduction/features/agent",
+                      "introduction/features/agents/persona",
+                      "introduction/features/agents/tools-1",
+                      "introduction/features/agents/apps",
+                      "introduction/features/agents/knowledge",
+                      "introduction/features/agents/tasks"
+                    ]
+                  },
+                  {
+                    "group": "Tasks",
+                    "pages": [
+                      "introduction/features/tasks/overview",
+                      "introduction/features/task"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "General Settings",
+                "pages": [
+                  "essentials/settings",
+                  "introduction/general-settings/settings",
+                  "introduction/general-settings/plan",
+                  "introduction/general-settings/billing",
+                  "introduction/general-settings/usage",
+                  "introduction/general-settings/memmory",
+                  "introduction/general-settings/knowleadge-base",
+                  "introduction/general-settings/apps",
+                  "introduction/general-settings/status"
+                ]
+              },
+              "development"
+            ]
+          },
+          {
+            "tab": "Guides",
+            "groups": [
+              {
+                "group": "Apps",
+                "pages": []
+              },
+              {
+                "group": "Prompting best practices",
+                "pages": []
+              },
+              {
+                "group": "Chats",
+                "pages": []
+              },
+              {
+                "group": "Agents",
+                "pages": []
+              },
+              {
+                "group": "Writing content",
+                "pages": [
+                  "essentials/markdown",
+                  "essentials/code",
+                  "essentials/images",
+                  "essentials/reusable-snippets"
+                ]
+              },
+              {
+                "group": "AI tools",
+                "pages": [
+                  "ai-tools/cursor",
+                  "ai-tools/claude-code",
+                  "ai-tools/windsurf"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "API reference",
+            "groups": [
+              {
+                "group": "API documentation",
+                "pages": [
+                  "api-reference/introduction",
+                  "api-reference/api-documentation/quick-start"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Help center",
+            "pages": [
+              "help-center/support",
+              {
+                "group": "Account",
+                "pages": [
+                  "help-center/account/untitled-page",
+                  "help-center/account/what-can-i-do-if-i-forget-my-password",
+                  "help-center/account/how-can-i-change-my-username"
+                ]
+              },
+              {
+                "group": "Billing",
+                "pages": [
+                  "help-center/billing/bil",
+                  "help-center/billing/how-can-i-cancel-my-subscription",
+                  "help-center/billing/untitled-page",
+                  "help-center/billing/how-do-i-upgrade-or-downgrade-my-subscription",
+                  "help-center/billing/untitled-page-1"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Protocol",
+            "pages": [
+              "protocol/manifesto",
+              "protocol/untitled-page-1",
+              "protocol/untitled-page",
+              "protocol/credits-policy",
+              "protocol/usage-policy"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Support",
+        "href": "mailto:hi@mintlify.com"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Dashboard",
+      "href": "https://dashboard.mintlify.com"
+    }
+  },
+  "contextual": {
+    "options": [
+     "copy",
+     "view",
+     "chatgpt",
+     "claude",
+     "perplexity",
+     "mcp",
+     "cursor",
+     "vscode"
+   ]
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/mintlify",
+      "github": "https://github.com/mintlify",
+      "linkedin": "https://linkedin.com/company/mintlify"
+    }
+  }
+}

@@ -1,0 +1,634 @@
+---
+title: "API Keys"
+description: "Secure authentication and access management for NeuroAI platform"
+---
+
+<Note>
+  API keys provide programmatic access to NeuroAI. If you're using the web interface, authentication is handled automatically.
+</Note>
+
+# API Keys
+
+API keys provide secure, programmatic access to NeuroAI platform resources. They enable authentication for automated workflows, integrations, and applications without requiring manual login credentials.
+
+## What are API Keys?
+
+API keys are long-lived access tokens that authenticate requests to NeuroAI services. They act as unique identifiers that verify your identity and determine what actions you can perform within the platform.
+
+### Key Benefits
+
+<CardGroup cols={2}>
+  <Card title="Seamless Integration" icon="plug">
+    Connect NeuroAI with external tools and services effortlessly
+  </Card>
+  <Card title="Automated Access" icon="robot">
+    Enable scripts, CI/CD pipelines, and automated workflows
+  </Card>
+  <Card title="Granular Permissions" icon="shield-check">
+    Control access levels through role-based permissions
+  </Card>
+  <Card title="Secure Communication" icon="lock">
+    Authenticate without exposing user credentials
+  </Card>
+</CardGroup>
+
+## Getting Started
+
+### Prerequisites
+
+To create and manage API keys:
+
+- Active NeuroAI account
+- Administrator or API Key Manager role
+- Access to NeuroAI dashboard
+
+## Creating an API Key
+
+<Tabs>
+  <Tab title="Dashboard">
+    ### Via Dashboard
+
+    1. Navigate to **Settings** → **Users and Teams**
+    2. Select **API Keys** from the menu
+    3. Click **Create API Key** button
+    4. Configure your key:
+       - **Name**: Descriptive identifier (e.g., "Production CI/CD")
+       - **Description**: Document purpose and usage
+       - **Role**: Select appropriate access level
+       - **Expiration** (optional): Set expiration date
+    5. Click **Create**
+
+    <Warning>
+      Copy and securely store your API key immediately—it will only be displayed once!
+    </Warning>
+  </Tab>
+  <Tab title="API">
+    ### Via API
+
+    Create an API key programmatically:
+
+    ```bash
+    curl -X POST "https://api.neuroai.com/v1/api-keys" \
+      -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \
+      -H "Content-Type: application/json" \
+      -d '{
+        "name": "my-api-key",
+        "description": "API key for production deployment",
+        "role": "developer",
+        "expiration": "2026-12-31T23:59:59Z"
+      }'
+    ```
+  </Tab>
+</Tabs>
+
+## API Key Types
+
+<CardGroup cols={3}>
+  <Card title="Personal Keys" icon="user">
+    Individual user keys for personal projects and testing
+  </Card>
+  <Card title="Team Keys" icon="users">
+    Shared keys for production applications and team integrations
+  </Card>
+  <Card title="Service Keys" icon="server">
+    Dedicated keys for service-to-service authentication
+  </Card>
+</CardGroup>
+
+### Personal API Keys
+
+Personal keys are specific to individual NeuroAI users and inherit the creator's permissions.
+
+**Use Cases:**
+
+- Personal projects and experiments
+- Development and testing environments
+- Individual automation scripts
+
+**Characteristics:**
+
+- Tied to single user account
+- Cannot exceed creator's permission level
+- Auto-revoked when user account is deactivated
+
+### Team API Keys
+
+Shared keys that authenticate requests on behalf of a team or organization.
+
+**Use Cases:**
+
+- Production applications
+- Team-wide integrations
+- CI/CD pipelines
+- Shared development resources
+
+### Service API Keys
+
+Dedicated keys for service-to-service authentication and data ingestion.
+
+**Use Cases:**
+
+- Telemetry data transmission
+- Webhook endpoints
+- Third-party service integrations
+- Monitoring and analytics services
+
+## Authentication
+
+<Tabs>
+  <Tab title="Header (Recommended)">
+    ### Bearer Token Authentication
+
+    Include your API key in the Authorization header:
+
+    ```bash
+    curl "https://api.neuroai.com/v1/agents" \
+      -H "Authorization: Bearer YOUR_API_KEY"
+    ```
+
+    Or using X-API-Key header:
+
+    ```bash
+    curl "https://api.neuroai.com/v1/agents" \
+      -H "X-API-Key: YOUR_API_KEY"
+    ```
+  </Tab>
+  <Tab title="Query Parameter">
+    ### URL Parameter
+
+    Include the API key as a URL parameter:
+
+    ```bash
+    curl "https://api.neuroai.com/v1/agents?api_key=YOUR_API_KEY"
+    ```
+
+    <Warning>
+      Not recommended for production. Query parameters may be logged in server logs and browser history.
+    </Warning>
+  </Tab>
+</Tabs>
+
+## Integration Examples
+
+<CardGroup cols={3}>
+  <Card title="Python" icon="python" href="#python-example">
+    Integrate with Python applications
+  </Card>
+  <Card title="Node.js" icon="node" href="#nodejs-example">
+    Integrate with Node.js applications
+  </Card>
+  <Card title="cURL" icon="terminal" href="#curl-example">
+    Test with command line
+  </Card>
+</CardGroup>
+
+### Environment Setup
+
+Configure API keys in your environment:
+
+```bash
+# .env file
+NEUROAI_API_KEY=your_api_key_here
+NEUROAI_API_BASE=https://api.neuroai.com/v1
+MODEL_TO_USE=openai/gpt-4o
+```
+
+### Python Example
+
+```python
+import os
+import requests
+
+# Load API key from environment
+api_key = os.getenv('NEUROAI_API_KEY')
+
+# Make authenticated request
+headers = {
+    'Authorization': f'Bearer {api_key}',
+    'Content-Type': 'application/json'
+}
+
+response = requests.get(
+    'https://api.neuroai.com/v1/agents',
+    headers=headers
+)
+
+print(response.json())
+```
+
+### Node.js Example
+
+```javascript
+const axios = require('axios');
+
+const apiKey = process.env.NEUROAI_API_KEY;
+
+const client = axios.create({
+  baseURL: 'https://api.neuroai.com/v1',
+  headers: {
+    'Authorization': `Bearer ${apiKey}`,
+    'Content-Type': 'application/json'
+  }
+});
+
+// Make authenticated request
+client.get('/agents')
+  .then(response => console.log(response.data))
+  .catch(error => console.error(error));
+```
+
+### cURL Example
+
+```bash
+# Set API key as environment variable
+export NEUROAI_API_KEY="your_api_key_here"
+
+# Make authenticated request
+curl "https://api.neuroai.com/v1/agents" \
+  -H "Authorization: Bearer $NEUROAI_API_KEY"
+```
+
+## Permissions and Roles
+
+<CardGroup cols={2}>
+  <Card title="Role-Based Access" icon="user-shield">
+    Assign predefined roles with specific permission sets
+  </Card>
+  <Card title="Custom Permissions" icon="sliders">
+    Create custom roles for fine-grained access control
+  </Card>
+</CardGroup>
+
+### Available Roles
+
+| Role              | Permissions                           | Use Case                         |
+| ----------------- | ------------------------------------- | -------------------------------- |
+| **Viewer**        | Read-only access                      | Monitoring, analytics, reporting |
+| **Developer**     | Create and modify agents              | Development, testing             |
+| **Administrator** | Full access including user management | Production deployments           |
+| **API Manager**   | Manage API keys and integrations      | DevOps, security                 |
+
+### Custom Permissions
+
+For fine-grained control, create custom roles:
+
+```json
+{
+  "role_name": "custom-deployment-role",
+  "permissions": {
+    "agents": ["create", "read", "update"],
+    "workflows": ["create", "read", "execute"],
+    "deployments": ["create", "read", "update", "delete"],
+    "users": ["read"]
+  }
+}
+```
+
+## Managing API Keys
+
+<AccordionGroup>
+  <Accordion title="Viewing API Keys">
+    List all API keys associated with your account:
+
+    ```bash
+    curl "https://api.neuroai.com/v1/api-keys" \
+      -H "Authorization: Bearer YOUR_ACCESS_TOKEN"
+    ```
+  </Accordion>
+  <Accordion title="Updating API Keys">
+    Modify API key properties (name, description, permissions):
+
+    ```bash
+    curl -X PATCH "https://api.neuroai.com/v1/api-keys/{key_id}" \
+      -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \
+      -H "Content-Type: application/json" \
+      -d '{
+        "name": "Updated Key Name",
+        "description": "Updated description",
+        "role": "administrator"
+      }'
+    ```
+  </Accordion>
+  <Accordion title="Rotating API Keys">
+    Regular key rotation enhances security:
+
+    ```bash
+    curl -X POST "https://api.neuroai.com/v1/api-keys/{key_id}/rotate" \
+      -H "Authorization: Bearer YOUR_ACCESS_TOKEN"
+    ```
+
+    This generates a new key while invalidating the old one.
+  </Accordion>
+  <Accordion title="Revoking API Keys">
+    Delete an API key when it's no longer needed:
+
+    ```bash
+    curl -X DELETE "https://api.neuroai.com/v1/api-keys/{key_id}" \
+      -H "Authorization: Bearer YOUR_ACCESS_TOKEN"
+    ```
+
+    **Via Dashboard:**
+
+    1. Navigate to **Settings** → **API Keys**
+    2. Locate the key to revoke
+    3. Click **Delete** or **Revoke**
+    4. Confirm the action
+  </Accordion>
+</AccordionGroup>
+
+## Security Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Storage & Handling" icon="database">
+    Secure storage and environment configuration
+  </Card>
+  <Card title="Access Control" icon="shield-halved">
+    Principle of least privilege and role management
+  </Card>
+  <Card title="Key Rotation" icon="rotate">
+    Regular rotation schedule and automated processes
+  </Card>
+  <Card title="Monitoring" icon="chart-line">
+    Usage tracking and suspicious activity alerts
+  </Card>
+</CardGroup>
+
+### Storage and Handling
+
+<Tabs>
+  <Tab title="✅ Do">
+    - Store keys in environment variables
+    - Use secrets management systems (Vault, AWS Secrets Manager)
+    - Restrict access to authorized personnel only
+    - Use .gitignore for .env files
+    - Implement git-secrets to prevent commits
+  </Tab>
+  <Tab title="❌ Don't">
+    - Never hardcode keys in source code
+    - Don't commit keys to repositories
+    - Avoid logging keys in application logs
+    - Don't share keys via email or chat
+    - Never expose keys in client-side code
+  </Tab>
+</Tabs>
+
+### Access Control
+
+- **Principle of Least Privilege**: Assign minimum necessary permissions
+- **Separate by Environment**: Different keys for dev, staging, production
+- **Regular Audits**: Review usage and permissions quarterly
+- **Monitor Activity**: Track for suspicious patterns
+
+### Key Rotation
+
+Configure automatic expiration and rotation:
+
+```json
+{
+  "expiration": "2026-12-31T23:59:59Z",
+  "rotation_policy": {
+    "enabled": true,
+    "days": 90
+  }
+}
+```
+
+### Additional Security Measures
+
+<AccordionGroup>
+  <Accordion title="Referrer Restrictions">
+    Limit API key usage to specific domains or IP addresses:
+
+    ```json
+    {
+      "allowed_referrers": [
+        "https://yourdomain.com/*",
+        "https://app.yourdomain.com/*"
+      ],
+      "allowed_ips": [
+        "203.0.113.0/24",
+        "198.51.100.50"
+      ]
+    }
+    ```
+  </Accordion>
+  <Accordion title="Rate Limiting">
+    Protect against abuse with rate limits:
+
+    ```json
+    {
+      "rate_limit": {
+        "requests_per_minute": 100,
+        "requests_per_hour": 5000
+      }
+    }
+    ```
+  </Accordion>
+  <Accordion title="Hide Credentials">
+    Prevent keys from being forwarded to upstream services:
+
+    ```json
+    {
+      "hide_credentials": true
+    }
+    ```
+  </Accordion>
+</AccordionGroup>
+
+## Monitoring and Logging
+
+<CardGroup cols={3}>
+  <Card title="Usage Tracking" icon="chart-simple">
+    Monitor request volume and patterns
+  </Card>
+  <Card title="Audit Logs" icon="file-lines">
+    Access comprehensive security logs
+  </Card>
+  <Card title="Alerts" icon="bell">
+    Get notified of suspicious activity
+  </Card>
+</CardGroup>
+
+### Access Audit Logs
+
+```bash
+curl "https://api.neuroai.com/v1/api-keys/{key_id}/audit-log" \
+  -H "Authorization: Bearer YOUR_ACCESS_TOKEN"
+```
+
+### Configure Alerts
+
+Monitor for:
+
+- Unusual request patterns
+- Multiple failed authentication attempts
+- Requests from unexpected locations
+- Access to sensitive endpoints
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="401 Unauthorized">
+    **Common causes:**
+
+    - API key is incorrect or revoked
+    - Missing or malformed Authorization header
+    - Key lacks required permissions
+
+    **Solution:** Verify header format and key validity:
+
+    ```bash
+    curl "https://api.neuroai.com/v1/auth/verify" \
+      -H "Authorization: Bearer YOUR_API_KEY"
+    ```
+  </Accordion>
+  <Accordion title="403 Forbidden">
+    **Common causes:**
+
+    - API key lacks required permissions
+    - Resource access is restricted
+    - Referrer restrictions are active
+
+    **Solution:** Review and update key permissions or use a key with appropriate access level.
+  </Accordion>
+  <Accordion title="429 Too Many Requests">
+    **Common causes:**
+
+    - Rate limit exceeded
+    - Too many concurrent requests
+
+    **Solution:**
+
+    - Implement exponential backoff retry logic
+    - Review and optimize request patterns
+    - Consider upgrading your plan for higher limits
+  </Accordion>
+  <Accordion title="Expired API Key">
+    **Common causes:**
+
+    - Key has reached expiration date
+    - Key was manually revoked
+
+    **Solution:** Create a new API key or extend expiration if possible.
+  </Accordion>
+</AccordionGroup>
+
+### Testing API Keys
+
+Verify your API key is working:
+
+```bash
+curl "https://api.neuroai.com/v1/auth/verify" \
+  -H "Authorization: Bearer YOUR_API_KEY"
+```
+
+Expected response:
+
+```json
+{
+  "valid": true,
+  "key_id": "key_abc123",
+  "name": "Production Key",
+  "role": "developer",
+  "expires_at": "2026-12-31T23:59:59Z"
+}
+```
+
+## API Reference
+
+<CardGroup cols={2}>
+  <Card title="Create API Key" icon="plus" href="#create-api-key">
+    POST /v1/api-keys
+  </Card>
+  <Card title="List API Keys" icon="list" href="#list-api-keys">
+    GET /v1/api-keys
+  </Card>
+  <Card title="Update API Key" icon="pen" href="#update-api-key">
+    PATCH /v1/api-keys/key_id
+  </Card>
+  <Card title="Delete API Key" icon="trash" href="#delete-api-key">
+    DELETE /v1/api-keys/key_id
+  </Card>
+</CardGroup>
+
+### Endpoints Summary
+
+| Endpoint                       | Method | Description             |
+| ------------------------------ | ------ | ----------------------- |
+| `/v1/api-keys`                 | POST   | Create a new API key    |
+| `/v1/api-keys`                 | GET    | List all API keys       |
+| `/v1/api-keys/{key_id}`        | GET    | Get API key details     |
+| `/v1/api-keys/{key_id}`        | PATCH  | Update API key          |
+| `/v1/api-keys/{key_id}/rotate` | POST   | Rotate API key          |
+| `/v1/api-keys/{key_id}`        | DELETE | Delete API key          |
+| `/v1/auth/verify`              | GET    | Verify API key validity |
+
+## Migration Guide
+
+<Tabs>
+  <Tab title="From Legacy Auth">
+    ### From Username/Password
+
+    1. **Create API keys** for all service accounts
+    2. **Update applications** to use API key authentication
+    3. **Test thoroughly** in staging environment
+    4. **Deploy to production** with gradual rollout
+    5. **Monitor for issues** during transition
+    6. **Deactivate legacy credentials** after successful migration
+  </Tab>
+  <Tab title="From Other Platforms">
+    ### From External Systems
+
+    1. **Map existing permissions** to NeuroAI roles
+    2. **Create equivalent API keys** with matching access
+    3. **Update integration endpoints** and auth methods
+    4. **Validate functionality** with comprehensive testing
+    5. **Document changes** for your team
+  </Tab>
+</Tabs>
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="How many API keys can I create?">
+    There is no strict limit on the number of API keys per account. However, we recommend creating only the keys you need and following the principle of least privilege.
+  </Accordion>
+  <Accordion title="Can I use the same key across multiple environments?">
+    While technically possible, it's strongly discouraged. Use separate API keys for development, staging, and production environments for better security and access control.
+  </Accordion>
+  <Accordion title="What happens if my API key is compromised?">
+    Immediately revoke the compromised key through the dashboard or API. Create a new key with different credentials and update all applications. Review audit logs to assess potential unauthorized access.
+  </Accordion>
+  <Accordion title="Do API keys expire?">
+    By default, API keys do not expire unless you explicitly set an expiration date during creation. For enhanced security, consider setting expiration dates and implementing regular key rotation.
+  </Accordion>
+  <Accordion title="Can I recover a deleted API key?">
+    No, deleted API keys cannot be recovered. You must create a new API key if one is accidentally deleted.
+  </Accordion>
+  <Accordion title="How do I know which permissions my API key needs?">
+    Start with minimal permissions required for your use case. Test thoroughly and add permissions as needed. Review the permissions documentation for detailed information about each role.
+  </Accordion>
+</AccordionGroup>
+
+## Support
+
+<CardGroup>
+  <Card title="Documentation" icon="book" href="https://docs.neuroai.com">
+    Comprehensive guides and tutorials
+  </Card>
+  <Card title="Support Portal" icon="headset" href="https://support.neuroai.com">
+    Submit tickets and get help
+  </Card>
+  <Card title="API Status" icon="signal" href="https://status.neuroai.com">
+    Check real-time API status
+  </Card>
+  <Card title="Community" icon="comments" href="https://community.neuroai.com">
+    Join the discussion
+  </Card>
+</CardGroup>
+
+---
+
+**Last Updated**: January 2026\
+**API Version**: v1\
+**Product**: NeuroAI Platform
