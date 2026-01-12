@@ -91,6 +91,12 @@
             "tab": "Guides",
             "groups": [
               {
+                "group": "Use Cases",
+                "pages": [
+                  "en/guides/use-cases/use-cases"
+                ]
+              },
+              {
                 "group": "Chats",
                 "pages": []
               },
