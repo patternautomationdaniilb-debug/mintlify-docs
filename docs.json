@@ -107,7 +107,8 @@
           },
           {
             "tab": "Guides",
-            "groups": [
+            "pages": [
+              "en/guides/overview",
               {
                 "group": "Apps",
                 "pages": []
