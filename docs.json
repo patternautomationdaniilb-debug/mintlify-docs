@@ -84,17 +84,22 @@
                 ]
               },
               {
-                "group": "General Settings",
+                "group": "Settings in Neuro",
                 "pages": [
-                  "essentials/settings",
                   "introduction/general-settings/settings",
-                  "introduction/general-settings/plan",
-                  "en/introduction/general-settings/usage",
-                  "introduction/general-settings/billing",
-                  "introduction/general-settings/memmory",
-                  "introduction/general-settings/knowleadge-base",
-                  "introduction/general-settings/apps",
-                  "introduction/general-settings/status"
+                  {
+                    "group": "General Settings",
+                    "pages": [
+                      "introduction/general-settings/plan",
+                      "en/introduction/general-settings/usage",
+                      "introduction/general-settings/billing",
+                      "introduction/general-settings/memmory",
+                      "introduction/general-settings/knowleadge-base",
+                      "introduction/general-settings/apps",
+                      "introduction/general-settings/status"
+                    ]
+                  },
+                  "essentials/settings"
                 ]
               },
               "development"
