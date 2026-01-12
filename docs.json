@@ -175,10 +175,7 @@
       }
     ]
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
+  "logo": "/images/Bazaart_C0831A1C-80C9-4E96-AA6D-7933263A68A3.png",
   "navbar": {
     "links": [
       {
