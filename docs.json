@@ -34,7 +34,6 @@
           {
             "tab": "Introduction",
             "pages": [
-              "introduction/what-is-neuro",
               "index",
               "quickstart",
               {
