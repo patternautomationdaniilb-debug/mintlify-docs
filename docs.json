@@ -91,19 +91,29 @@
             "tab": "Guides",
             "groups": [
               {
-                "group": "Apps",
-                "pages": []
-              },
-              {
-                "group": "Prompting best practices",
-                "pages": []
-              },
-              {
                 "group": "Chats",
                 "pages": []
               },
               {
                 "group": "Agents",
+                "pages": [
+                  "untitled-page"
+                ]
+              },
+              {
+                "group": "Tasks",
+                "pages": [
+                  "en/guides/tasks"
+                ]
+              },
+              {
+                "group": "Apps",
+                "pages": [
+                  "untitled-page"
+                ]
+              },
+              {
+                "group": "Prompting best practices",
                 "pages": []
               },
               {
