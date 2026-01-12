@@ -1,13 +1,13 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "NeuroAI",
   "colors": {
     "primary": "#146eaf",
     "light": "#038af1",
     "dark": "#0b0f80"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/images/Bazaart_C0831A1C-80C9-4E6-AA6D-7933263A68A3.png",
   "navigation": {
     "global": {
       "anchors": [
@@ -211,5 +211,6 @@
   },
   "appearance": {
     "default": "system"
-  }
+  },
+  "description": "Documentation about NeuroAI"
 }
