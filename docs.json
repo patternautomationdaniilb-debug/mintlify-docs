@@ -149,7 +149,9 @@
             "pages": [
               {
                 "group": "Account",
-                "pages": []
+                "pages": [
+                  "en/help-center/account/why-is-my-credit-usage-tab-missing"
+                ]
               },
               {
                 "group": "Billing",
