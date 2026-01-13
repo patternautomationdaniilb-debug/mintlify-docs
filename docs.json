@@ -135,7 +135,9 @@
             "groups": [
               {
                 "group": "API documentation",
-                "pages": []
+                "pages": [
+                  "en/api-reference/api-documentation/untitled-page"
+                ]
               }
             ]
           },
