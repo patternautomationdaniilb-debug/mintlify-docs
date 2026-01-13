@@ -204,7 +204,10 @@
             ]
           },
           {
-            "tab": "Protocol"
+            "tab": "Protocol",
+            "pages": [
+              "en/protocol/untitled-page"
+            ]
           }
         ]
       }
