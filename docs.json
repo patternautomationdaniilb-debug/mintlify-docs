@@ -151,7 +151,9 @@
                   },
                   {
                     "group": "Pricing",
-                    "pages": []
+                    "pages": [
+                      "en/help-center/billing/pricing/are-there-any-discounts-or-special-offers"
+                    ]
                   },
                   {
                     "group": "Refunds",
