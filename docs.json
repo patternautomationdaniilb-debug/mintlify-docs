@@ -150,8 +150,8 @@
               {
                 "group": "Account",
                 "pages": [
-                  "en/help-center/account/h",
                   "en/help-center/account/learn-how-to-delete-or-edit-your-bank-card-information-in-manus-manage-your-payment-methods-and-billing-information",
+                  "en/help-center/account/h",
                   "en/help-center/account/how-can-i-delete-edit-my-bank-card",
                   "en/help-center/account/how-can-i-delete-documents-from-disk-space",
                   "en/help-center/account/how-can-i-change-my-email",
