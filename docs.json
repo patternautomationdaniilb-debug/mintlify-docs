@@ -33,7 +33,7 @@
         "tabs": [
           {
             "tab": "Introduction",
-            "groups": [
+            "pages": [
               {
                 "group": "First Steps",
                 "pages": [
@@ -61,7 +61,8 @@
               {
                 "group": "General Settings",
                 "pages": []
-              }
+              },
+              "en/introduction/untitled-page"
             ]
           },
           {
