@@ -150,6 +150,7 @@
               {
                 "group": "Account",
                 "pages": [
+                  "en/help-center/account/how-can-i-change-the-login-methods",
                   "en/help-center/account/untitled-page",
                   "en/help-center/account/account-has-been-suspended",
                   "en/help-center/account/how-can-i-get-a-campus-pass",
