@@ -96,7 +96,9 @@
             "groups": [
               {
                 "group": "Use Cases",
-                "pages": []
+                "pages": [
+                  "en/guides/use-cases/u"
+                ]
               },
               {
                 "group": "Chats",
