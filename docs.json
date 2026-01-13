@@ -130,7 +130,8 @@
                     "group": "Payments",
                     "pages": [
                       "en/help-center/billing/payments/how-can-i-change-my-payment-method",
-                      "en/help-center/billing/payments/what-can-i-do-if-the-payment-method-is-not-supported"
+                      "en/help-center/billing/payments/what-can-i-do-if-the-payment-method-is-not-supported",
+                      "en/help-center/billing/payments/why-did-my-payment-fail"
                     ]
                   },
                   {
