@@ -123,10 +123,22 @@
                       "en/help-center/billing/subscription"
                     ]
                   },
-                  "en/help-center/billing/credit",
-                  "en/help-center/billing/credits",
-                  "en/help-center/billing/pricing",
-                  "en/help-center/billing/refunds"
+                  {
+                    "group": "Payments",
+                    "pages": []
+                  },
+                  {
+                    "group": "Credits",
+                    "pages": []
+                  },
+                  {
+                    "group": "Pricing",
+                    "pages": []
+                  },
+                  {
+                    "group": "Refunds",
+                    "pages": []
+                  }
                 ]
               }
             ]
