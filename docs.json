@@ -37,6 +37,7 @@
               {
                 "group": "First Steps",
                 "pages": [
+                  "en/introduction/first-steps/welcome",
                   "en/introduction/first-steps/untitled-page",
                   "en/introduction/first-steps/untitled-page-1"
                 ]
