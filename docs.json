@@ -159,7 +159,9 @@
                   },
                   {
                     "group": "Refunds",
-                    "pages": []
+                    "pages": [
+                      "en/help-center/billing/refunds/how-does-our-ai-agents-credit-refund-policy-work"
+                    ]
                   }
                 ]
               }
