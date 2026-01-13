@@ -139,7 +139,9 @@
                   },
                   {
                     "group": "Credits",
-                    "pages": []
+                    "pages": [
+                      "en/help-center/billing/credits/what-are-the-rules-for-credits-consumption-and-how-can-i-obtain-them"
+                    ]
                   },
                   {
                     "group": "Pricing",
