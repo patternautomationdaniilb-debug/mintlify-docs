@@ -36,7 +36,9 @@
             "groups": [
               {
                 "group": "First Steps",
-                "pages": []
+                "pages": [
+                  "en/introduction/first-steps/untitled-page"
+                ]
               },
               {
                 "group": "Features",
