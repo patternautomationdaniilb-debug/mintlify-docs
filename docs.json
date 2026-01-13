@@ -36,58 +36,28 @@
             "groups": [
               {
                 "group": "First Steps",
-                "pages": [
-                  "index",
-                  "quickstart"
-                ]
+                "pages": []
               },
               {
                 "group": "Features",
                 "pages": [
-                  "introduction/features/overview",
                   {
                     "group": "Chats",
-                    "pages": [
-                      "introduction/features/chat/overview",
-                      "introduction/features/chat/slides",
-                      "introduction/features/chat/data",
-                      "introduction/features/chat/docs",
-                      "introduction/features/chat/video",
-                      "introduction/features/chat/research",
-                      "introduction/features/chat/image"
-                    ]
+                    "pages": []
                   },
                   {
                     "group": "Agents",
-                    "pages": [
-                      "introduction/features/agents/overview",
-                      "introduction/features/agents/persona",
-                      "introduction/features/agents/tools",
-                      "introduction/features/agents/apps",
-                      "introduction/features/agents/knowledge",
-                      "introduction/features/agents/tasks"
-                    ]
+                    "pages": []
                   },
                   {
                     "group": "Tasks",
-                    "pages": [
-                      "introduction/features/tasks/overview"
-                    ]
+                    "pages": []
                   }
                 ]
               },
               {
                 "group": "General Settings",
-                "pages": [
-                  "introduction/general-settings/settings",
-                  "introduction/general-settings/plan",
-                  "introduction/general-settings/billing",
-                  "introduction/general-settings/usage",
-                  "introduction/general-settings/memory",
-                  "introduction/general-settings/knowledge-base",
-                  "introduction/general-settings/apps",
-                  "introduction/general-settings/status"
-                ]
+                "pages": []
               }
             ]
           },
@@ -96,9 +66,7 @@
             "groups": [
               {
                 "group": "Use Cases",
-                "pages": [
-                  "en/guides/use-cases/use-cases"
-                ]
+                "pages": []
               },
               {
                 "group": "Chats",
@@ -106,21 +74,15 @@
               },
               {
                 "group": "Agents",
-                "pages": [
-                  "untitled-page"
-                ]
+                "pages": []
               },
               {
                 "group": "Tasks",
-                "pages": [
-                  "en/guides/tasks"
-                ]
+                "pages": []
               },
               {
                 "group": "Apps",
-                "pages": [
-                  "untitled-page"
-                ]
+                "pages": []
               },
               {
                 "group": "Prompting best practices",
@@ -128,20 +90,11 @@
               },
               {
                 "group": "Writing content",
-                "pages": [
-                  "essentials/markdown",
-                  "essentials/code",
-                  "essentials/images",
-                  "essentials/reusable-snippets"
-                ]
+                "pages": []
               },
               {
                 "group": "AI tools",
-                "pages": [
-                  "ai-tools/cursor",
-                  "ai-tools/claude-code",
-                  "ai-tools/windsurf"
-                ]
+                "pages": []
               }
             ]
           },
@@ -150,207 +103,25 @@
             "groups": [
               {
                 "group": "API documentation",
-                "pages": [
-                  "api-reference/introduction",
-                  "api-reference/api-documentation/quick-start"
-                ]
+                "pages": []
               }
             ]
           },
           {
             "tab": "Help center",
             "pages": [
-              "help-center/support",
               {
                 "group": "Account",
-                "pages": [
-                  "help-center/account/untitled-page",
-                  "help-center/account/what-can-i-do-if-i-forget-my-password",
-                  "help-center/account/how-can-i-change-my-username"
-                ]
-              },
-              {
-                "group": "Billing",
-                "pages": [
-                  "help-center/billing/bil",
-                  "help-center/billing/how-can-i-cancel-my-subscription",
-                  "help-center/billing/untitled-page",
-                  "help-center/billing/how-do-i-upgrade-or-downgrade-my-subscription",
-                  "help-center/billing/untitled-page-1"
-                ]
-              }
-            ]
-          },
-          {
-            "tab": "Protocol",
-            "pages": [
-              "protocol/manifesto",
-              "protocol/untitled-page-1",
-              "protocol/untitled-page",
-              "protocol/credits-policy",
-              "protocol/usage-policy"
-            ]
-          }
-        ]
-      },
-      {
-        "language": "ru",
-        "tabs": [
-          {
-            "tab": "Introduction",
-            "pages": [
-              "index",
-              "quickstart",
-              {
-                "group": "Features",
-                "pages": [
-                  "introduction/features/overview",
-                  {
-                    "group": "Chats",
-                    "pages": [
-                      "introduction/features/chat/overview",
-                      "introduction/features/chat/slides",
-                      "introduction/features/chat/data",
-                      "introduction/features/chat/docs",
-                      "introduction/features/chat/video",
-                      "introduction/features/chat/research",
-                      "introduction/features/chat/image"
-                    ]
-                  },
-                  {
-                    "group": "Agents",
-                    "pages": [
-                      "introduction/features/agents/overview",
-                      "introduction/features/agents/persona",
-                      "introduction/features/agents/tools",
-                      "introduction/features/agents/apps",
-                      "introduction/features/agents/knowledge",
-                      "introduction/features/agents/tasks"
-                    ]
-                  },
-                  {
-                    "group": "Tasks",
-                    "pages": [
-                      "introduction/features/tasks/overview"
-                    ]
-                  }
-                ]
-              },
-              {
-                "group": "General Settings",
-                "pages": [
-                  "introduction/general-settings/settings",
-                  "introduction/general-settings/plan",
-                  "introduction/general-settings/billing",
-                  "introduction/general-settings/usage",
-                  "introduction/general-settings/memory",
-                  "introduction/general-settings/knowledge-base",
-                  "introduction/general-settings/apps",
-                  "introduction/general-settings/status"
-                ]
-              },
-              "development"
-            ]
-          },
-          {
-            "tab": "Guides",
-            "groups": [
-              {
-                "group": "Use Cases",
-                "pages": [
-                  "en/guides/use-cases/use-cases"
-                ]
-              },
-              {
-                "group": "Chats",
                 "pages": []
               },
               {
-                "group": "Agents",
-                "pages": [
-                  "untitled-page"
-                ]
-              },
-              {
-                "group": "Tasks",
-                "pages": [
-                  "en/guides/tasks"
-                ]
-              },
-              {
-                "group": "Apps",
-                "pages": [
-                  "untitled-page"
-                ]
-              },
-              {
-                "group": "Prompting best practices",
-                "pages": []
-              },
-              {
-                "group": "Writing content",
-                "pages": [
-                  "essentials/markdown",
-                  "essentials/code",
-                  "essentials/images",
-                  "essentials/reusable-snippets"
-                ]
-              },
-              {
-                "group": "AI tools",
-                "pages": [
-                  "ai-tools/cursor",
-                  "ai-tools/claude-code",
-                  "ai-tools/windsurf"
-                ]
-              }
-            ]
-          },
-          {
-            "tab": "API reference",
-            "groups": [
-              {
-                "group": "API documentation",
-                "pages": [
-                  "api-reference/introduction",
-                  "api-reference/api-documentation/quick-start"
-                ]
-              }
-            ]
-          },
-          {
-            "tab": "Help center",
-            "pages": [
-              "help-center/support",
-              {
-                "group": "Account",
-                "pages": [
-                  "help-center/account/untitled-page",
-                  "help-center/account/what-can-i-do-if-i-forget-my-password",
-                  "help-center/account/how-can-i-change-my-username"
-                ]
-              },
-              {
                 "group": "Billing",
-                "pages": [
-                  "help-center/billing/bil",
-                  "help-center/billing/how-can-i-cancel-my-subscription",
-                  "help-center/billing/untitled-page",
-                  "help-center/billing/how-do-i-upgrade-or-downgrade-my-subscription",
-                  "help-center/billing/untitled-page-1"
-                ]
+                "pages": []
               }
             ]
           },
           {
-            "tab": "Protocol",
-            "pages": [
-              "protocol/manifesto",
-              "protocol/untitled-page-1",
-              "protocol/untitled-page",
-              "protocol/credits-policy",
-              "protocol/usage-policy"
-            ]
+            "tab": "Protocol"
           }
         ]
       }
