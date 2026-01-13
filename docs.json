@@ -206,10 +206,10 @@
           {
             "tab": "Protocol",
             "pages": [
-              "en/protocol/untitled-page-3",
-              "en/protocol/untitled-page-2",
+              "en/protocol/untitled-page",
               "en/protocol/untitled-page-1",
-              "en/protocol/untitled-page"
+              "en/protocol/untitled-page-2",
+              "en/protocol/untitled-page-3"
             ]
           }
         ]
