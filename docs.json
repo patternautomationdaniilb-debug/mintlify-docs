@@ -150,6 +150,8 @@
               {
                 "group": "Account",
                 "pages": [
+                  "en/help-center/account/untitled-page",
+                  "en/help-center/account/account-has-been-suspended",
                   "en/help-center/account/how-can-i-get-a-campus-pass",
                   "en/help-center/account/how-can-i-change-my-password",
                   "en/help-center/account/how-can-i-manage-the-login-information-that-manus-stores",
