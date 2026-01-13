@@ -102,31 +102,33 @@
               },
               {
                 "group": "Chats",
-                "pages": []
+                "pages": [
+                  "en/guides/chats/h"
+                ]
               },
               {
                 "group": "Agents",
-                "pages": []
+                "pages": [
+                  "en/guides/agents/k"
+                ]
               },
               {
                 "group": "Tasks",
-                "pages": []
+                "pages": [
+                  "en/guides/tasks/klo"
+                ]
               },
               {
                 "group": "Apps",
-                "pages": []
+                "pages": [
+                  "en/guides/apps/kk"
+                ]
               },
               {
                 "group": "Prompting best practices",
-                "pages": []
-              },
-              {
-                "group": "Writing content",
-                "pages": []
-              },
-              {
-                "group": "AI tools",
-                "pages": []
+                "pages": [
+                  "en/guides/prompting-best-practices/kk"
+                ]
               }
             ]
           },
