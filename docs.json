@@ -47,7 +47,11 @@
                   "en/introduction/features/untitled-page",
                   {
                     "group": "Chats",
-                    "pages": []
+                    "pages": [
+                      "en/introduction/features/chats/overview",
+                      "en/introduction/features/chats/slides",
+                      "en/introduction/features/chats/data"
+                    ]
                   },
                   {
                     "group": "Agents",
