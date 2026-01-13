@@ -128,7 +128,9 @@
                   },
                   {
                     "group": "Payments",
-                    "pages": []
+                    "pages": [
+                      "en/help-center/billing/payments/how-can-i-change-my-payment-method"
+                    ]
                   },
                   {
                     "group": "Credits",
