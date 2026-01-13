@@ -78,6 +78,9 @@
               {
                 "group": "General Settings",
                 "pages": [
+                  "en/introduction/general-settings/overview",
+                  "en/introduction/general-settings/plan",
+                  "en/introduction/general-settings/billing",
                   "en/introduction/general-settings/usage",
                   "en/introduction/general-settings/memory",
                   "en/introduction/general-settings/knowledge-base",
