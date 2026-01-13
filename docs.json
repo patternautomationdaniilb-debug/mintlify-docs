@@ -150,6 +150,7 @@
               {
                 "group": "Account",
                 "pages": [
+                  "en/help-center/account/how-can-i-manage-the-login-information-that-manus-stores",
                   "en/help-center/account/why-is-my-credit-usage-tab-missing"
                 ]
               },
