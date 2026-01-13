@@ -77,7 +77,13 @@
               },
               {
                 "group": "General Settings",
-                "pages": []
+                "pages": [
+                  "en/introduction/general-settings/usage",
+                  "en/introduction/general-settings/memory",
+                  "en/introduction/general-settings/knowledge-base",
+                  "en/introduction/general-settings/apps",
+                  "en/introduction/general-settings/status-page"
+                ]
               },
               "en/introduction/untitled-page"
             ]
