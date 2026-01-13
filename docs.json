@@ -69,7 +69,9 @@
                   },
                   {
                     "group": "Tasks",
-                    "pages": []
+                    "pages": [
+                      "en/introduction/features/tasks/overview"
+                    ]
                   }
                 ]
               },
