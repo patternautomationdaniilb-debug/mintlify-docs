@@ -154,6 +154,7 @@
               {
                 "group": "Login/Sign-up",
                 "pages": [
+                  "en/help-center/login-sign-up/what-should-i-do-if-i-forgot-my-registered-email",
                   "en/help-center/login-sign-up/what-can-i-do-if-i-cannot-log-in-with-a-1043-error"
                 ]
               },
