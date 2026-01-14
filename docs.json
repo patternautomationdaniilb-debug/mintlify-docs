@@ -50,6 +50,7 @@
                   {
                     "group": "Chats",
                     "pages": [
+                      "en/introduction/features/chats/what-are-the-differences-between-chat-mode-and-agent-mode",
                       "en/introduction/features/chats/overview",
                       "en/introduction/features/chats/slides",
                       "en/introduction/features/chats/data",
