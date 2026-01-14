@@ -257,12 +257,17 @@
           {
             "tab": "Protocol",
             "pages": [
-              "en/protocol/do-i-own-the-assets-websites-images-videos-slides-generated-via-manus",
-              "en/protocol/will-manus-use-user-data-for-model-training-purposes",
               {
                 "group": "North Star LLM",
                 "pages": [
                   "en/protocol/north-star-llm/overview"
+                ]
+              },
+              {
+                "group": "Privacy Policy",
+                "pages": [
+                  "en/protocol/will-manus-use-user-data-for-model-training-purposes",
+                  "en/protocol/do-i-own-the-assets-websites-images-videos-slides-generated-via-manus"
                 ]
               }
             ]
