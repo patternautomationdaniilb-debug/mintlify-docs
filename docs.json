@@ -60,8 +60,9 @@
                       {
                         "group": "Video",
                         "pages": [
-                          "en/introduction/features/chats/video/why-cant-i-generate-a-video",
-                          "en/introduction/features/chats/video"
+                          "en/introduction/features/chats/video/can-manus-use-veo-3-to-generate-vertical-videos",
+                          "en/introduction/features/chats/video",
+                          "en/introduction/features/chats/video/why-cant-i-generate-a-video"
                         ]
                       },
                       "en/introduction/features/chats/research",
