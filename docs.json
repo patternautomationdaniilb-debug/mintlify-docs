@@ -110,6 +110,7 @@
                   {
                     "group": "Apps",
                     "pages": [
+                      "en/introduction/general-settings/apps/overview",
                       "en/introduction/general-settings/apps/how-can-i-use-manus-connectors",
                       "en/introduction/general-settings/apps"
                     ]
