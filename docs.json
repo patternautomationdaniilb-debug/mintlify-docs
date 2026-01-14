@@ -152,6 +152,12 @@
             "tab": "Help center",
             "groups": [
               {
+                "group": "Events & Plans",
+                "pages": [
+                  "en/help-center/events-and-plans/where-can-i-see-my-credits-usage-in-my-manus-team-workspace"
+                ]
+              },
+              {
                 "group": "Login/Sign-up",
                 "pages": [
                   "en/help-center/login-sign-up/why-cant-i-enter-a-phone-number",
