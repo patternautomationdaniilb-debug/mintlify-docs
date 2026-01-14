@@ -57,7 +57,13 @@
                       "en/introduction/features/chats/data",
                       "en/introduction/features/chats/docs",
                       "en/introduction/features/chats/canvas",
-                      "en/introduction/features/chats/video",
+                      {
+                        "group": "Video",
+                        "pages": [
+                          "en/introduction/features/chats/video/why-cant-i-generate-a-video",
+                          "en/introduction/features/chats/video"
+                        ]
+                      },
                       "en/introduction/features/chats/research",
                       "en/introduction/features/chats/image"
                     ]
