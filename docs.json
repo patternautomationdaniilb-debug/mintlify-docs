@@ -150,7 +150,13 @@
           },
           {
             "tab": "Help center",
-            "pages": [
+            "groups": [
+              {
+                "group": "Login/Sign-up",
+                "pages": [
+                  "en/help-center/login-sign-up/what-can-i-do-if-i-cannot-log-in-with-a-1043-error"
+                ]
+              },
               {
                 "group": "Account",
                 "pages": [
