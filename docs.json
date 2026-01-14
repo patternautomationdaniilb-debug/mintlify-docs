@@ -154,6 +154,7 @@
               {
                 "group": "Login/Sign-up",
                 "pages": [
+                  "en/help-center/login-sign-up/why-is-the-verification-code-incorrect",
                   "en/help-center/login-sign-up/how-can-i-register-without-a-phone-number",
                   "en/help-center/login-sign-up/why-do-i-need-to-verify-my-phone-number",
                   "en/help-center/login-sign-up/how-can-i-have-multiple-accounts",
