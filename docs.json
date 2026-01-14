@@ -256,7 +256,8 @@
           },
           {
             "tab": "Protocol",
-            "groups": [
+            "pages": [
+              "en/protocol/will-manus-use-user-data-for-model-training-purposes",
               {
                 "group": "North Star LLM",
                 "pages": [
