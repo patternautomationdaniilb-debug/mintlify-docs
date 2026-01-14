@@ -83,6 +83,7 @@
                   {
                     "group": "Tasks",
                     "pages": [
+                      "en/introduction/features/tasks/how-can-i-recover-a-deleted-task",
                       "en/introduction/features/tasks/what-can-i-do-if-i-encounter-a-sandbox-issue-in-the-task",
                       "en/introduction/features/tasks/how-can-i-learn-about-the-virtual-machine-disk-model-performance-specifications",
                       "en/introduction/features/tasks/how-can-i-share-a-task",
