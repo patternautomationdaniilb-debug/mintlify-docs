@@ -266,6 +266,7 @@
               {
                 "group": "Privacy Policy",
                 "pages": [
+                  "en/protocol/privacy-policy/will-manus-publicly-display-or-recommend-projects-templates-or-playbooks-created-by-users-without-explicit-consent",
                   "en/protocol/privacy-policy/who-can-see-my-tasks",
                   "en/protocol/will-manus-use-user-data-for-model-training-purposes",
                   "en/protocol/do-i-own-the-assets-websites-images-videos-slides-generated-via-manus"
