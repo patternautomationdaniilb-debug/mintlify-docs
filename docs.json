@@ -154,6 +154,7 @@
               {
                 "group": "Login/Sign-up",
                 "pages": [
+                  "en/help-center/login-sign-up/why-cant-a-previously-verified-phone-number-be-used-again",
                   "en/help-center/login-sign-up/does-manus-retain-my-phone-number",
                   "en/help-center/login-sign-up/why-is-the-verification-code-incorrect",
                   "en/help-center/login-sign-up/how-can-i-register-without-a-phone-number",
