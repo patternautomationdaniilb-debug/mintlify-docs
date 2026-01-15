@@ -122,7 +122,13 @@
                       "en/introduction/features/super-agent/overview"
                     ]
                   },
-                  "en/introduction/features/custom-ai-agents"
+                  "en/introduction/features/custom-ai-agents",
+                  {
+                    "group": "North Star LLM",
+                    "pages": [
+                      "en/protocol/north-star-llm/overview"
+                    ]
+                  }
                 ]
               }
             ]
@@ -242,29 +248,27 @@
           {
             "tab": "Help center",
             "pages": [
-              "en/introduction/general-settings/status-page",
               "en/protocol/untitled-page",
+              "en/introduction/general-settings/status-page",
               "en/protocol/untitled-page-2",
+              "en/protocol/usage-policy",
               {
                 "group": "Privacy Policy",
                 "pages": [
                   "en/protocol/untitled-page-1",
-                  "en/protocol/will-manus-use-user-data-for-model-training-purposes",
-                  "en/protocol/privacy-policy/will-my-personal-data-be-deleted-after-i-delete-my-account",
-                  "en/protocol/privacy-policy/will-manuss-privacy-policy-change",
-                  "en/protocol/privacy-policy/how-can-manus-ensure-the-security-of-user-information",
-                  "en/protocol/privacy-policy/can-minors-use-manus",
-                  "en/protocol/privacy-policy/will-manus-publicly-display-or-recommend-projects-templates-or-playbooks-created-by-users-without-explicit-consent",
-                  "en/protocol/privacy-policy/who-can-see-my-tasks",
-                  "en/protocol/do-i-own-the-assets-websites-images-videos-slides-generated-via-manus"
-                ]
-              },
-              "en/protocol/o",
-              "en/protocol/usage-policy",
-              {
-                "group": "North Star LLM",
-                "pages": [
-                  "en/protocol/north-star-llm/overview"
+                  {
+                    "group": "FAQ",
+                    "pages": [
+                      "en/protocol/privacy-policy/will-my-personal-data-be-deleted-after-i-delete-my-account",
+                      "en/protocol/privacy-policy/will-manuss-privacy-policy-change",
+                      "en/protocol/privacy-policy/how-can-manus-ensure-the-security-of-user-information",
+                      "en/protocol/privacy-policy/can-minors-use-manus",
+                      "en/protocol/privacy-policy/who-can-see-my-tasks",
+                      "en/protocol/privacy-policy/will-manus-publicly-display-or-recommend-projects-templates-or-playbooks-created-by-users-without-explicit-consent",
+                      "en/protocol/do-i-own-the-assets-websites-images-videos-slides-generated-via-manus",
+                      "en/protocol/will-manus-use-user-data-for-model-training-purposes"
+                    ]
+                  }
                 ]
               },
               {
@@ -294,6 +298,7 @@
                   {
                     "group": "Credits",
                     "pages": [
+                      "en/protocol/o",
                       "en/introduction/general-settings/usage",
                       "en/help-center/billing/credits/what-are-the-rules-for-credits-consumption-and-how-can-i-obtain-them-1",
                       "en/help-center/billing/credits/will-my-daily-refresh-credits-accumulate-or-reset",
@@ -372,9 +377,6 @@
                 ]
               }
             ]
-          },
-          {
-            "tab": "Protocoll"
           }
         ]
       }
