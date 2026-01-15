@@ -115,6 +115,10 @@
                     "pages": [
                       "en/introduction/features/neuro-ai-computer/untitled-page"
                     ]
+                  },
+                  {
+                    "group": "Super Agent",
+                    "pages": []
                   }
                 ]
               },
