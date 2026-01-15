@@ -118,7 +118,9 @@
                   },
                   {
                     "group": "Super Agent",
-                    "pages": []
+                    "pages": [
+                      "en/introduction/features/super-agent/overview"
+                    ]
                   }
                 ]
               },
