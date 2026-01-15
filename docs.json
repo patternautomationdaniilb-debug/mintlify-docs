@@ -352,6 +352,7 @@
           {
             "tab": "Protocol",
             "pages": [
+              "en/protocol/terms-of-services",
               "en/protocol/manifesto",
               {
                 "group": "North Star LLM",
