@@ -89,23 +89,6 @@
                       "en/introduction/features/tasks/how-can-i-share-a-task",
                       "en/introduction/features/tasks/overview"
                     ]
-                  }
-                ]
-              },
-              {
-                "group": "General Settings",
-                "pages": [
-                  "en/introduction/general-settings/overview",
-                  "en/introduction/general-settings/plan",
-                  "en/introduction/general-settings/billing",
-                  "en/introduction/general-settings/usage",
-                  "en/introduction/general-settings/memory",
-                  {
-                    "group": "Knowledge Base",
-                    "pages": [
-                      "en/introduction/general-settings/knowledge-base",
-                      "en/introduction/general-settings/knowledge-base/sorry-deleted-tasks-cannot-be-recovered-you-can-try-starting-a-new-conversation-common-related-faqs-can-deleted-tasks-be-recovered-what-should-i-do-if-i-deleted-a-task-is-task-deletion-permanent-can-i-restore-a-deleted-task-what-happens-when-i-delete-a-task-what-is-the-alternative-to-recovering-a-deleted-task-can-i-get-my-deleted-task-back-should-i-start-a-new-conversation-if-i-deleted-a-task"
-                    ]
                   },
                   {
                     "group": "Apps",
@@ -119,7 +102,18 @@
                       "en/introduction/general-settings/apps/how-can-i-use-manus-connectors"
                     ]
                   },
-                  "en/introduction/general-settings/status-page"
+                  {
+                    "group": "Knowledge Base",
+                    "pages": [
+                      "en/introduction/general-settings/knowledge-base",
+                      "en/introduction/general-settings/knowledge-base/sorry-deleted-tasks-cannot-be-recovered-you-can-try-starting-a-new-conversation-common-related-faqs-can-deleted-tasks-be-recovered-what-should-i-do-if-i-deleted-a-task-is-task-deletion-permanent-can-i-restore-a-deleted-task-what-happens-when-i-delete-a-task-what-is-the-alternative-to-recovering-a-deleted-task-can-i-get-my-deleted-task-back-should-i-start-a-new-conversation-if-i-deleted-a-task"
+                    ]
+                  },
+                  "en/introduction/general-settings/memory",
+                  {
+                    "group": "Neuro AI Computer",
+                    "pages": []
+                  }
                 ]
               },
               "en/introduction/untitled-page"
@@ -186,6 +180,7 @@
               {
                 "group": "Events & Plans",
                 "pages": [
+                  "en/introduction/general-settings/plan",
                   "en/help-center/events-and-plans/what-is-manus-team-plan",
                   "en/help-center/events-and-plans/how-can-i-subscribe-to-manus-team-plan",
                   "en/help-center/events-and-plans/what-roles-are-in-the-team-version-and-what-are-the-functions-of-each-role",
@@ -235,6 +230,7 @@
               {
                 "group": "Billing",
                 "pages": [
+                  "en/introduction/general-settings/billing",
                   {
                     "group": "Subscriptions",
                     "pages": [
@@ -258,6 +254,7 @@
                   {
                     "group": "Credits",
                     "pages": [
+                      "en/introduction/general-settings/usage",
                       "en/help-center/billing/credits/what-are-the-rules-for-credits-consumption-and-how-can-i-obtain-them-1",
                       "en/help-center/billing/credits/will-my-daily-refresh-credits-accumulate-or-reset",
                       "en/help-center/billing/credits/what-should-i-do-if-my-daily-credits-have-not-refreshed",
@@ -283,7 +280,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "en/introduction/general-settings/status-page"
             ]
           },
           {
