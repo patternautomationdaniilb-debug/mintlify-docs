@@ -352,17 +352,13 @@
           {
             "tab": "Protocol",
             "pages": [
-              "en/protocol/o",
-              "en/protocol/untitled-page-2",
-              "en/protocol/untitled-page-1",
-              "en/protocol/untitled-page",
-              "en/protocol/terms-of-services",
+              "en/protocol/usage-policy",
               {
-                "group": "North Star LLM",
-                "pages": [
-                  "en/protocol/north-star-llm/overview"
-                ]
+                "group": "Untitled Group",
+                "pages": []
               },
+              "en/protocol/terms-of-services",
+              "en/protocol/untitled-page-2",
               {
                 "group": "Privacy Policy",
                 "pages": [
@@ -374,7 +370,16 @@
                   "en/protocol/privacy-policy/can-minors-use-manus",
                   "en/protocol/privacy-policy/will-manus-publicly-display-or-recommend-projects-templates-or-playbooks-created-by-users-without-explicit-consent",
                   "en/protocol/privacy-policy/who-can-see-my-tasks",
-                  "en/protocol/do-i-own-the-assets-websites-images-videos-slides-generated-via-manus"
+                  "en/protocol/do-i-own-the-assets-websites-images-videos-slides-generated-via-manus",
+                  "en/protocol/untitled-page-1"
+                ]
+              },
+              "en/protocol/o",
+              "en/protocol/untitled-page",
+              {
+                "group": "North Star LLM",
+                "pages": [
+                  "en/protocol/north-star-llm/overview"
                 ]
               }
             ]
