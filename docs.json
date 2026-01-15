@@ -352,7 +352,12 @@
           {
             "tab": "Protocoll",
             "pages": [
-              "en/protocol/untitled-page",
+              "en/protocol/untitled-page"
+            ]
+          },
+          {
+            "tab": "Protocoll",
+            "pages": [
               "en/protocol/terms-of-services",
               "en/protocol/untitled-page-2",
               {
