@@ -243,6 +243,7 @@
             "tab": "Help center",
             "pages": [
               "en/introduction/general-settings/status-page",
+              "en/protocol/untitled-page",
               {
                 "group": "Billing",
                 "pages": [
@@ -350,10 +351,7 @@
             ]
           },
           {
-            "tab": "Protocoll",
-            "pages": [
-              "en/protocol/untitled-page"
-            ]
+            "tab": "Protocoll"
           },
           {
             "tab": "Protocoll",
