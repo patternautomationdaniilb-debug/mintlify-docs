@@ -237,56 +237,7 @@
           {
             "tab": "Help center",
             "pages": [
-              {
-                "group": "Events & Plans",
-                "pages": [
-                  "en/introduction/general-settings/plan",
-                  "en/help-center/events-and-plans/what-is-manus-team-plan",
-                  "en/help-center/events-and-plans/how-can-i-subscribe-to-manus-team-plan",
-                  "en/help-center/events-and-plans/what-roles-are-in-the-team-version-and-what-are-the-functions-of-each-role",
-                  "en/help-center/events-and-plans/how-can-i-join-the-team",
-                  "en/help-center/events-and-plans/how-can-manus-team-members-see-the-tasks-i-created",
-                  "en/help-center/events-and-plans/is-the-environment-configured-separately-for-team-members",
-                  "en/help-center/events-and-plans/how-to-use-manus",
-                  "en/help-center/events-and-plans/what-is-the-current-single-sign-on-sso-subscription-pricing-for-manus-team",
-                  "en/help-center/how-to-automatically-land-on-my-manus-team-account-upon-logging-in-with-single-sign-on-sso",
-                  "en/help-center/events-and-plans/where-can-i-enable-subscribe-to-a-single-sign-on-sso-subscription-for-manus-team",
-                  "en/help-center/events-and-plans/where-can-i-see-my-credits-usage-in-my-manus-team-workspace"
-                ]
-              },
-              {
-                "group": "Login/Sign-up",
-                "pages": [
-                  "en/help-center/login-sign-up/why-cant-i-enter-a-phone-number",
-                  "en/help-center/login-sign-up/why-cant-a-previously-verified-phone-number-be-used-again",
-                  "en/help-center/login-sign-up/does-manus-retain-my-phone-number",
-                  "en/help-center/login-sign-up/why-is-the-verification-code-incorrect",
-                  "en/help-center/login-sign-up/how-can-i-register-without-a-phone-number",
-                  "en/help-center/login-sign-up/why-do-i-need-to-verify-my-phone-number",
-                  "en/help-center/login-sign-up/how-can-i-have-multiple-accounts",
-                  "en/help-center/login-sign-up/what-should-i-do-if-i-forgot-my-registered-email",
-                  "en/help-center/login-sign-up/what-can-i-do-if-i-cannot-log-in-with-a-1043-error"
-                ]
-              },
-              {
-                "group": "Account",
-                "pages": [
-                  "en/help-center/account/learn-how-to-delete-or-edit-your-bank-card-information-in-manus-manage-your-payment-methods-and-billing-information",
-                  "en/help-center/account/h",
-                  "en/help-center/account/how-can-i-delete-edit-my-bank-card",
-                  "en/help-center/account/how-can-i-delete-documents-from-disk-space",
-                  "en/help-center/account/how-can-i-change-my-email",
-                  "en/help-center/account/what-can-i-do-if-i-forget-my-password",
-                  "en/help-center/account/how-can-i-change-my-username",
-                  "en/help-center/account/how-can-i-change-the-login-methods",
-                  "en/help-center/account/untitled-page",
-                  "en/help-center/account/account-has-been-suspended",
-                  "en/help-center/account/how-can-i-get-a-campus-pass",
-                  "en/help-center/account/how-can-i-change-my-password",
-                  "en/help-center/account/how-can-i-manage-the-login-information-that-manus-stores",
-                  "en/help-center/account/why-is-my-credit-usage-tab-missing"
-                ]
-              },
+              "en/introduction/general-settings/status-page",
               {
                 "group": "Billing",
                 "pages": [
@@ -341,7 +292,56 @@
                   }
                 ]
               },
-              "en/introduction/general-settings/status-page"
+              {
+                "group": "Account",
+                "pages": [
+                  "en/help-center/account/learn-how-to-delete-or-edit-your-bank-card-information-in-manus-manage-your-payment-methods-and-billing-information",
+                  "en/help-center/account/h",
+                  "en/help-center/account/how-can-i-delete-edit-my-bank-card",
+                  "en/help-center/account/how-can-i-delete-documents-from-disk-space",
+                  "en/help-center/account/how-can-i-change-my-email",
+                  "en/help-center/account/what-can-i-do-if-i-forget-my-password",
+                  "en/help-center/account/how-can-i-change-my-username",
+                  "en/help-center/account/how-can-i-change-the-login-methods",
+                  "en/help-center/account/untitled-page",
+                  "en/help-center/account/account-has-been-suspended",
+                  "en/help-center/account/how-can-i-get-a-campus-pass",
+                  "en/help-center/account/how-can-i-change-my-password",
+                  "en/help-center/account/how-can-i-manage-the-login-information-that-manus-stores",
+                  "en/help-center/account/why-is-my-credit-usage-tab-missing"
+                ]
+              },
+              {
+                "group": "Events & Plans",
+                "pages": [
+                  "en/introduction/general-settings/plan",
+                  "en/help-center/events-and-plans/what-is-manus-team-plan",
+                  "en/help-center/events-and-plans/how-can-i-subscribe-to-manus-team-plan",
+                  "en/help-center/events-and-plans/what-roles-are-in-the-team-version-and-what-are-the-functions-of-each-role",
+                  "en/help-center/events-and-plans/how-can-i-join-the-team",
+                  "en/help-center/events-and-plans/how-can-manus-team-members-see-the-tasks-i-created",
+                  "en/help-center/events-and-plans/is-the-environment-configured-separately-for-team-members",
+                  "en/help-center/events-and-plans/how-to-use-manus",
+                  "en/help-center/events-and-plans/what-is-the-current-single-sign-on-sso-subscription-pricing-for-manus-team",
+                  "en/help-center/how-to-automatically-land-on-my-manus-team-account-upon-logging-in-with-single-sign-on-sso",
+                  "en/help-center/events-and-plans/where-can-i-enable-subscribe-to-a-single-sign-on-sso-subscription-for-manus-team",
+                  "en/help-center/events-and-plans/where-can-i-see-my-credits-usage-in-my-manus-team-workspace"
+                ]
+              },
+              {
+                "group": "Login/Sign-up",
+                "pages": [
+                  "en/help-center/login-sign-up/why-cant-i-enter-a-phone-number",
+                  "en/help-center/login-sign-up/why-cant-a-previously-verified-phone-number-be-used-again",
+                  "en/help-center/login-sign-up/does-manus-retain-my-phone-number",
+                  "en/help-center/login-sign-up/why-is-the-verification-code-incorrect",
+                  "en/help-center/login-sign-up/how-can-i-register-without-a-phone-number",
+                  "en/help-center/login-sign-up/why-do-i-need-to-verify-my-phone-number",
+                  "en/help-center/login-sign-up/how-can-i-have-multiple-accounts",
+                  "en/help-center/login-sign-up/what-should-i-do-if-i-forgot-my-registered-email",
+                  "en/help-center/login-sign-up/what-can-i-do-if-i-cannot-log-in-with-a-1043-error"
+                ]
+              }
             ]
           },
           {
