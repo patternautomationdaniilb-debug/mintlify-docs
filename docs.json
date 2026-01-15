@@ -133,6 +133,54 @@
               {
                 "group": "Use Cases",
                 "pages": [
+                  {
+                    "group": "Professional Development",
+                    "pages": []
+                  },
+                  {
+                    "group": "Family & Household Management",
+                    "pages": []
+                  },
+                  {
+                    "group": "Entertainment & Lifestyle",
+                    "pages": []
+                  },
+                  {
+                    "group": "Health & Wellness",
+                    "pages": []
+                  },
+                  {
+                    "group": "Personal Productivity & Daily Life",
+                    "pages": []
+                  },
+                  {
+                    "group": "Education & Learning",
+                    "pages": []
+                  },
+                  {
+                    "group": "Voice AI Applications",
+                    "pages": []
+                  },
+                  {
+                    "group": "Analytics & Insights",
+                    "pages": []
+                  },
+                  {
+                    "group": "Content & Marketing",
+                    "pages": []
+                  },
+                  {
+                    "group": "Internal Business Process Automation",
+                    "pages": []
+                  },
+                  {
+                    "group": "Sales & Lead Generation Optimization",
+                    "pages": []
+                  },
+                  {
+                    "group": "Customer Service Automation",
+                    "pages": []
+                  },
                   "en/guides/use-cases/untitled-page",
                   "en/guides/use-cases/u"
                 ]
