@@ -112,7 +112,9 @@
                   "en/introduction/general-settings/memory",
                   {
                     "group": "Neuro AI Computer",
-                    "pages": []
+                    "pages": [
+                      "en/introduction/features/neuro-ai-computer/untitled-page"
+                    ]
                   }
                 ]
               },
