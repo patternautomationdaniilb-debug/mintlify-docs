@@ -244,6 +244,30 @@
             "pages": [
               "en/introduction/general-settings/status-page",
               "en/protocol/untitled-page",
+              "en/protocol/terms-of-services",
+              "en/protocol/untitled-page-2",
+              {
+                "group": "Privacy Policy",
+                "pages": [
+                  "en/protocol/untitled-page-1",
+                  "en/protocol/will-manus-use-user-data-for-model-training-purposes",
+                  "en/protocol/privacy-policy/will-my-personal-data-be-deleted-after-i-delete-my-account",
+                  "en/protocol/privacy-policy/will-manuss-privacy-policy-change",
+                  "en/protocol/privacy-policy/how-can-manus-ensure-the-security-of-user-information",
+                  "en/protocol/privacy-policy/can-minors-use-manus",
+                  "en/protocol/privacy-policy/will-manus-publicly-display-or-recommend-projects-templates-or-playbooks-created-by-users-without-explicit-consent",
+                  "en/protocol/privacy-policy/who-can-see-my-tasks",
+                  "en/protocol/do-i-own-the-assets-websites-images-videos-slides-generated-via-manus"
+                ]
+              },
+              "en/protocol/o",
+              "en/protocol/usage-policy",
+              {
+                "group": "North Star LLM",
+                "pages": [
+                  "en/protocol/north-star-llm/overview"
+                ]
+              },
               {
                 "group": "Billing",
                 "pages": [
@@ -351,33 +375,7 @@
             ]
           },
           {
-            "tab": "Protocoll",
-            "pages": [
-              "en/protocol/terms-of-services",
-              "en/protocol/untitled-page-2",
-              {
-                "group": "Privacy Policy",
-                "pages": [
-                  "en/protocol/untitled-page-1",
-                  "en/protocol/will-manus-use-user-data-for-model-training-purposes",
-                  "en/protocol/privacy-policy/will-my-personal-data-be-deleted-after-i-delete-my-account",
-                  "en/protocol/privacy-policy/will-manuss-privacy-policy-change",
-                  "en/protocol/privacy-policy/how-can-manus-ensure-the-security-of-user-information",
-                  "en/protocol/privacy-policy/can-minors-use-manus",
-                  "en/protocol/privacy-policy/will-manus-publicly-display-or-recommend-projects-templates-or-playbooks-created-by-users-without-explicit-consent",
-                  "en/protocol/privacy-policy/who-can-see-my-tasks",
-                  "en/protocol/do-i-own-the-assets-websites-images-videos-slides-generated-via-manus"
-                ]
-              },
-              "en/protocol/o",
-              "en/protocol/usage-policy",
-              {
-                "group": "North Star LLM",
-                "pages": [
-                  "en/protocol/north-star-llm/overview"
-                ]
-              }
-            ]
+            "tab": "Protocoll"
           }
         ]
       }
