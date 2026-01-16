@@ -50,9 +50,14 @@
                   {
                     "group": "Chats",
                     "pages": [
-                      "en/introduction/features/chats/can-i-switch-back-to-chat-mode-from-agent-mode",
-                      "en/introduction/features/chats/what-are-the-differences-between-chat-mode-and-agent-mode",
                       "en/introduction/features/chats/overview",
+                      {
+                        "group": "Modes",
+                        "pages": [
+                          "en/introduction/features/chats/what-are-the-differences-between-chat-mode-and-agent-mode",
+                          "en/introduction/features/chats/can-i-switch-back-to-chat-mode-from-agent-mode"
+                        ]
+                      },
                       "en/introduction/features/chats/slides",
                       "en/introduction/features/chats/data",
                       "en/introduction/features/chats/docs",
