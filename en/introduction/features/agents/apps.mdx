@@ -1,4 +1,1187 @@
 ---
 title: "Apps"
-description: "Learn how to set up recurring tasks for your Neuro agents and automate your team's repetitive workflows."
+description: "Learn how to set up apps for your Neuro agents and automate your team's repetitive workflows."
 ---
+
+## Overview
+
+Apps enable your custom agents to access external tools, search data, and take actions across your entire tech stack. Instead of being limited to conversation, agents can:
+
+- 🔍 **Search** — Find information from connected services
+- 📊 **Reference** — Pull real-time data into responses
+- 🚀 **Take Actions** — Create tasks, send messages, update records
+- 🎯 **Deep Research** — Analyze multiple sources with citations
+- ⚡ **Integrate** — Connect to 500+ business tools
+
+---
+
+## How Apps Work With Custom Agents
+
+### Agent Capabilities With Apps
+
+When you configure apps for a custom agent, it gains access to those services:
+
+```
+Agent Request:
+"Search our CRM for accounts in healthcare"
+
+With Apps Enabled:
+→ Agent accesses Salesforce via app
+→ Searches for matching accounts
+→ Returns results with relevant data
+
+Without Apps:
+→ Agent responds with generic knowledge
+→ No access to actual company data
+→ Limited to training data
+```
+
+### Apps by Agent Persona
+
+Different agent personas benefit from different app combinations. Here's what each agent type can do with apps:
+
+---
+
+## Agent Personas & Their Apps
+
+### 1. Sales Agent
+
+**Purpose**: Drive revenue through intelligent sales outreach and lead management
+
+**Core Apps**:
+
+- **Salesforce** — Access accounts, leads, opportunities
+- **Apollo** — Find and verify prospect emails
+- **LinkedIn** — Research prospects and companies
+- **Gmail** — Send personalized emails
+- **Slack** — Update team on progress
+- **HubSpot** — Manage contacts and deals
+- **Pipedrive** — Track sales pipeline
+
+**Key Workflows**:
+
+```
+Sales Agent Tasks:
+
+1. Lead Research
+   App: Apollo + LinkedIn
+   → Find prospects
+   → Research background
+   → Verify email addresses
+
+2. Account Management
+   App: Salesforce + HubSpot
+   → Pull account information
+   → Check recent activities
+   → Track deal status
+
+3. Email Outreach
+   App: Gmail + Salesforce
+   → Draft personalized email
+   → Send via Gmail
+   → Log to Salesforce
+
+4. Team Updates
+   App: Slack + Salesforce
+   → Pull yesterday's closed deals
+   → Post summary to #sales
+   → Notify team of updates
+```
+
+**Agent Capabilities**:
+
+```
+Sales Agent can:
+✓ Search Salesforce for specific accounts
+✓ Find prospect emails with Apollo
+✓ Draft personalized outreach emails
+✓ Log activities to CRM
+✓ Update deal status
+✓ Post team updates to Slack
+✓ Research companies on LinkedIn
+✓ Track pipeline progress
+```
+
+**Example Prompts**:
+
+```
+"Find all accounts in the healthcare space
+where we haven't contacted in 60 days"
+
+"Research this prospect company using LinkedIn
+and Apollo, then draft a personalized email"
+
+"What were our top 5 closed deals this week?
+Post a summary to #sales channel"
+
+"Update this opportunity to 'Negotiation'
+and send a notification to the account manager"
+```
+
+---
+
+### 2. Customer Success Agent
+
+**Purpose**: Ensure customer satisfaction and drive retention through proactive support
+
+**Core Apps**:
+
+- **Salesforce** — View customer accounts and history
+- **Zendesk** — Manage support tickets
+- **Intercom** — Send customer messages
+- **Google Drive** — Access success plans
+- **Slack** — Notify team members
+- **HubSpot** — Track customer interactions
+- **Freshdesk** — Manage support cases
+
+**Key Workflows**:
+
+```
+Customer Success Agent Tasks:
+
+1. Onboarding Support
+   App: Salesforce + Zendesk + Google Drive
+   → Pull onboarding checklist from Drive
+   → Create support tickets in Zendesk
+   → Log in Salesforce
+   → Send welcome message via Intercom
+
+2. Health Monitoring
+   App: Salesforce + Intercom
+   → Check customer health score
+   → Review recent activity
+   → Send proactive outreach
+   → Log interaction to account
+
+3. Issue Resolution
+   App: Zendesk + Slack
+   → Pull ticket details
+   → Research solution
+   → Update ticket status
+   → Notify team in Slack
+
+4. Renewal Management
+   App: Salesforce + Intercom + Gmail
+   → Identify upcoming renewals
+   → Send renewal offer
+   → Track response
+   → Escalate if needed
+```
+
+**Agent Capabilities**:
+
+```
+Customer Success Agent can:
+✓ View customer account history
+✓ Create and manage support tickets
+✓ Send messages to customers
+✓ Check success metrics
+✓ Pull success plans
+✓ Update ticket status
+✓ Send proactive outreach
+✓ Document interactions
+✓ Escalate urgent issues
+```
+
+**Example Prompts**:
+
+```
+"Check which of our customers are at risk
+of churning this quarter and send them
+a proactive check-in message"
+
+"Create a ticket in Zendesk for this
+customer issue and assign it to the
+appropriate team member"
+
+"Pull this customer's success plan from
+Google Drive and create a checklist for
+their onboarding"
+
+"What's the status of this support ticket?
+Update it if the issue is resolved and
+notify the customer"
+```
+
+---
+
+### 3. Marketing Agent
+
+**Purpose**: Generate demand and enhance brand awareness through intelligent campaigns
+
+**Core Apps**:
+
+- **Mailchimp** — Email marketing campaigns
+- **HubSpot** — Lead generation and tracking
+- **Google Analytics** — Website metrics
+- **Canva** — Design graphics
+- **LinkedIn** — Post content
+- **Facebook/Instagram** — Social posting
+- **Google Drive** — Access marketing assets
+- **Slack** — Share updates
+
+**Key Workflows**:
+
+```
+Marketing Agent Tasks:
+
+1. Campaign Planning
+   App: HubSpot + Google Drive
+   → Review past campaign performance
+   → Pull creative assets
+   → Plan new campaign
+   → Document strategy
+
+2. Email Campaign
+   App: Mailchimp + HubSpot
+   → Create email template
+   → Define audience segment
+   → Schedule send
+   → Track performance
+
+3. Content Creation
+   App: Canva + Google Drive + LinkedIn
+   → Design social graphics
+   → Create LinkedIn post
+   → Schedule publication
+   → Track engagement
+
+4. Analytics Reporting
+   App: Google Analytics + Slack
+   → Pull weekly metrics
+   → Analyze trends
+   → Create summary
+   → Post to #marketing
+```
+
+**Agent Capabilities**:
+
+```
+Marketing Agent can:
+✓ Create email campaigns
+✓ Segment audiences
+✓ Design graphics with Canva
+✓ Post to social media
+✓ Pull website analytics
+✓ Track campaign performance
+✓ Access marketing assets
+✓ Generate reports
+✓ Schedule content
+```
+
+**Example Prompts**:
+
+```
+"Design a social media graphic for our
+new product launch and schedule it
+to post on LinkedIn tomorrow"
+
+"Create an email campaign targeting
+customers who haven't purchased
+in the last 6 months"
+
+"What were our top performing blog posts
+last month? Create a summary report"
+
+"Pull this week's website analytics and
+post a summary of key metrics to Slack"
+```
+
+---
+
+### 4. Product Manager Agent
+
+**Purpose**: Drive product development with data-driven decisions and customer insights
+
+**Core Apps**:
+
+- **Jira** — Track features and bugs
+- **Linear** — Issue management
+- **Notion** — Product roadmap
+- **Intercom** — Customer feedback
+- **Google Drive** — Design docs
+- **GitHub** — Code repository
+- **Slack** — Team communication
+- **Mixpanel** — Product analytics
+
+**Key Workflows**:
+
+```
+Product Manager Agent Tasks:
+
+1. Roadmap Planning
+   App: Notion + Jira + Intercom
+   → Pull customer feedback
+   → Review feature requests
+   → Create roadmap items
+   → Prioritize based on impact
+
+2. Feature Tracking
+   App: Jira + Linear + Slack
+   → Create feature spec
+   → Break into tasks
+   → Assign to engineering
+   → Track progress
+
+3. Bug Management
+   App: Jira + GitHub + Linear
+   → Receive bug reports
+   → Prioritize by severity
+   → Assign to team
+   → Track resolution
+
+4. Customer Feedback
+   App: Intercom + Notion + Slack
+   → Aggregate feedback
+   → Identify themes
+   → Document insights
+   → Share with team
+```
+
+**Agent Capabilities**:
+
+```
+Product Manager Agent can:
+✓ Create and manage feature specs
+✓ Track bug reports
+✓ Access customer feedback
+✓ Review product analytics
+✓ Update roadmap
+✓ Prioritize features
+✓ Communicate with engineering
+✓ Document decisions
+```
+
+**Example Prompts**:
+
+```
+"Review our customer feedback from
+the past month and identify the top
+5 feature requests"
+
+"Create a feature spec in Notion for
+our new authentication system and
+break it down into tasks in Jira"
+
+"What's the status of our Q4 roadmap?
+Pull details from Notion and create
+an update for the team"
+
+"Analyze which features are most
+used in Mixpanel and create a
+report for the product team"
+```
+
+---
+
+### 5. Operations Agent
+
+**Purpose**: Streamline processes and ensure organizational efficiency
+
+**Core Apps**:
+
+- **Asana** — Project management
+- [**Monday.com**](http://Monday.com) — Task tracking
+- **Google Sheets** — Data management
+- **Slack** — Team communication
+- **Google Drive** — Document storage
+- **ClickUp** — Workflow management
+- **Zapier** — Automation
+- **Google Calendar** — Scheduling
+
+**Key Workflows**:
+
+```
+Operations Agent Tasks:
+
+1. Project Management
+   App: Asana + Slack
+   → Create project tasks
+   → Assign to team
+   → Track progress
+   → Update team in Slack
+
+2. Process Automation
+   App: Zapier + Google Sheets
+   → Create automation workflows
+   → Track execution
+   → Log data to sheets
+   → Monitor performance
+
+3. Meeting Coordination
+   App: Google Calendar + Slack
+   → Schedule meetings
+   → Send calendar invites
+   → Post reminders in Slack
+   → Track attendance
+
+4. Reporting
+   App: Google Sheets + Slack
+   → Compile data
+   → Create reports
+   → Post summaries
+   → Archive for reference
+```
+
+**Agent Capabilities**:
+
+```
+Operations Agent can:
+✓ Create and manage projects
+✓ Assign tasks to team members
+✓ Update project status
+✓ Create automations
+✓ Schedule meetings
+✓ Generate reports
+✓ Manage spreadsheet data
+✓ Send team notifications
+✓ Track KPIs
+```
+
+**Example Prompts**:
+
+```
+"Create a project for our Q4 planning
+initiative in Asana and assign tasks
+to each department head"
+
+"Pull our monthly KPI data from Google
+Sheets and post an update to Slack"
+
+"Set up an automation to log all new
+Salesforce leads to this spreadsheet"
+
+"Schedule a weekly sync meeting with
+the product team and send calendar
+invites to everyone"
+```
+
+---
+
+### 6. Research & Analytics Agent
+
+**Purpose**: Provide data-driven insights and competitive intelligence
+
+**Core Apps**:
+
+- **Perplexity** — Deep research
+- **Google Analytics** — Website data
+- **Firecrawl** — Web scraping
+- **Tavily** — Information retrieval
+- **Exa** — Semantic search
+- **Bright Data** — Market data
+- **Notion** — Documentation
+- **Google Sheets** — Data compilation
+
+**Key Workflows**:
+
+```
+Research Agent Tasks:
+
+1. Market Research
+   App: Perplexity + Firecrawl
+   → Research market trends
+   → Gather competitor info
+   → Compile statistics
+   → Document findings
+
+2. Competitive Intelligence
+   App: Bright Data + Tavily + Notion
+   → Track competitor activities
+   → Monitor pricing changes
+   → Research product updates
+   → Create competitive analysis
+
+3. Customer Research
+   App: Google Analytics + Intercom
+   → Analyze user behavior
+   → Review customer feedback
+   → Identify patterns
+   → Document insights
+
+4. Data Analysis
+   App: Google Sheets + Google Analytics
+   → Pull traffic data
+   → Analyze trends
+   → Create visualizations
+   → Generate reports
+```
+
+**Agent Capabilities**:
+
+```
+Research Agent can:
+✓ Conduct deep research
+✓ Analyze web data
+✓ Scrape competitor sites
+✓ Compile market data
+✓ Create competitive reports
+✓ Analyze user behavior
+✓ Document findings
+✓ Generate insights
+✓ Create visualizations
+```
+
+**Example Prompts**:
+
+```
+"Research the AI automation market
+for 2025. Include market size, growth
+trends, key players, and emerging
+opportunities. Use Perplexity"
+
+"Monitor our top 5 competitors for
+any product updates or pricing
+changes this month"
+
+"Analyze our website traffic from
+the past quarter and identify
+trends in user behavior"
+
+"Create a competitive analysis
+comparing our features to the
+top 3 competitors"
+```
+
+---
+
+### 7. Content Creator Agent
+
+**Purpose**: Produce high-quality content efficiently across multiple channels
+
+**Core Apps**:
+
+- **Canva** — Design graphics
+- **Google Drive** — Store content
+- **Figma** — Create designs
+- **LinkedIn** — Post content
+- **YouTube** — Video management
+- **HeyGen** — Video creation
+- **Notion** — Content calendar
+- **Slack** — Share updates
+
+**Key Workflows**:
+
+```
+Content Creator Agent Tasks:
+
+1. Social Content
+   App: Canva + LinkedIn
+   → Design social graphic
+   → Write caption
+   → Schedule post
+   → Track engagement
+
+2. Blog Content
+   App: Google Drive + Notion
+   → Create outline
+   → Write article
+   → Add visuals
+   → Schedule publication
+
+3. Video Content
+   App: HeyGen + YouTube + Google Drive
+   → Create video script
+   → Generate video
+   → Upload to YouTube
+   → Share links
+
+4. Content Planning
+   App: Notion + Slack
+   → Plan monthly calendar
+   → Track content ideas
+   → Assign deadlines
+   → Post updates
+```
+
+**Agent Capabilities**:
+
+```
+Content Creator Agent can:
+✓ Design graphics
+✓ Write content
+✓ Create videos
+✓ Post to social media
+✓ Schedule content
+✓ Manage content calendar
+✓ Collaborate on docs
+✓ Track performance
+```
+
+**Example Prompts**:
+
+```
+"Create a LinkedIn post about our
+new product launch with a custom
+graphic. Schedule it for tomorrow
+morning"
+
+"Write a blog post about [topic] and
+save it to Google Drive. Include a
+design brief for the cover image"
+
+"Create a 30-second product demo
+video using HeyGen and upload it
+to our YouTube channel"
+
+"Plan our content calendar for next
+month using our Notion template
+and post a summary to Slack"
+```
+
+---
+
+### 8. HR & Recruitment Agent
+
+**Purpose**: Streamline hiring and employee management processes
+
+**Core Apps**:
+
+- **Lever** — Applicant tracking
+- **BambooHR** — Employee data
+- **Google Drive** — Documents
+- **Slack** — Team communication
+- **Gmail** — Email communication
+- **Google Calendar** — Interview scheduling
+- **Workable** — Recruitment
+- **Calendly** — Scheduling
+
+**Key Workflows**:
+
+```
+HR Agent Tasks:
+
+1. Recruitment
+   App: Lever + Gmail
+   → Post job opening
+   → Screen applications
+   → Send interview invites
+   → Track candidates
+
+2. Onboarding
+   App: BambooHR + Google Drive
+   → Create employee record
+   → Prepare onboarding docs
+   → Schedule training
+   → Track completion
+
+3. Interview Coordination
+   App: Calendly + Slack + Gmail
+   → Schedule interviews
+   → Send calendar invites
+   → Notify hiring team
+   → Request feedback
+
+4. Employee Management
+   App: BambooHR + Slack
+   → Review employee records
+   → Update information
+   → Send announcements
+   → Track milestones
+```
+
+**Agent Capabilities**:
+
+```
+HR Agent can:
+✓ Manage job postings
+✓ Screen applications
+✓ Schedule interviews
+✓ Create employee records
+✓ Send communications
+✓ Manage onboarding
+✓ Track hiring pipeline
+✓ Prepare documents
+```
+
+**Example Prompts**:
+
+```
+"Screen the applications for our
+Senior Engineer position and send
+interview invites to the top 5
+candidates"
+
+"Create an onboarding checklist for
+the new sales hire starting Monday
+and send it to their manager"
+
+"Schedule interviews with these
+3 candidates using Calendly and
+send interview prep materials"
+
+"Send a birthday announcement to
+Slack for our team member whose
+birthday is today"
+```
+
+---
+
+### 9. Finance Agent
+
+**Purpose**: Manage financial processes and provide business insights
+
+**Core Apps**:
+
+- **Stripe** — Payment processing
+- **Xero** — Accounting
+- **QuickBooks** — Financial management
+- **Google Sheets** — Data tracking
+- **Slack** — Team updates
+- **Google Drive** — Document storage
+- **Tableau** — Reporting
+- **Square** — POS/Payments
+
+**Key Workflows**:
+
+```
+Finance Agent Tasks:
+
+1. Invoice Management
+   App: Xero + Stripe + Google Sheets
+   → Create invoices
+   → Track payments
+   → Send reminders
+   → Log in spreadsheet
+
+2. Financial Reporting
+   App: QuickBooks + Google Sheets + Slack
+   → Pull financial data
+   → Create reports
+   → Analyze trends
+   → Post summaries
+
+3. Expense Tracking
+   App: Google Sheets + Slack
+   → Log expenses
+   → Categorize
+   → Submit for approval
+   → Archive receipts
+
+4. Budget Management
+   App: Google Sheets + Slack
+   → Track spending
+   → Monitor vs. budget
+   → Alert on overages
+   → Create forecasts
+```
+
+**Agent Capabilities**:
+
+```
+Finance Agent can:
+✓ Create invoices
+✓ Track payments
+✓ Generate financial reports
+✓ Manage expenses
+✓ Monitor budgets
+✓ Analyze cash flow
+✓ Create forecasts
+✓ Send financial updates
+```
+
+**Example Prompts**:
+
+```
+"What's our current cash flow status?
+Pull data from Xero and create a
+summary for the executive team"
+
+"Send invoice reminders to any
+customers with payments due
+this week and track responses"
+
+"Create our monthly financial report
+from Xero data and post a summary
+to the #finance Slack channel"
+
+"Track this month's expenses against
+our budget and alert me if we're
+approaching any limits"
+```
+
+---
+
+### 10. IT & DevOps Agent
+
+**Purpose**: Manage infrastructure and ensure system reliability
+
+**Core Apps**:
+
+- **GitHub** — Code repository
+- **Sentry** — Error tracking
+- **DataDog** — Monitoring
+- **Slack** — Alerts and communication
+- **Jira** — Issue tracking
+- **CloudFlare** — Security
+- **New Relic** — APM
+- **Vercel** — Deployment
+
+**Key Workflows**:
+
+```
+IT/DevOps Agent Tasks:
+
+1. Incident Management
+   App: Sentry + DataDog + Slack
+   → Monitor errors
+   → Create alerts
+   → Notify team
+   → Track resolution
+
+2. Deployment Management
+   App: GitHub + Vercel + Slack
+   → Track deployments
+   → Monitor performance
+   → Rollback if needed
+   → Post updates
+
+3. Infrastructure Monitoring
+   App: DataDog + New Relic + Slack
+   → Monitor uptime
+   → Track performance
+   → Alert on issues
+   → Create reports
+
+4. Security Management
+   App: CloudFlare + GitHub + Slack
+   → Monitor threats
+   → Update firewall rules
+   → Scan code
+   → Post alerts
+```
+
+**Agent Capabilities**:
+
+```
+IT/DevOps Agent can:
+✓ Monitor system health
+✓ Track deployments
+✓ Manage errors
+✓ Create incidents
+✓ Update infrastructure
+✓ Configure alerts
+✓ Generate reports
+✓ Track performance
+```
+
+**Example Prompts**:
+
+```
+"What's the status of our production
+system? Check DataDog and Sentry
+for any critical issues"
+
+"Create a GitHub issue for this bug
+and assign it to the platform team
+in Jira"
+
+"Monitor our deployment to production
+and post updates to #devops as it
+progresses"
+
+"Review our security alerts from
+CloudFlare and update firewall rules
+if needed"
+```
+
+---
+
+## Configuring Apps for Your Agent
+
+### Step 1: Identify Agent Needs
+
+```
+Ask yourself:
+- What tools does this agent need?
+- What data should it access?
+- What actions should it take?
+- What notifications are needed?
+```
+
+### Step 2: Select Relevant Apps
+
+```
+For each app:
+1. Verify the agent needs it
+2. Check what permissions are required
+3. Ensure data is appropriate
+4. Plan the workflows
+```
+
+### Step 3: Configure Permissions
+
+```
+For each app:
+- Grant read permissions if searching
+- Grant write permissions if creating/updating
+- Restrict access to specific folders/teams
+- Document what access is granted
+```
+
+### Step 4: Test Agent Workflows
+
+```
+Before deploying:
+1. Test basic app access
+2. Verify search capabilities
+3. Test write actions
+4. Confirm notifications work
+5. Review output quality
+```
+
+### Step 5: Deploy and Monitor
+
+```
+After deployment:
+- Monitor app usage
+- Check for errors
+- Gather feedback
+- Refine permissions
+- Scale as needed
+```
+
+---
+
+## App Permissions & Security
+
+### Permission Levels
+
+```
+READ Permissions:
+✓ Search documents
+✓ View records
+✓ Access data
+✗ Create or modify
+✗ Delete
+✗ Share with others
+
+WRITE Permissions:
+✓ All READ actions
+✓ Create new records
+✓ Update existing data
+✓ Delete if enabled
+✗ Share or change permissions
+✗ Manage team access
+
+ADMIN Permissions:
+✓ All READ and WRITE actions
+✓ Manage team access
+✓ Change permissions
+✓ Configure settings
+```
+
+### Best Practices
+
+```
+✅ Grant minimal necessary permissions
+✅ Review permissions quarterly
+✅ Use specific folder/team restrictions
+✅ Document what each app accesses
+✅ Revoke unused app permissions
+✅ Audit app activity regularly
+✅ Test with sandbox first
+✅ Monitor for unusual access
+```
+
+---
+
+## Troubleshooting Agent Apps
+
+### App Not Accessible
+
+```
+Issue: Agent can't access app
+
+Check:
+1. Is app connected? (Settings → Apps)
+2. Is agent configured to use it?
+3. Are permissions granted?
+4. Is authentication valid?
+
+Solution:
+1. Verify app is installed
+2. Add app to agent config
+3. Grant necessary permissions
+4. Re-authenticate if needed
+```
+
+### Slow App Performance
+
+```
+Issue: Agent waiting for app response
+
+Causes:
+- App service is slow
+- Network connection issue
+- Large data request
+- Rate limits hit
+
+Solutions:
+- Check app status
+- Retry the request
+- Make requests more specific
+- Optimize data access
+```
+
+### Agent Not Taking Actions
+
+```
+Issue: Agent can't write to app
+
+Check:
+1. Does agent have write permission?
+2. Is authentication valid?
+3. Is the action possible in app?
+4. Are there validation errors?
+
+Solution:
+1. Grant write permissions
+2. Re-authenticate
+3. Verify action format
+4. Check error messages
+```
+
+---
+
+## Advanced Agent Configurations
+
+### Multi-App Workflows
+
+Chain apps together for powerful agent workflows:
+
+```
+Example: Lead Research Agent
+
+Step 1: Apollo App
+   → Find prospect email
+
+Step 2: LinkedIn App
+   → Research prospect background
+
+Step 3: Salesforce App
+   → Check if company exists
+   → Create if needed
+
+Step 4: Gmail App
+   → Draft personalized email
+
+Step 5: Slack App
+   → Post summary to team
+```
+
+### Conditional App Usage
+
+Configure agents to use different apps based on conditions:
+
+```
+Example: Smart Support Agent
+
+IF ticket category is billing:
+   → Use Stripe app
+   → Check payment history
+   → Offer solutions
+
+IF ticket category is technical:
+   → Use Jira app
+   → Check known issues
+   → Create bug report
+
+IF ticket category is product:
+   → Use Intercom app
+   → Check feature requests
+   → Suggest workarounds
+```
+
+### App Failure Handling
+
+Configure graceful degradation when apps fail:
+
+```
+Example: Resilient Sales Agent
+
+Primary: Salesforce (full data)
+Fallback: HubSpot (alternative data)
+If both fail: Use knowledge base
+
+Notification: Alert team in Slack
+Escalation: Create task for manual review
+Recovery: Retry on next interaction
+```
+
+---
+
+## Measuring Agent Success
+
+### Metrics to Track
+
+```
+Efficiency Metrics:
+- Tasks completed per agent
+- Average response time
+- API call efficiency
+- Error rate
+
+Quality Metrics:
+- Accuracy of actions taken
+- Data relevance
+- User satisfaction
+- Revision/correction rate
+
+Adoption Metrics:
+- Agent usage frequency
+- App integration usage
+- Team adoption rate
+- Workflow consistency
+```
+
+### Optimization Tips
+
+```
+To improve agent performance:
+1. Analyze failed requests
+2. Optimize app workflows
+3. Refine agent prompts
+4. Add guardrails
+5. Monitor permissions
+6. Update agent knowledge
+7. Gather user feedback
+8. Iterate configurations
+```
+
+---
+
+## Next Steps
+
+1. **Identify Your Agent Personas** — What types of agents do you need?
+2. **Map Required Apps** — Which apps should each agent use?
+3. **Configure Permissions** — Grant appropriate access levels
+4. **Build Workflows** — Define what agents should do
+5. **Test & Deploy** — Validate before full rollout
+6. **Monitor & Optimize** — Track performance and refine
+
+---
+
+## FAQ
+
+**Can agents use apps I haven't installed?**\
+No. Apps must be installed and configured first. Agents can only use configured apps.
+
+**What if an agent needs an app we don't have?**\
+Request it from the App Directory. Most popular tools are available.
+
+**Can different agents have different app permissions?**\
+Yes. Configure permissions per agent based on their role.
+
+**Are agent actions logged?**\
+Yes. All agent actions are logged and auditable.
+
+**Can I revoke app access immediately?**\
+Yes. Disconnect apps anytime in Settings → Apps.
+
+**What if an agent takes an unwanted action?**\
+Review agent configuration and permissions. Add guardrails or remove app access.
+
+---
+
+_Last updated: 2026 Ready to empower your agents? Configure apps now!_
