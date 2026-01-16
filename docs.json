@@ -162,7 +162,9 @@
                   },
                   {
                     "group": "Personal Productivity & Daily Life",
-                    "pages": []
+                    "pages": [
+                      "en/guides/use-cases/personal-productivity-and-daily-life/examples"
+                    ]
                   },
                   {
                     "group": "Education & Learning",
