@@ -248,6 +248,7 @@
           {
             "tab": "Help center",
             "pages": [
+              "en/help-center/user-safety-and-content-policy",
               "en/protocol/untitled-page",
               "en/introduction/general-settings/status-page",
               "en/help-center/enterprise-implementation",
