@@ -142,7 +142,9 @@
                   "en/guides/use-cases/featured",
                   {
                     "group": "Professional Development",
-                    "pages": []
+                    "pages": [
+                      "en/guides/use-cases/professional-development/examples"
+                    ]
                   },
                   {
                     "group": "Family & Household Management",
