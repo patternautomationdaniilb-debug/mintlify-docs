@@ -162,7 +162,9 @@
                   },
                   {
                     "group": "Education & Learning",
-                    "pages": []
+                    "pages": [
+                      "en/guides/use-cases/education-and-learning/examples"
+                    ]
                   },
                   {
                     "group": "Voice AI Applications",
