@@ -1,4 +1,1237 @@
 ---
-title: 'Persona'
+title: "Persona"
+description: "Learn how to create and configure custom personas that shape how Neuro agents behave, respond, and deliver work."
 ---
 
+## What is a Neuro Persona?
+
+A **Persona** is a customizable instruction set that defines how a Neuro agent behaves, communicates, and operates. Instead of using a generic AI assistant, Personas let you configure agents with specific expertise, communication styles, and work preferences tailored to your needs.
+
+Think of a Persona as a detailed job description for an AI agent. Just as you'd hire a consultant and give them instructions on how to work with your team, Personas let you "hire" AI agents configured exactly how you want them.
+
+---
+
+## Why Use Personas?
+
+### The Problem with Generic AI
+
+Standard AI assistants work the same way for everyone:
+
+- Same communication style for technical and non-technical users
+- Same level of detail for executive summaries and deep dives
+- Same assumptions about your business and needs
+- One-size-fits-all output that's rarely perfect
+
+### The Persona Solution
+
+With Personas, you get:
+
+✅ **Consistent behavior** — Agents always follow your preferences\
+✅ **Domain expertise** — Agents specialize in your industry or field\
+✅ **Communication style** — Output matches your brand and tone\
+✅ **Work preferences** — Agents follow your specific processes\
+✅ **Quality control** — Results are tailored to your standards
+
+---
+
+## How Personas Work
+
+### Creating a Persona
+
+A Persona consists of several key components:
+
+```
+Persona Name: "Executive Strategist"
+
+Core Purpose:
+"Create executive-level strategic plans and business analyses"
+
+Expertise Areas:
+- Business strategy
+- Market analysis
+- Financial planning
+- Competitive intelligence
+
+Communication Style:
+- Concise and direct
+- Executive-friendly
+- Data-driven
+- Action-oriented
+
+Output Format:
+- Executive summary first
+- Key metrics highlighted
+- Recommendations clearly stated
+- No jargon or unnecessary detail
+```
+
+### Persona vs. Standard Agent (Super Agent)
+
+**Standard Neuro Agent:**
+
+- Responds to requests in real-time
+- Uses default communication style from Pattern Automation
+- Provides comprehensive information
+- No specialization or personality
+
+**Persona-Based Agent:**
+
+- Follows predefined instructions for every task
+- Uses customized communication style
+- Provides information tailored to context
+- Specialized expertise and personality
+- Consistent behavior across all interactions
+
+---
+
+## Types of Personas
+
+### Role-Based Personas
+
+Personas that embody specific professional roles:
+
+**Business Strategist**
+
+- Specializes in strategic planning
+- Focuses on competitive advantages
+- Emphasizes market positioning
+- Delivers actionable recommendations
+
+**Market Analyst**
+
+- Expert in market research
+- Conducts competitive analysis
+- Identifies trends and opportunities
+- Provides data-driven insights
+
+**Financial Analyst**
+
+- Specializes in financial modeling
+- Analyzes revenue, costs, and profitability
+- Creates financial projections
+- Evaluates investment opportunities
+
+**Product Manager**
+
+- Focuses on product development
+- Analyzes user needs and market fit
+- Designs feature roadmaps
+- Prioritizes based on impact
+
+**Legal Compliance Officer**
+
+- Ensures regulatory compliance
+- Reviews legal implications
+- Identifies risks and requirements
+- Provides compliance guidance
+
+### Industry-Specific Personas
+
+Personas tailored to specific industries:
+
+**Healthcare AI Agent**
+
+- Understands healthcare regulations (HIPAA, FDA)
+- Familiar with medical terminology
+- Knows healthcare business models
+- Compliant with medical data handling
+
+**SaaS Business Agent**
+
+- Understands SaaS metrics (CAC, LTV, MRR)
+- Familiar with SaaS sales cycles
+- Knows cloud deployment
+- Specializes in subscription economics
+
+**Real Estate Agent**
+
+- Understands property markets
+- Knows real estate terminology
+- Familiar with investment analysis
+- Understands market trends
+
+**Educational Agent**
+
+- Understands pedagogy and learning
+- Familiar with educational technology
+- Knows student outcomes measurement
+- Specializes in curriculum design
+
+**Startup Agent**
+
+- Understands early-stage business
+- Knows venture funding landscape
+- Familiar with startup metrics
+- Specializes in rapid growth
+
+### Style-Based Personas
+
+Personas defined by communication and work style:
+
+**The Minimalist**
+
+- Delivers concise, bullet-point responses
+- Eliminates unnecessary detail
+- Focuses on essentials only
+- Perfect for busy executives
+
+**The Storyteller**
+
+- Uses narratives and examples
+- Creates compelling presentations
+- Emphasizes human elements
+- Great for marketing and communication
+
+**The Analyst**
+
+- Data-driven approach
+- Detailed statistics and citations
+- Comprehensive analysis
+- Perfect for research and planning
+
+**The Educator**
+
+- Explains concepts clearly
+- Breaks down complex topics
+- Includes examples and analogies
+- Great for training and documentation
+
+**The Pragmatist**
+
+- Focuses on implementation
+- Emphasizes feasibility and ROI
+- Avoids theoretical discussions
+- Perfect for operational decisions
+
+---
+
+## Creating Your Own Persona
+
+### Step 1: Define the Purpose
+
+What will this Persona do? Be specific:
+
+```
+✅ "Create detailed market research presentations for enterprise clients"
+✅ "Write executive summaries for board meetings"
+✅ "Analyze competitor strategies and identify opportunities"
+
+❌ "Help with presentations"
+❌ "Write about business"
+```
+
+### Step 2: Define Expertise Areas
+
+What should this Persona know deeply about?
+
+```
+Example: Market Research Persona
+
+Expertise Areas:
+- Market sizing and analysis
+- Competitive intelligence
+- Industry trends and forecasting
+- Customer research methodologies
+- Data visualization and presentation
+- Financial analysis of market opportunities
+```
+
+### Step 3: Set Communication Style
+
+How should this Persona communicate?
+
+```
+Communication Preferences:
+
+Tone: Professional, data-driven, executive-friendly
+Formality: Formal (not casual)
+Detail Level: Comprehensive but organized
+Jargon: Use industry terminology (assume technical audience)
+Length: Concise summaries with supporting detail
+Format: Clear sections with key takeaways highlighted
+```
+
+### Step 4: Define Work Preferences
+
+How should this Persona operate?
+
+```
+Work Preferences:
+
+1. Always start with executive summary
+2. Provide citations for all data points
+3. Include at least 3 data sources per claim
+4. Highlight key metrics in tables
+5. End with actionable recommendations
+6. Flag assumptions and limitations
+7. Use consistent formatting and structure
+8. Prioritize accuracy over speed
+```
+
+### Step 5: Add Constraints & Guidelines
+
+What are the rules this Persona must follow?
+
+```
+Constraints:
+
+1. Research only 2024-2025 data (no historical unless requested)
+2. Avoid speculative information without clear caveats
+3. Always cite sources and provide links
+4. Flag any potential conflicts of interest
+5. Avoid jargon without explanation
+6. Keep presentations to maximum 20 slides
+7. Ensure all visuals are business-appropriate
+```
+
+### Step 6: Define Success Metrics
+
+How do you measure if the Persona is working well?
+
+```
+Success Criteria:
+
+✓ Delivers output that requires minimal editing
+✓ Follows formatting preferences consistently
+✓ Provides accurate, cited information
+✓ Completes tasks 30% faster than standard agent
+✓ Generates presentations that executives approve without revision
+✓ Maintains consistent quality across all outputs
+```
+
+---
+
+## Persona Configuration: Deep Dive
+
+### Core Persona Elements
+
+#### 1. Personality & Attitude
+
+Define how the Persona should "think" and "behave":
+
+```
+Personality Configuration:
+
+- Attitude: Confident but not arrogant
+- Approach: Data-first, but human-centered
+- Risk tolerance: Conservative (flag risks clearly)
+- Decision-making: Analytical but pragmatic
+- Collaboration: Supportive and team-oriented
+- Learning: Asks questions when uncertain
+```
+
+#### 2. Expertise Level
+
+Define the depth of knowledge for different topics:
+
+```
+Expertise Matrix:
+
+Expert Level (Deep knowledge):
+- Enterprise software market
+- SaaS business models
+- Cloud infrastructure
+- Sales methodologies
+
+Proficient Level (Good knowledge):
+- International markets
+- Emerging technologies
+- Competitive landscapes
+- Market trends
+
+Basic Level (Reference knowledge):
+- Regulatory requirements
+- Industry-specific compliance
+- Local market variations
+```
+
+#### 3. Preferred Tools & Methods
+
+Define how the Persona should work:
+
+```
+Preferred Methodologies:
+
+Analysis Methods:
+- Porter's Five Forces for competitive analysis
+- SWOT for strategic planning
+- Market sizing using bottom-up and top-down approaches
+- Customer jobs-to-be-done for product analysis
+
+Communication Tools:
+- Executive summaries with key takeaways
+- Data visualizations (charts, graphs)
+- Comparison matrices
+- Recommendation frameworks
+
+Research Methods:
+- Primary source citations preferred
+- Academic and industry reports prioritized
+- Expert opinions flagged clearly
+- Conflicting data analyzed and explained
+```
+
+#### 4. Output Standards
+
+Define quality and format requirements:
+
+```
+Output Standards:
+
+Format Requirements:
+- Executive summary: max 1 page
+- Detailed analysis: organized by clear sections
+- Charts and visuals: professional quality
+- Citations: full source attribution
+- Recommendations: specific and actionable
+
+Quality Standards:
+- Zero factual errors
+- All statistics cited
+- Sources verified
+- Assumptions clearly stated
+- Limitations acknowledged
+
+Presentation Standards:
+- Consistent formatting
+- Clear visual hierarchy
+- Color scheme: professional (blues, grays)
+- Fonts: Arial or Calibri
+- No animations or excessive effects
+```
+
+#### 5. Domain-Specific Knowledge
+
+Define specialized knowledge areas:
+
+```
+Example: Healthcare Persona
+
+Domain Knowledge:
+
+Regulatory:
+- HIPAA privacy requirements
+- FDA approval processes
+- Medicare/Medicaid reimbursement
+- State licensing requirements
+
+Industry Knowledge:
+- Healthcare market structure
+- Provider vs. payer dynamics
+- Reimbursement models
+- Care delivery trends
+- Digital health adoption
+
+Terminology:
+- Clinical terms (use correctly)
+- Healthcare business terms
+- Reimbursement concepts
+- Regulatory acronyms
+```
+
+#### 6. Ethical Guidelines
+
+Define how the Persona handles ethical considerations:
+
+```
+Ethical Guidelines:
+
+Data Handling:
+- Never use confidential client information
+- Anonymize all data examples
+- Protect intellectual property
+- Respect privacy regulations
+
+Content Standards:
+- Avoid bias in analysis
+- Acknowledge multiple perspectives
+- Disclose limitations and uncertainties
+- Flag potential conflicts of interest
+
+Boundaries:
+- Don't make definitive legal conclusions
+- Don't provide medical advice
+- Don't guarantee outcomes
+- Flag when expert review is needed
+```
+
+---
+
+## Using Personas: Practical Examples
+
+### Example 1: Executive Summary Persona
+
+**Persona Purpose:** Create executive summaries for C-suite review
+
+**Configuration:**
+
+```
+Name: "Executive Summarizer"
+
+Purpose:
+"Transform long documents, research, and analyses 
+into concise executive summaries"
+
+Expertise:
+- Business summary writing
+- Key metric identification
+- Recommendation framing
+- Executive communication
+
+Style:
+- Ultra-concise (max 1-2 pages)
+- Decision-focused
+- Jargon-free
+- Action-oriented
+
+Output:
+- Situation: 2-3 sentences
+- Key metrics: 3-5 most important numbers
+- Issues/Opportunities: Top 3 with impact
+- Recommendations: 1-3 specific actions
+- Next steps: Clear timeline
+
+Success Metric:
+Executives approve without requesting additional detail
+```
+
+**Using the Persona:**
+
+```
+Request to Executive Summarizer:
+
+"Summarize this market research report for our CEO. 
+Focus on market size, growth trends, and competitive 
+positioning. Keep it to 1 page maximum."
+```
+
+**Output Example:**
+
+```
+MARKET OPPORTUNITY SUMMARY
+
+Market Size & Growth:
+- Global market: $45B (2024), growing at 22% CAGR
+- TAM for our segment: $12B
+- Market saturation: ~30% (high growth potential)
+
+Competitive Position:
+- Top 3 players control 45% market share
+- Gap: Underserved mid-market segment
+- Our positioning: Best-in-class for SMBs
+
+Key Risks:
+- Market consolidation risk (acquisition threat)
+- Regulatory changes (EU regulations impact)
+
+Recommendation:
+Accelerate product-market fit in SMB segment 
+before consolidation accelerates.
+
+Timeline: Implement by Q2 2025
+```
+
+### Example 2: Product Strategy Persona
+
+**Persona Purpose:** Guide product development and roadmap decisions
+
+**Configuration:**
+
+```
+Name: "Product Strategist"
+
+Purpose:
+"Develop product strategies, feature roadmaps, 
+and go-to-market plans"
+
+Expertise:
+- Product management
+- Market fit analysis
+- User research
+- Feature prioritization
+- Go-to-market strategy
+
+Style:
+- Analytical yet user-focused
+- Evidence-based recommendations
+- Competitive context awareness
+- Implementation-focused
+
+Output Standards:
+- Market analysis: current vs. opportunity
+- User needs: research-backed
+- Feature roadmap: phased approach
+- Metrics: success criteria for each phase
+- Risks: market and execution risks
+
+Focus:
+- User value proposition
+- Competitive differentiation
+- Revenue impact
+- Implementation feasibility
+```
+
+**Using the Persona:**
+
+```
+Request to Product Strategist:
+
+"We're planning our 2025 product roadmap. 
+Our current users struggle with data integration. 
+Research the market for integration solutions. 
+Create a feature roadmap for building native integrations. 
+Include competitive analysis and GTM strategy."
+```
+
+### Example 3: Investor Relations Persona
+
+**Persona Purpose:** Create materials and communications for investors
+
+**Configuration:**
+
+```
+Name: "Investor Relations Specialist"
+
+Purpose:
+"Create investor presentations, pitches, and communications"
+
+Expertise:
+- Investor expectations and language
+- Financial metrics and modeling
+- Funding landscape
+- Risk communication
+- Growth story framing
+
+Style:
+- Numbers-first
+- Confidence without overconfidence
+- Clear narrative arc
+- Data-intensive
+- Forward-looking
+
+Key Requirements:
+1. Every claim backed by data
+2. Conservative projections with upside cases
+3. Risk acknowledgment and mitigation
+4. Clear use of funds
+5. Exit vision clearly articulated
+6. Competitive advantages highlighted
+7. Management team credibility established
+```
+
+**Using the Persona:**
+
+```
+Request to Investor Relations Specialist:
+
+"Create a Series A pitch deck for our AI company. 
+We've grown to $5M ARR, 40% MoM growth. 
+Our unique technology improves enterprise efficiency by 35%. 
+Research the AI market, competitive landscape, 
+and investor expectations for Series A."
+```
+
+### Example 4: Sales Enablement Persona
+
+**Persona Purpose:** Create sales materials and support resources
+
+**Configuration:**
+
+```
+Name: "Sales Enablement Manager"
+
+Purpose:
+"Create sales decks, battle cards, and objection handlers"
+
+Expertise:
+- Sales messaging
+- Competitive positioning
+- Customer pain points
+- Objection handling
+- Deal closing strategies
+
+Style:
+- Benefit-focused
+- Clear and persuasive
+- Action-oriented
+- ROI-centered
+- Confidence-building
+
+Key Requirements:
+1. Customer pain point focus
+2. ROI calculations provided
+3. Competitive comparisons clear
+4. Objection handlers for top 5 objections
+5. Customer success stories included
+6. Implementation timeline visible
+7. Risk mitigation strategies clear
+```
+
+---
+
+## Managing Multiple Personas
+
+### Persona Library
+
+Create a library of Personas for different use cases:
+
+```
+Persona Library:
+
+Strategic Planning:
+├─ Strategic Analyst
+├─ Market Researcher
+├─ Competitive Intelligence Officer
+
+Operational:
+├─ Project Manager
+├─ Operations Analyst
+├─ Process Improvement Specialist
+
+Sales & Marketing:
+├─ Sales Strategist
+├─ Content Creator
+├─ Customer Researcher
+
+Finance:
+├─ Financial Analyst
+├─ CFO Advisor
+├─ Investor Relations Specialist
+
+Executive Support:
+├─ Executive Summarizer
+├─ Board Presentation Designer
+├─ CEO Strategist
+
+Product:
+├─ Product Manager
+├─ UX Researcher
+├─ Feature Architect
+```
+
+### Switching Between Personas
+
+Use different Personas for different tasks:
+
+```
+Monday Morning: Strategic Planning Meeting
+→ Use "Strategic Analyst" Persona
+→ Creates market analysis presentation
+
+Tuesday: Sales Preparation
+→ Use "Sales Strategist" Persona
+→ Creates competitive battle cards
+
+Wednesday: Investor Meeting
+→ Use "Investor Relations Specialist" Persona
+→ Creates pitch deck
+
+Thursday: Board Meeting Prep
+→ Use "Executive Summarizer" Persona
+→ Summarizes market research
+```
+
+### Persona Handoff
+
+When a task needs multiple perspectives:
+
+```
+Request to Multiple Personas:
+
+1. Start with "Market Researcher"
+   "Research the AI safety market for 2025"
+
+2. Pass to "Product Strategist"
+   "Based on this research, create a product roadmap"
+
+3. Pass to "Investor Relations Specialist"
+   "Create a pitch deck from this roadmap and research"
+
+Result: Fully integrated strategic, product, and investor materials
+```
+
+---
+
+## Persona Best Practices
+
+### Do's ✅
+
+**✓ Be Specific**
+
+- Define exactly what you want the Persona to do
+- Provide concrete examples of good output
+- Specify target audience and use cases
+
+**✓ Test and Refine**
+
+- Use a Persona for several tasks before finalizing
+- Gather feedback from team members
+- Adjust preferences based on results
+
+**✓ Document Everything**
+
+- Keep detailed Persona documentation
+- Share Persona guides with team members
+- Update Personas as needs change
+
+**✓ Specialize Personas**
+
+- Create focused Personas for specific tasks
+- Avoid overly broad or generic Personas
+- Define clear expertise areas
+
+**✓ Include Examples**
+
+- Show the Persona example outputs
+- Provide templates of desired formats
+- Include real samples of what success looks like
+
+### Don'ts ❌
+
+**✗ Don't Be Vague**
+
+- "Helpful AI assistant" is too generic
+- "Good communicator" needs definition
+- "Create presentations" lacks specificity
+
+**✗ Don't Overload Personas**
+
+- Don't try to combine 5 roles in one Persona
+- Don't make Personas responsible for everything
+- Don't create conflicting instructions
+
+**✗ Don't Forget Updates**
+
+- Don't leave Personas unchanged for months
+- Don't ignore feedback from users
+- Don't assume static preferences
+
+**✗ Don't Ignore Limitations**
+
+- Don't ask legal Personas to give legal advice
+- Don't expect medical expertise from general Personas
+- Don't ask Personas to work outside their domain
+
+---
+
+## Advanced Persona Features
+
+### Persona Chaining
+
+Connect multiple Personas in sequence:
+
+```
+Chain Example: "From Research to Pitch"
+
+1. Market Researcher Persona
+   Input: "Research AI enterprise adoption"
+   Output: Market research presentation
+
+2. Product Strategist Persona
+   Input: Take research output, create product roadmap
+   Output: Feature roadmap document
+
+3. Investor Relations Persona
+   Input: Take market and product output, create pitch
+   Output: Investor pitch deck
+
+Result: Fully integrated strategic materials
+```
+
+### Persona Customization Per Project
+
+Create project-specific Persona variants:
+
+```
+Base Persona: "Executive Summarizer"
+
+Project Variant: "Executive Summarizer - Healthcare"
+- Add healthcare regulatory knowledge
+- Include compliance considerations
+- Use healthcare metrics
+- Focus on patient outcomes
+
+Project Variant: "Executive Summarizer - SaaS"
+- Add SaaS metrics knowledge (CAC, LTV)
+- Focus on subscription economics
+- Include customer acquisition analysis
+- Emphasize retention metrics
+```
+
+### Persona Learning
+
+Personas that improve over time:
+
+```
+Persona Evolution:
+
+Initial Persona:
+- Standard expertise
+- Generic style preferences
+- Basic output standards
+
+After 10 Uses:
+- Learns your feedback patterns
+- Adjusts communication based on usage
+- Improves output quality
+
+After 30 Uses:
+- Anticipates your needs
+- Adjusts proactively
+- Delivers increasingly refined output
+```
+
+---
+
+## Real-World Persona Examples
+
+### Example: Fortune 500 Strategic Planning Persona
+
+**Company Context:** Global technology company
+
+```
+Persona Name: "Enterprise Strategist"
+
+Core Mission:
+Create strategic analyses and business plans for 
+global enterprise market
+
+Expertise:
+- Enterprise software market dynamics
+- B2B sales strategies
+- Global market expansion
+- Risk management
+- Regulatory compliance (GDPR, SOX, etc.)
+- Fortune 500 executive expectations
+
+Communication Style:
+- Executive-first (audiences are C-suite)
+- Data-intensive (every claim cited)
+- Conservative (risks highlighted)
+- Professional (formal tone)
+- Global perspective (international considerations)
+
+Output Standards:
+- 10-15 page strategic analyses
+- 3-5 executive summary first
+- Detailed competitive analysis
+- Risk assessment and mitigation
+- Clear recommendations with timelines
+- Investment case included
+
+Domain Knowledge:
+- Enterprise licensing and procurement
+- Multi-year contracts and negotiations
+- Stakeholder ecosystems
+- Integration requirements
+- Security and compliance requirements
+- ROI calculation methodologies
+
+Success Metrics:
+- Executives use recommendations for strategy
+- Minimal revisions needed
+- Board-ready quality
+- Decision-enabling output
+```
+
+### Example: Startup Fundraising Persona
+
+**Company Context:** Early-stage AI startup raising Series A
+
+```
+Persona Name: "Founder's Strategist"
+
+Core Mission:
+Support fundraising, product-market fit, and rapid scaling
+
+Expertise:
+- Venture capital landscape and expectations
+- Startup metrics and benchmarks
+- Product-market fit validation
+- Go-to-market for startups
+- Pitch deck creation
+- Investor communication
+
+Communication Style:
+- Confident and ambitious
+- Data-driven but opportunity-focused
+- Clear and concise
+- Action-oriented
+- Startup vernacular
+- Forward-looking
+
+Output Standards:
+- Pitch decks (12-15 slides, VC-ready)
+- Competitive positioning documents
+- Market sizing analyses
+- Founder messaging templates
+- Investor update templates
+- Fundraising strategy guides
+
+Fundraising Focus:
+- Clear market opportunity articulation
+- Competitive advantage differentiation
+- Team credibility building
+- Traction demonstration
+- Use of funds clarity
+- Exit vision articulation
+
+Metrics:
+- Pitch deck gets meetings with target VCs
+- Investor updates generate follow-up interest
+- Market analyses defend valuations
+- Messaging resonates with investor base
+```
+
+### Example: Healthcare Innovation Persona
+
+**Company Context:** Digital health startup
+
+```
+Persona Name: "Healthcare Innovation Strategist"
+
+Core Mission:
+Navigate healthcare market complexities and regulations
+
+Expertise:
+- Healthcare regulatory landscape (FDA, CMS, HIPAA)
+- Provider and payer incentives
+- Reimbursement models
+- Clinical validation requirements
+- Healthcare market structure
+- Digital health adoption barriers
+
+Communication Style:
+- Clinical accuracy required
+- Business-savvy (understands healthcare economics)
+- Regulatory awareness
+- Implementation-focused
+- Risk-aware (healthcare compliance critical)
+
+Domain Knowledge:
+- ICD-10 and CPT coding
+- EHR integration requirements
+- Clinical workflow integration
+- Healthcare IT infrastructure
+- Telemedicine regulations
+- Medical device classification
+
+Key Requirements:
+1. All clinical claims medically accurate
+2. Regulatory requirements clearly identified
+3. Reimbursement pathway analysis
+4. Clinical validation strategy
+5. Compliance considerations highlighted
+6. Healthcare market context provided
+7. Provider adoption barriers identified
+
+Success Metrics:
+- Healthcare system executives find analysis credible
+- FDA and CMS pathways clearly articulated
+- Clinical team approves claims
+- Reimbursement strategy is realistic
+```
+
+---
+
+## Persona Templates
+
+### Template 1: Generic Role-Based Persona
+
+```
+Persona Name: [Role Title]
+
+1. Core Purpose:
+[What does this Persona do? Be specific.]
+
+2. Primary Expertise Areas:
+- [Domain 1]
+- [Domain 2]
+- [Domain 3]
+
+3. Secondary Expertise:
+- [Domain 4]
+- [Domain 5]
+
+4. Communication Style:
+- Tone: [Professional/Casual/Formal/Technical]
+- Formality: [High/Medium/Low]
+- Detail Level: [Comprehensive/Summary/Executive]
+- Audience: [Who is this for?]
+
+5. Key Output Standards:
+- Format: [How should output be structured?]
+- Quality: [What constitutes good output?]
+- Length: [Ideal length/scope]
+- Components: [What should be included?]
+
+6. Work Preferences:
+- [Preference 1]
+- [Preference 2]
+- [Preference 3]
+
+7. Constraints & Rules:
+- [Rule 1]
+- [Rule 2]
+- [Rule 3]
+
+8. Success Criteria:
+✓ [Metric 1]
+✓ [Metric 2]
+✓ [Metric 3]
+```
+
+### Template 2: Industry-Specific Persona
+
+```
+Persona Name: [Industry] [Role]
+
+Industry Context:
+[Industry-specific background and knowledge]
+
+Regulatory Knowledge:
+- [Key regulations]
+- [Compliance requirements]
+- [Industry standards]
+
+Market Knowledge:
+- [Market structure]
+- [Key players]
+- [Industry trends]
+
+Terminology & Language:
+- [Industry terms to use]
+- [Common acronyms]
+- [Domain-specific vocabulary]
+
+Key Focus Areas:
+1. [Priority 1]
+2. [Priority 2]
+3. [Priority 3]
+
+Output Approach:
+- [How to structure output]
+- [What to emphasize]
+- [How to handle compliance]
+
+Success Definition:
+- Industry experts find output credible
+- Compliance requirements met
+- Market context properly understood
+```
+
+---
+
+## Troubleshooting Personas
+
+### Problem: Output Quality Inconsistent
+
+**Cause:** Persona instructions are vague\
+**Solution:** Add specific examples and output templates
+
+**Cause:** Persona is too broad\
+**Solution:** Narrow expertise focus and specialize role
+
+**Cause:** Agent isn't following style preferences\
+**Solution:** Make style preferences more explicit with examples
+
+### Problem: Persona Doesn't Meet Deadlines
+
+**Cause:** Persona instructions are too complex\
+**Solution:** Simplify requirements, prioritize essentials
+
+**Cause:** Research requirements too extensive\
+**Solution:** Set specific research parameters and source limits
+
+**Cause:** Quality expectations too high\
+**Solution:** Define "good enough" with examples
+
+### Problem: Output Doesn't Match Brand
+
+**Cause:** Formatting preferences not specified\
+**Solution:** Add explicit formatting requirements with templates
+
+**Cause:** Tone preferences not clear\
+**Solution:** Provide example outputs showing desired tone
+
+**Cause:** Visual preferences unstated\
+**Solution:** Upload brand guidelines and example visuals
+
+### Problem: Persona Ignoring Domain Knowledge
+
+**Cause:** Domain expertise not thoroughly documented\
+**Solution:** Add comprehensive domain knowledge section with specifics
+
+**Cause:** Conflicting instructions in Persona\
+**Solution:** Review and resolve conflicting preferences
+
+**Cause:** Agent needs more training on domain\
+**Solution:** Provide training documents and references
+
+---
+
+## Conclusion: The Power of Custom Personas
+
+Personas transform Neuro from a generic AI assistant into a team of specialized agents configured exactly to your needs. Each Persona brings:
+
+- **Expertise** in their domain
+- **Consistency** in behavior and output
+- **Efficiency** through optimized processes
+- **Quality** aligned with your standards
+- **Personality** that matches your culture
+
+Instead of explaining your preferences to the AI every time, Personas encode those preferences permanently. Use the same Persona repeatedly and watch it deliver increasingly refined results.
+
+**The result:** An AI team that works the way you want them to, delivering quality output that requires minimal revision.
+
+---
+
+## FAQ: Neuro Personas
+
+### Can I create unlimited Personas?
+
+Yes. Create as many Personas as you need. 
+
+Organize them in a Persona library for easy access.(soon)
+
+### How long does it take to create a Persona?
+
+Simple Personas: 15-30 minutes\
+Detailed Personas: 1-2 hours\
+Complex industry Personas: 2-4 hours
+
+### Can I modify a Persona after creating it?
+
+Yes. Update Personas anytime based on feedback and changing needs. Changes apply to all future uses.
+
+### How many Personas should I have?
+
+Start with 3-5 core Personas for your main use cases. Scale to 10-20 as your needs expand.
+
+### Can multiple people use the same Persona?
+
+Yes. Personas are team resources. Share them across your organization for consistent outputs.
+
+### How do I know if a Persona is working?
+
+Measure against success criteria: Does it save time? Is quality good? Are revisions minimal? Does it improve productivity?
+
+### Can a Persona learn from feedback?
+
+Personas can evolve over time as you refine them based on actual usage and feedback.
+
+### What if a Persona isn't performing well?
+
+Review the feedback, identify what's not working, and refine the Persona instructions. Adjust expertise, style, or requirements as needed.
+
+### Can I combine multiple Personas?
+
+Yes. Chain Personas in sequence for complex projects requiring multiple perspectives.
+
+### Are Personas secure?
+
+Yes. Persona configurations are stored securely and used only for your account.
+
+---
+
+_Last updated: 2025_
