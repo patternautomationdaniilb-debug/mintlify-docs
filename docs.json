@@ -146,7 +146,9 @@
                   },
                   {
                     "group": "Family & Household Management",
-                    "pages": []
+                    "pages": [
+                      "en/guides/use-cases/family-and-household-management/examples"
+                    ]
                   },
                   {
                     "group": "Entertainment & Lifestyle",
