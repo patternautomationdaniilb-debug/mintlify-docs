@@ -172,7 +172,9 @@
                   },
                   {
                     "group": "Analytics & Insights",
-                    "pages": []
+                    "pages": [
+                      "en/guides/use-cases/analytics-and-insights/examples"
+                    ]
                   },
                   {
                     "group": "Content & Marketing",
