@@ -1,11 +1,304 @@
 ---
 title: "Overview"
+description: "Pattern Automation Lab's frontier AI model with game-based training"
 ---
 
-**North star**
+## What is North Star Model?
 
-https://github.com/atfortes/Awesome-LLM-Reasoning
+North Star Model is Pattern Automation Lab's flagship large language model that combines **high computational efficiency** with **superior reasoning and agent performance**. Unlike traditional language models, North Star employs an innovative training methodology using simulated video game environments to develop robust reasoning capabilities.
 
-[<u>https://moonshotai.github.io/Kimi-K2/</u>](https://moonshotai.github.io/Kimi-K2/)
+**Key Innovation:** The model progresses through increasingly complex interactive game scenarios—from Tetris to Chess to custom Minecraft and Sims-like environments—developing spatial reasoning, multi-step planning, and sophisticated tool-use patterns that generalize to real-world applications.
 
-[<u>https://learn.microsoft.com/en-us/ai/playbook/</u>](https://learn.microsoft.com/en-us/ai/playbook/)
+---
+
+## Technical Breakthroughs
+
+### 1. Pattern Sparse Attention (PSA)
+
+- **Efficient attention mechanism** that substantially reduces computational complexity
+- Preserves model performance in **long-context scenarios**
+- Handles complex game states and interaction sequences efficiently
+- Selects **top-k relevant tokens** (2048) instead of processing all tokens
+
+### 2. Scalable Reinforcement Learning Framework
+
+- **10%+ of pre-training cost** allocated to post-training
+- Robust RL protocol enabling frontier-level performance
+- **Group Relative Policy Optimization (GRPO)** algorithm
+- Balances performance across diverse domains
+
+### 3. Advanced Context Engineering
+
+- **KV-cache optimization** reducing costs by **10x**
+- Average input-to-output ratio: **100:1** in production
+- Production-grade agent performance
+- Sophisticated error recovery mechanisms
+
+### 4. Large-Scale Agentic Task Synthesis
+
+- Novel synthesis pipeline for training data generation
+- Integrates reasoning into tool-use scenarios
+- Scalable agentic post-training methodology
+
+---
+
+## Game-Based Training Methodology
+
+North Star's unique training progression through video game environments:
+
+**Phase 1: Logical Chain Development** → Fundamental reasoning chains through structured problems
+
+**Phase 2: Tetris Environment** → Spatial reasoning, pattern recognition, sequential decision-making
+
+**Phase 3: Racing Simulations** → Continuous control, trajectory planning, real-time decisions
+
+**Phase 4: Chess Mastery** → Deep strategic thinking, multi-move planning, game tree evaluation
+
+**Phase 5: Minecraft Environment (Custom)** → Open-ended problem-solving, resource management, tool usage, 3D navigation
+
+**Phase 6: Sims-Style Simulation (Ongoing)** → Complex social reasoning, multi-agent interactions, long-term planning
+
+**Result:** The model develops robust reasoning chains, spatial understanding, and multi-step planning capabilities through direct interaction with dynamic virtual environments.
+
+---
+
+## Model Variants
+
+### North Star Model (Standard)
+
+- High efficiency with frontier-level performance
+- Optimized for production deployments
+- Fast inference with maintained quality
+- **2M token context window**
+
+### North Star Model Speciale (High-Compute)
+
+- Surpasses comparable frontier models
+- **Gold-medal performance** in:
+  - 2025 International Mathematical Olympiad (IMO)
+  - International Olympiad in Informatics (IOI)
+- Enhanced reasoning proficiency
+- Extended post-training compute
+
+---
+
+## Safety & Alignment
+
+### Comprehensive Safety Training
+
+- **Refusal policy** for harmful requests (CBRN, cyber weapons, CSAM, etc.)
+- **System prompt** with safety guidelines
+- **Input filters** for harmful content classes
+- Low hallucination rates through targeted post-training
+
+### Evaluated Behaviors
+
+- ✅ **Abuse potential** - Refuses 95%+ harmful requests
+- ✅ **Deception** - Minimized through honesty training (MASK dataset)
+- ✅ **Political bias** - Truth-seeking, politically objective
+- ✅ **Sycophancy** - Reduced through training
+- ✅ **Dual-use capabilities** - Below flagship model levels
+
+### Safety Mitigations
+
+- Fixed safety system prompt prefix
+- Model-based input filters
+- Reasoning-enabled honesty improvements
+- Agentic abuse safeguards (AgentHarm, AgentDojo benchmarks)
+
+---
+
+## Architecture Highlights
+
+### Pattern Sparse Attention Components
+
+1. **Lightning Indexer**
+   - Computes index scores between query and preceding tokens
+   - Determines which tokens to select
+   - Designed for sequential game state representations
+2. **Fine-Grained Token Selection**
+   - Retrieves only top-k key-value entries
+   - Balances efficiency with performance
+   - Mirrors game-playing attention mechanisms
+
+### Game Environment Integration
+
+- **State Encoder** - Processes grid-based game states
+- **Action Decoder** - Maps outputs to valid game actions
+- **Reward Processor** - Integrates game rewards into training
+- **Reasoning Bridge** - Connects game reasoning to natural language
+
+---
+
+## Production AI Agent Capabilities
+
+### Strategic Design Principles
+
+✓ **In-context learning** over end-to-end training ✓ Rapid iteration (hours vs. weeks) ✓ Orthogonality to base model progress ✓ Flexibility without retraining
+
+### KV-Cache Optimization
+
+- **10x cost reduction** (cached: \$0.30/MTok vs uncached: \$3.00/MTok)
+- Dramatically improved response times
+- Single most important metric for production agents
+- Optimized for agent operational chains
+
+### Agent Operational Chain
+
+1. Model selects action from action space
+2. Action executes in environment (virtual sandbox)
+3. Result added to context as observation
+4. Cycle repeats until task completion
+
+---
+
+## Post-Training Methodology
+
+### Specialist Distillation
+
+Six specialized domains, each supporting thinking and non-thinking modes:
+
+- Mathematics
+- Programming
+- General logical reasoning
+- General agentic tasks
+- Agentic coding
+- Agentic search
+
+### Mixed RL Training
+
+- **Group Relative Policy Optimization (GRPO)** algorithm
+- Merges reasoning, agent, and human alignment into one RL stage
+- Prevents catastrophic forgetting
+- Balances performance across diverse domains
+
+### Game-Based Insights Integration
+
+- Natural reward signals from games
+- Clear success/failure states inform reward shaping
+- Unbiased KL estimation from off-policy game learning
+- Off-policy sequence masking developed through Chess/Minecraft training
+
+---
+
+## Key Performance Characteristics
+
+### Efficiency
+
+- **Reduced computational complexity** through PSA
+- **Long-context optimization** (2M tokens)
+- **Fast inference** without quality loss
+- **Cost-effective** production deployment
+
+### Reasoning
+
+- **Frontier-level performance** comparable to leading proprietary models
+- **Gold-medal Olympiad performance** (Speciale variant)
+- **Robust reasoning chains** from game-based training
+- **Multi-step planning** capabilities
+
+### Agent Performance
+
+- **Superior generalization** in interactive environments
+- **Robust instruction-following** in complex scenarios
+- **Production-grade reliability** through context engineering
+- **Scalable tool-use** through agentic task synthesis
+
+---
+
+## Integration with Language Capabilities
+
+### Verbalized Reasoning
+
+- Model verbalizes reasoning while playing games
+- Creates natural language chains of thought
+- Corresponds in-game actions to explanations
+- Develops robust thinking patterns
+
+### Tool-Calling Foundation
+
+- Maps game actions to tool invocations
+- Establishes MCP (Model Context Protocol) agent functionality
+- Generalizes to real-world API interactions
+- Sophisticated multi-tool coordination
+
+### Context Management Skills
+
+- Game state tracking → conversational context management
+- Long interaction sequences → multi-turn conversations
+- Resource tracking → complex workflow orchestration
+- Error recovery → robust production deployment
+
+---
+
+## Why Game-Based Training Works
+
+**Traditional text-only training:**
+
+- Limited to passive information processing
+- No interactive feedback loops
+- Difficult to develop multi-step planning
+
+**Game-based interactive training:**
+
+- ✅ Goal-oriented scenarios requiring planning
+- ✅ Immediate feedback from environment
+- ✅ Natural reward signals for learning
+- ✅ Spatial reasoning development
+- ✅ Resource management and tool usage
+- ✅ Multi-agent social interactions (Sims)
+- ✅ Generalizable reasoning patterns
+
+**Result:** North Star develops robust agentic capabilities that transfer directly to real-world applications like customer support, research agents, and autonomous task execution.
+
+---
+
+## Deployment Considerations
+
+### Recommended Usage
+
+- **Enable reasoning mode** for truthfulness-sensitive applications
+- **Include honesty instructions** in system prompts
+- **Leverage KV-cache** for production cost optimization
+- **Design contexts** with identical prefixes for cache hits
+- **Monitor context growth** in agentic loops
+
+### Performance Optimization
+
+- **Context-to-output ratio:** Typically 100:1 in agent scenarios
+- **KV-cache hit rate:** Single most important cost/latency metric
+- **Time to First Token (TTFT):** Dramatically reduced with cache
+- **Production costs:** 10x lower with proper cache optimization
+
+---
+
+**Ongoing Development:**
+
+- Continued training in Sims-style environment
+- Enhanced social reasoning capabilities
+- Expanded tool-use scenarios
+- Production deployment optimizations
+
+---
+
+## Summary
+
+North Star Model represents a **paradigm shift** in AI training methodology:
+
+**Instead of:** Text-only passive learning\
+**North Star uses:** Interactive game-based reasoning development
+
+**Instead of:** Generic vanilla attention\
+**North Star uses:** Pattern Sparse Attention for efficiency
+
+**Instead of:** Limited post-training compute\
+**North Star allocates:** 10%+ of pre-training cost to post-training
+
+**Instead of:** Basic agent capabilities\
+**North Star delivers:** Production-grade agentic performance
+
+**Result:** A frontier model that harmonizes efficiency, reasoning, and agent performance through innovative training approaches—achieving gold-medal Olympiad performance while maintaining practical deployment efficiency.
+
+---
+
+_For detailed technical specifications, safety evaluations, and architecture documentation, refer to the complete technical papers._
