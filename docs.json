@@ -80,6 +80,7 @@
                     "pages": [
                       "en/introduction/features/agents/overview",
                       "en/introduction/features/agents/persona",
+                      "en/introduction/features/agents/tools",
                       "en/introduction/features/agents/apps",
                       "en/introduction/features/agents/knowledge",
                       "en/introduction/features/agents/task"
