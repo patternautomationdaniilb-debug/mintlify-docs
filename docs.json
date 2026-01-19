@@ -49,6 +49,7 @@
                   "en/introduction/features/untitled-page",
                   {
                     "group": "Chats",
+                    "icon": "message",
                     "pages": [
                       "en/introduction/features/chats/overview",
                       {
@@ -91,6 +92,7 @@
                   },
                   {
                     "group": "Tasks",
+                    "icon": "timer",
                     "pages": [
                       "en/introduction/features/tasks/overview",
                       "en/introduction/features/tasks/how-can-i-recover-a-deleted-task",
@@ -101,6 +103,7 @@
                   },
                   {
                     "group": "Apps",
+                    "icon": "chart-tree-map",
                     "pages": [
                       "en/introduction/general-settings/apps/overview",
                       "en/introduction/general-settings/apps/overview-3",
@@ -120,18 +123,21 @@
                   "en/introduction/general-settings/memory",
                   {
                     "group": "Neuro AI Computer",
+                    "icon": "computer",
                     "pages": [
                       "en/introduction/features/neuro-ai-computer/untitled-page"
                     ]
                   },
                   {
                     "group": "Super Agent",
+                    "icon": "face-grin-stars",
                     "pages": [
                       "en/introduction/features/super-agent/overview"
                     ]
                   },
                   {
                     "group": "North Star LLM",
+                    "icon": "star-christmas",
                     "pages": [
                       "en/protocol/north-star-llm/overview"
                     ]
