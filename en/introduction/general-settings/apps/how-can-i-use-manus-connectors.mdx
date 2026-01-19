@@ -1,80 +1,71 @@
 ---
-title: "How can I use Manus Connectors？"
-description: "Discover how to use Manus connectors to integrate Gmail, Github, databases, and more."
+title: "How can I use Neuro Apps？"
+description: "Discover how to use Neuro Apps to integrate Gmail, Github, databases, and more."
 ---
 
-## What is a connector?
+## What is an App?
 
-Connectors are a user-centric integration layer that enables Manus to securely access your third-party data and APIs (including MCP servers) and execute workflows directly in conversations.
+App are a user-centric integration layer that enables Neuro to securely access your third-party data and APIs (including MCP servers) and execute workflows directly in conversations.
 
 This system abstracts external services into unified tools and data models while providing permission and cost control.
 
-With connectors, you can access, search, and interact with external tools and data directly within Manus. This streamlines your workflow and centralizes operations.
+With apps/connectors, you can access, search, and interact with external tools and data directly within Neuro. This streamlines your workflow and centralizes operations.
 
-Manus imports relevant information from these connected sources to better understand your needs and deliver more personalized AI experiences—all without requiring you to switch between applications.
+Neuro imports relevant information from these connected sources to better understand your needs and deliver more personalized AI experiences—all without requiring you to switch between applications.
 
 Typical implementations include:
 
 - Gmail/Google Calendar integration for automated email summarization, response drafting, and schedule management
-- GitHub/Linear/[monday.com](http://monday.com) integration for streamlined issue management, automated release notes, and systematic project reporting
-- Natural language interface for Supabase/Postgres (Prisma, Neon) database queries, providing real-time access to product metrics and analytics
+- GitHub/Linear/monday.com integration for streamlined issue management, automated release notes, and systematic project reporting
+- Natural language interface for Supabase/Postgres (Prisma, Neon) database queries, providing real-time access to product metrics and analytics(soon)
 
-These integrations work together in a secure environment, giving you quick access to your data and tools. This setup helps you work more efficiently by reducing context-switching, while still keeping your information safe.
+These apps/integrations work together in a secure environment, giving you quick access to your data and tools. This setup helps you work more efficiently by reducing context-switching, while still keeping your information safe.
 
-## How can I start using a connector?
+## How can I start using an app?
 
 1. Select your favorite app to connect with and click "+ Connect"
 2. Authenticate by logging in to your app account
    - Note that some connectors require additional configuration, such as a personal API token. Please follow the specific instructions for your chosen connector.
-3. Upon successful connection, you will see a pop-up notification stating "Successfully installed connector."
-4. You can now start using the connector with Manus
+3. Upon successful connection, you will see a pop-up notification stating "Successfully installed app/connector."
+4. You can now start using the apps with Neuro
 
-## What happens when I remove a connector?
+### What happens when I remove an apps?
 
-When you remove a connector, all login information and saved credentials are cleared. You'll need to connect the connector again and log in to resume using it.
+When you remove an app, all login information and saved credentials are cleared. You'll need to connect the app again and log in to resume using it.
 
-# **How do I switch accounts for a connector?**
+### How do I switch accounts for an app?
 
-You can easily switch to a different account. Simply select your connector and click "Manage" → "Configure". This will initiate a re-authentication process where you can select a different account or workspace for the connector.
+You can easily switch to a different account. Simply select your app and click "Manage" → "Configure". This will initiate a re-authentication process where you can select a different account or workspace for the app.
 
-# **What if I cannot find the connector I want?**
+### What if I cannot find the app/connector I want?
 
 You can create your own custom API connector or MCP connector. Simply follow the provided instructions to enter the required information.
 
-## What if I share my session link with someone? Will they be able to see the data or API keys from the connector?
+### What if I share my session link with someone? Will they be able to see the data or API keys from the app/connector?
 
-Manus protects your privacy by hiding connector output in shared sessions and automatically redacting sensitive information like API keys. However, please remain cautious about what content you choose to share.
-
-## Troubleshooting GitHub Connection Issues
-
-If you encounter problems connecting to GitHub, follow these steps:
-
-1. Visit the [**<u>Integrations settings page</u>**](https://github.com/settings/installations) on GitHub
-2. Uninstall the Manus Connector app from your GitHub account.
-3. Return to [**<u>Manus.im</u>**](http://Manus.im)\*\* \*\*and set up the connection again.
+Neuro protects your privacy by hiding apps/connector output in shared sessions and automatically redacting sensitive information like API keys. However, please remain cautious about what content you choose to share.
 
 Common related FAQs:
 
-- How can I start using a connector?
-- What can I do with connectors?
-- Do I need to switch between applications when using connectors?
-- What are typical connector implementations?
-- How do I switch accounts for a connector?
-- What if I cannot find the connector I want?
-- What if I share my session link with someone? Will they be able to see the data or API keys from the connector?
-- How do I troubleshoot GitHub connection issues?
-- Do connectors support MCP servers?
-- Are connectors secure?
-- Can I integrate Gmail with Manus?
-- Can I integrate GitHub with Manus?
-- Can I query databases using connectors?
-- Do I need an API token for some connectors?
-- How do I know if a connector is successfully installed?
-- Can I create custom connectors?
-- Does Manus redact sensitive information in shared sessions?
-- How do I authenticate a connector?
-- What happens to my credentials when I remove a connector?
-- Can I change the workspace for a connector?
-- Do connectors provide permission control?
-- Can connectors help with schedule management?
-- Can connectors automate release notes?
+- How can I start using an apps?
+- What can I do with apps?
+- Do I need to switch between applications when using apps?
+- What are typical app implementations?
+- How do I switch accounts for an app?
+- What if I cannot find the app I want?
+- What if I share my session link with someone? Will they be able to see the data or API keys from the app?
+- Do apps/connectors support MCP servers?
+- Are apps/connectors secure?
+- Can I integrate Gmail with Neuro?
+- Can I integrate GitHub with Neuro?
+- Can I query databases using apps/connectors?
+- Do I need an API token for some apps/connectors?
+- How do I know if an app/connector is successfully installed?
+- Can I create custom apps/connectors?
+- Does Neuro redact sensitive information in shared sessions?
+- How do I authenticate an app?
+- What happens to my credentials when I remove an app?
+- Can I change the workspace for an app?
+- Do apps/connectors provide permission control?
+- Can apps/connectors help with schedule management?
+- Can apps/connectors automate release notes?
