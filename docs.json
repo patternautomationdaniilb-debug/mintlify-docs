@@ -64,6 +64,7 @@
                       "en/introduction/features/chats/canvas",
                       {
                         "group": "Video",
+                        "icon": "video",
                         "pages": [
                           "en/introduction/features/chats/video",
                           "en/introduction/features/chats/video/what-is-the-resolution-of-the-videos-generated-using-manus",
@@ -77,6 +78,7 @@
                   },
                   {
                     "group": "Agents",
+                    "icon": "message-bot",
                     "pages": [
                       "en/introduction/features/agents/overview",
                       "en/introduction/features/custom-ai-agents",
