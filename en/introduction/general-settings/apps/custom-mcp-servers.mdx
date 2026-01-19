@@ -1,143 +1,147 @@
 ---
-title: "Custom MCP Servers"
-description: "Build integrations with your internal tools and proprietary systems"
+title: "Custom MCP Servers/Apps"
+description: "Build integrations/apps with your internal tools and proprietary systems"
 ---
 
-## **What are Custom MCP Servers?**
+### What are Custom MCP Servers/Apps?
 
-Custom MCP servers allow you to extend Manus’s integration capabilities beyond prebuilt connectors. If your organization uses internal tools, proprietary APIs, or specialized services not covered by standard MCP connectors, you can build a custom server that connects Manus to those systems.A custom MCP server acts as a bridge between Manus and your internal infrastructure, enabling the same seamless multi-app workflows you get with prebuilt connectors—but tailored to your specific tools and requirements.
+Custom MCP servers/Apps allow you to extend Neuro’s integration capabilities beyond prebuilt connectors. If your organization uses internal tools, proprietary APIs, or specialized services not covered by standard MCP connectors/Apps, you can build a custom server that connects Neuro to those systems. A custom MCP server/Apps acts as a bridge between Neuro and your internal infrastructure, enabling the same seamless multi-app workflows you get with prebuilt connectors—but tailored to your specific tools and requirements.
 
-## [**​**](https://manus.im/docs/integrations/custom-mcp#why-build-custom-mcp-servers)
+**Why Build Custom MCP Servers/Apps?**
 
-**Why Build Custom MCP Servers?**
+**Internal Systems**
 
-### [**​**](https://manus.im/docs/integrations/custom-mcp#internal-systems)
+Many organizations rely on custom-built tools, internal databases, or proprietary software. Custom MCP/Apps servers allow Neuro to integrate with these systems, bringing internal data into your AI workflows.
 
-**Internal Systems**Many organizations rely on custom-built tools, internal databases, or proprietary software. Custom MCP servers allow Manus to integrate with these systems, bringing internal data into your AI workflows.**Examples**:
+**Examples**:
 
 - Internal CRM or customer database
 - Proprietary project management tools
 - Custom analytics platforms
 - Legacy systems with APIs
 
-### [**​**](https://manus.im/docs/integrations/custom-mcp#specialized-services)
+**Specialized Services**
 
-**Specialized Services**Some third-party services don’t have prebuilt MCP connectors. If you use a specialized tool or niche service, you can build a custom server to connect it to Manus.**Examples**:
+Some third-party services don’t have prebuilt MCP connectors. If you use a specialized tool or niche service, you can build a custom server to connect it to Neuro.
+
+**Examples**:
 
 - Industry-specific software
 - Regional services not covered by standard connectors
 - Emerging platforms without official integrations
 
-### [**​**](https://manus.im/docs/integrations/custom-mcp#custom-business-logic)
+**Custom Business Logic**
 
-**Custom Business Logic**Custom MCP servers can implement business-specific logic, data transformations, or validation rules that go beyond simple API calls. This allows you to enforce organizational policies and workflows within Manus integrations.**Examples**:
+Custom MCP servers/ Apps can implement business-specific logic, data transformations, or validation rules that go beyond simple API calls. This allows you to enforce organizational policies and workflows within Apps integrations.
+
+**Examples**:
 
 - Approval workflows before data updates
 - Data validation against internal standards
 - Custom authentication or security requirements
 - Multi-step processes specific to your organization
 
-## [**​**](https://manus.im/docs/integrations/custom-mcp#how-custom-mcp-servers-work)
+**How Custom MCP Servers Work**
 
-**How Custom MCP Servers Work**A custom MCP server is a lightweight service that implements the Model Context Protocol specification. It exposes endpoints that Manus can call to read data, perform actions, or execute custom logic within your systems.
+A custom MCP server is a lightweight service that implements the Model Context Protocol specification. It exposes endpoints that Neuro can call to read data, perform actions, or execute custom logic within your systems.
 
-### [**​**](https://manus.im/docs/integrations/custom-mcp#architecture)
+**Architecture Your Internal System**↔**Custom MCP Server**↔**NeuroAI**
 
-**ArchitectureYour Internal System**↔**Custom MCP Server**↔**Manus**The MCP server sits between Manus and your internal systems, translating Manus requests into actions within your tools and returning results in a format Manus understands.
+The MCP server sits between Neuro and your internal systems, translating Neuro requests into actions within your tools and returning results in a format Neuro understands.
 
-### [**​**](https://manus.im/docs/integrations/custom-mcp#protocol)
+**Protocol**
 
-**Protocol**Custom MCP servers implement a standardized protocol that defines:
+Custom MCP servers implement a standardized protocol that defines:
 
-- **Tools**: Actions Manus can perform (e.g., “get_customer_data”, “update_project_status”)
-- **Resources**: Data Manus can read (e.g., documents, records, files)
+- **Tools**: Actions Neuro can perform (e.g., “get_customer_data”, “update_project_status”)
+- **Resources**: Data Neuro can read (e.g., documents, records, files)
 - **Prompts**: Predefined templates for common operations
 
-## [**​**](https://manus.im/docs/integrations/custom-mcp#building-a-custom-mcp-server)
-
-**Building a Custom MCP Server**
-
-### [**​**](https://manus.im/docs/integrations/custom-mcp#prerequisites)
+**Building a Custom MCP Server/Apps**
 
 **Prerequisites**
 
 - **API access** to the system you want to integrate
 - **Development environment** (Node.js, Python, or any language that can run a web server)
-- **Understanding of the MCP specification** (available in Manus documentation)
+- **Understanding of the MCP specification/apps** (available in Neuro documentation)
 
-### [**​**](https://manus.im/docs/integrations/custom-mcp#basic-implementation)
+**Basic Implementation**
 
-**Basic Implementation**A minimal custom MCP server includes:
+A minimal custom MCP server/Apps includes:
 
 1. **Server endpoint**: A web service that responds to MCP protocol requests
-2. **Tool definitions**: Descriptions of actions Manus can perform
+2. **Tool definitions**: Descriptions of actions Neuro can perform
 3. **Authentication**: Secure handling of credentials and API keys
 4. **Request handlers**: Logic that executes actions and returns results
 
-### [**​**](https://manus.im/docs/integrations/custom-mcp#example:-internal-crm-integration)
+**Example: Internal CRM Integration**
 
-**Example: Internal CRM Integration**Here’s a conceptual example of a custom MCP server for an internal CRM:**Tools exposed**:
+Here’s a conceptual example of a custom MCP server for an internal CRM:
+
+**Tools exposed**:
 
 - `get_customer_info(customer_id)`: Retrieve customer details
 - `update_customer_notes(customer_id, notes)`: Add notes to customer record
 - `search_customers(query)`: Search customer database
 - `create_follow_up_task(customer_id, task_description, due_date)`: Create task
 
-**Authentication**: API key or OAuth token for your internal CRM**Deployment**: Hosted on your infrastructure or a secure cloud environmentOnce deployed, you connect this custom server to Manus, and it appears alongside prebuilt connectors. You can then use natural language prompts like:
+**Authentication**: API key or OAuth token for your internal CRM
+
+**Deployment**: Hosted on your infrastructure or a secure cloud environment
+
+Once deployed, you connect this custom server to Neuro, and it appears alongside prebuilt connectors. You can then use natural language prompts like:
 
 - “Get customer information for customer ID 12345”
-- “Search for customers in the San Francisco area”
+- “Search for customers in the Frankfurt area”
 - “Update notes for customer 67890 with our recent conversation”
 
-## [**​**](https://manus.im/docs/integrations/custom-mcp#connecting-a-custom-mcp-server)
+**Connecting a Custom MCP Server/Apps**
 
-**Connecting a Custom MCP Server**
+**Step 1: Deploy Your Server**
 
-### [**​**](https://manus.im/docs/integrations/custom-mcp#step-1:-deploy-your-server)
+Host your custom MCP server on infrastructure you control. Ensure it’s accessible via HTTPS and has proper security measures in place.
 
-**Step 1: Deploy Your Server**Host your custom MCP server on infrastructure you control. Ensure it’s accessible via HTTPS and has proper security measures in place.
+**Step 2: Add to Neuro**
 
-### [**​**](https://manus.im/docs/integrations/custom-mcp#step-2:-add-to-manus)
+In Manus, navigate to **Settings → Integrations → Custom MCP Servers/Neuro**
 
-**Step 2: Add to Manus**In Manus, navigate to**Settings → Integrations → Custom MCP Servers**and click**Add Server**.
+and click
 
-### [**​**](https://manus.im/docs/integrations/custom-mcp#step-3:-provide-server-details)
+**Add Server**.
 
-**Step 3: Provide Server Details**Enter the following information:
+**Step 3: Provide Server Details**
+
+Enter the following information:
 
 - **Server name**: A descriptive name (e.g., “Internal CRM”, “Analytics Platform”)
 - **Server URL**: The HTTPS endpoint where your MCP server is hosted
 - **Authentication**: API key, Bearer token, or other credentials required
 
-### [**​**](https://manus.im/docs/integrations/custom-mcp#step-4:-test-connection)
+**Step 4: Test Connection**
 
-**Step 4: Test Connection**Manus will verify it can communicate with your server and retrieve the list of available tools.
+Neuro will verify it can communicate with your server and retrieve the list of available tools.
 
-### [**​**](https://manus.im/docs/integrations/custom-mcp#step-5:-start-using)
+**Step 5: Start Using**
 
-**Step 5: Start Using**Once connected, your custom tools appear in Manus’s available integrations. Reference them in prompts just like prebuilt connectors.
-
-## [**​**](https://manus.im/docs/integrations/custom-mcp#security-considerations)
+Once connected, your custom tools appear in Neuro’s available integrations. Reference them in prompts just like prebuilt connectors.
 
 **Security Considerations**
 
-### [**​**](https://manus.im/docs/integrations/custom-mcp#authentication)
+**Authentication**
 
-**Authentication**Custom MCP servers should implement robust authentication:
+Custom MCP servers should implement robust authentication:
 
 - Use API keys, OAuth tokens, or other secure methods
 - Never expose credentials in URLs or logs
 - Rotate credentials regularly
 
-### [**​**](https://manus.im/docs/integrations/custom-mcp#authorization)
+**Authorization**
 
-**Authorization**Implement proper authorization checks:
+Implement proper authorization checks:
 
 - Verify that the requesting user has permission to access data
 - Enforce role-based access control (RBAC) if applicable
-- Log all access attempts for audit purposes
-
-### [**​**](https://manus.im/docs/integrations/custom-mcp#data-transmission)
+- Log all access attempts for audit purposes[**​**](https://manus.im/docs/integrations/custom-mcp#data-transmission)
 
 **Data Transmission**
 
