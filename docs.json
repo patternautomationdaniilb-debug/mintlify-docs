@@ -79,6 +79,7 @@
                     "group": "Agents",
                     "pages": [
                       "en/introduction/features/agents/overview",
+                      "en/introduction/features/custom-ai-agents",
                       "en/introduction/features/agents/persona",
                       "en/introduction/features/agents/tools",
                       "en/introduction/features/agents/apps",
@@ -127,7 +128,6 @@
                       "en/introduction/features/super-agent/overview"
                     ]
                   },
-                  "en/introduction/features/custom-ai-agents",
                   {
                     "group": "North Star LLM",
                     "pages": [
