@@ -306,6 +306,7 @@
               },
               {
                 "group": "Billing",
+                "icon": "money-bill-wave",
                 "pages": [
                   "en/introduction/general-settings/billing",
                   {
@@ -361,6 +362,7 @@
               },
               {
                 "group": "Account",
+                "icon": "universal-access",
                 "pages": [
                   "en/help-center/account/learn-how-to-delete-or-edit-your-bank-card-information-in-manus-manage-your-payment-methods-and-billing-information",
                   "en/help-center/account/h",
@@ -380,6 +382,7 @@
               },
               {
                 "group": "Events & Plans",
+                "icon": "arrows-rotate-reverse",
                 "pages": [
                   "en/introduction/general-settings/plan",
                   "en/help-center/events-and-plans/what-is-manus-team-plan",
@@ -397,6 +400,7 @@
               },
               {
                 "group": "Login/Sign-up",
+                "icon": "key",
                 "pages": [
                   "en/help-center/login-sign-up/why-cant-i-enter-a-phone-number",
                   "en/help-center/login-sign-up/why-cant-a-previously-verified-phone-number-be-used-again",
