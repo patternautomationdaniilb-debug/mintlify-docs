@@ -158,72 +158,87 @@
             "groups": [
               {
                 "group": "Use Cases",
+                "icon": "align-justify",
                 "pages": [
                   "en/guides/use-cases/featured",
                   {
                     "group": "Professional Development",
+                    "icon": "chart-line-up",
                     "pages": [
                       "en/guides/use-cases/professional-development/examples"
                     ]
                   },
                   {
                     "group": "Family & Household Management",
+                    "icon": "family-pants",
                     "pages": [
                       "en/guides/use-cases/family-and-household-management/examples"
                     ]
                   },
                   {
                     "group": "Entertainment & Lifestyle",
+                    "icon": "light-ceiling",
                     "pages": []
                   },
                   {
                     "group": "Health & Wellness",
+                    "icon": "apple-whole",
                     "pages": []
                   },
                   {
                     "group": "Personal Productivity & Daily Life",
+                    "icon": "alarm-clock",
                     "pages": [
                       "en/guides/use-cases/personal-productivity-and-daily-life/examples"
                     ]
                   },
                   {
                     "group": "Education & Learning",
+                    "icon": "book",
                     "pages": [
                       "en/guides/use-cases/education-and-learning/examples"
                     ]
                   },
                   {
                     "group": "Voice AI Applications",
+                    "icon": "microphone",
                     "pages": []
                   },
                   {
                     "group": "Analytics & Insights",
+                    "icon": "telescope",
                     "pages": [
                       "en/guides/use-cases/analytics-and-insights/examples"
                     ]
                   },
                   {
                     "group": "Content & Marketing",
+                    "icon": "camera",
                     "pages": []
                   },
                   {
                     "group": "Internal Business Process Automation",
+                    "icon": "robot",
                     "pages": []
                   },
                   {
                     "group": "Sales & Lead Generation Optimization",
+                    "icon": "money-bill-1-wave",
                     "pages": []
                   },
                   {
                     "group": "Customer Service Automation",
+                    "icon": "headset",
                     "pages": []
                   },
                   {
                     "group": "Programming",
+                    "icon": "diagram-project",
                     "pages": []
                   },
                   {
                     "group": "WTF",
+                    "icon": "question",
                     "pages": []
                   },
                   "en/guides/use-cases/untitled-page",
@@ -232,16 +247,11 @@
               },
               {
                 "group": "Chats",
-                "pages": [
-                  "en/guides/chats/untitled-page",
-                  "en/guides/chats/h"
-                ]
+                "pages": []
               },
               {
                 "group": "Agents",
-                "pages": [
-                  "en/guides/agents/k"
-                ]
+                "pages": []
               },
               {
                 "group": "Tasks",
@@ -251,15 +261,11 @@
               },
               {
                 "group": "Apps",
-                "pages": [
-                  "en/guides/apps/kk"
-                ]
+                "pages": []
               },
               {
                 "group": "Prompting best practices",
-                "pages": [
-                  "en/guides/prompting-best-practices/kk"
-                ]
+                "pages": []
               }
             ]
           },
