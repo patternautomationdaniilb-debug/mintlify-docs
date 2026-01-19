@@ -139,8 +139,9 @@
                     "group": "North Star LLM",
                     "icon": "star-christmas",
                     "pages": [
+                      "en/protocol/north-star-llm/overview",
                       "en/introduction/features/north-star-llm/untitled-page",
-                      "en/protocol/north-star-llm/overview"
+                      "en/introduction/features/north-star-llm/north-star-lite-1-0"
                     ]
                   }
                 ]
