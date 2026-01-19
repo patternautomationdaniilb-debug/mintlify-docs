@@ -1,3 +1,1121 @@
 ---
-title: "Tools"
+title: "Tools Configuration: Enable Agent Capabilities"
+description: "Configure tools and their individual capabilities for agents in Neuro. Control exactly what each agent can access and do."
 ---
+
+## Overview
+
+**Tool Configuration** allows you to enable, disable, and manage individual capabilities for your agents. Choose exactly which tools each agent needs, nothing more, nothing less.
+
+This ensures:
+
+- **Focused agents** — Each agent has only needed capabilities
+- **Security** — No unnecessary access to external services
+- **Performance** — Faster execution with fewer tools
+- **Cost control** — Pay only for what you use
+- **29 tools available** — Enable what you need (soon will be more)
+
+---
+
+## Available Tools (16 Categories)
+
+### 1. Task Management
+
+**Organize work with structured to-do lists**
+
+All 5 capabilities enabled:
+
+#### Clear All
+
+```
+Remove all tasks and sections completely
+Creates empty state for fresh start
+⚠️ PARAMETER: confirm (REQUIRED)
+
+Use when: Starting over, resetting task list
+```
+
+#### Create Tasks
+
+```
+Create organized task lists with sections
+Features:
+- Single section or batch creation
+- Auto-creates sections if needed
+- Order-based execution
+- Edit during execution
+
+Best for: Large, complex projects (10+ items)
+Example: Research projects, multi-phase work
+
+⚠️ PARAMETERS:
+- sections (optional, array of objects)
+- section_title (optional, single section)
+- section_id (optional, single section)
+- task_contents (optional)
+
+CRITICAL: Pass sections as array, NOT JSON string
+```
+
+#### Delete Tasks
+
+```
+Remove tasks or sections
+Features:
+- Delete by task ID or section ID
+- Section deletion removes all contained tasks
+- Clean task list during execution
+
+Use when: Tasks become unnecessary, requirements change
+
+⚠️ PARAMETERS:
+- task_ids (optional)
+- section_ids (optional)
+- confirm (optional, required when deleting sections)
+```
+
+#### Update Tasks
+
+```
+Mark tasks complete or modify content
+Features:
+- Mark complete immediately after finishing
+- Batch multiple updates into single call
+- Update content if requirements change
+- Keep task list current
+
+Best practice: Mark complete right after task finishes
+
+⚠️ PARAMETERS:
+- task_ids (REQUIRED)
+- content (optional)
+- status (optional)
+- section_id (optional)
+```
+
+#### View Tasks
+
+```
+See all tasks, sections, and progress
+Features:
+- View current tasks and status
+- Check progress regularly
+- Identify next task to execute
+- Verify all tasks are complete before final output
+
+Use when: Every 2-3 task completions
+
+⚠️ PARAMETERS: None
+```
+
+---
+
+### 2. Files & Folders
+
+**Create, edit, read, and organize files**
+
+All 5 capabilities enabled:
+
+#### Create File
+
+```
+Create new file with content
+Features:
+- Relative path to /workspace
+- Set permissions optionally
+- Supports any file type
+
+Example: 'src/main.py' for /workspace/src/main.py
+
+⚠️ PARAMETERS:
+- file_path (REQUIRED)
+- file_contents (REQUIRED)
+- permissions (optional)
+```
+
+#### Delete File
+
+```
+⚠️ CRITICAL: Request user confirmation via ask() tool
+NEVER delete without explicit user permission
+
+Process:
+1. Use ask() to request confirmation
+2. Include clear message: "Do you want me to delete [file_path]?"
+3. Wait for user confirmation
+4. Only proceed if user confirms
+
+⚠️ PARAMETERS:
+- file_path (REQUIRED)
+```
+
+#### Edit File
+
+```
+Make targeted edits to existing files
+Features:
+- Preserves unchanged code
+- Minimizes unchanged content
+- Uses // … existing code … comments
+- Multiple edits in single call
+- Faster than full rewrite
+
+Format edits in sequence:
+// … existing code …
+FIRST_EDIT
+// … existing code …
+SECOND_EDIT
+// … existing code …
+
+⚠️ PARAMETERS:
+- target_file (REQUIRED)
+- instructions (REQUIRED)
+- code_edit (REQUIRED)
+```
+
+#### Full File Rewrite
+
+```
+Completely replace file content
+Use when: Rewriting entire file (faster than many edits)
+
+CRITICAL FOR PRESENTATIONS:
+- MANDATORY for template-based presentations
+- MUST preserve template structure
+- Update ONLY content with research data
+- Do NOT use create_slide for templates
+
+⚠️ PARAMETERS:
+- file_path (REQUIRED)
+- file_contents (REQUIRED)
+- permissions (optional)
+```
+
+#### Str Replace
+
+```
+Replace specific text in file
+Features:
+- Replace unique string (appears once)
+- Simpler than edit_file for single changes
+- Relative path to /workspace
+
+Use when: Single, unique text replacement
+
+⚠️ PARAMETERS:
+- file_path (REQUIRED)
+- old_str (REQUIRED)
+- new_str (REQUIRED)
+```
+
+---
+
+### 3. Web Search & Research
+
+**Find and analyze information online**
+
+2 / 2 capabilities enabled:
+
+#### Web Search
+
+```
+Search internet for information
+Features:
+- Batch searches (array of queries)
+- Concurrent execution
+- Multiple topics simultaneously
+- Results include titles, URLs, dates, direct answers
+
+CRITICAL: Pass query as array, num_results as integer
+NOT as JSON strings
+
+Example:
+- Single: "query": "AI trends 2025"
+- Batch: "query": ["AI trends", "ML advances", "automation"]
+
+Use for: Research, current info, parallel searches
+
+⚠️ PARAMETERS:
+- query (REQUIRED, string or array)
+- num_results (optional, integer)
+```
+
+#### Scrape Webpage
+
+```
+Extract full text from multiple webpages
+Features:
+- Single operation extracts from multiple URLs
+- Main content without HTML markup
+- Optional full HTML for structure analysis
+- Saves time vs. one-at-a-time scraping
+
+Best practice: Collect multiple URLs from search results
+scrape all in single call
+
+⚠️ PARAMETERS:
+- urls (REQUIRED, array)
+- include_html (optional)
+```
+
+---
+
+### 4. File Reader & Knowledge Base
+
+**Read and search documents**
+
+#### Read File
+
+```
+Extract text from workspace files
+Supports:
+- PDFs (text extraction)
+- Word documents
+- Text files (.txt, .csv, .json, code files)
+- Images use load_image instead
+
+Batch mode: Read up to 20 files concurrently
+Much faster for multiple files!
+
+⚠️ PARAMETERS:
+- file_path (optional, single file)
+- file_paths (optional, batch mode)
+Use ONE, not both
+```
+
+#### Search File
+
+```
+Semantic search within documents
+Better for large files!
+Use instead of read_file for:
+- Large PDFs and documents
+- Finding specific information
+- Multiple files with targeted search
+
+Example: Search contract for "termination clause"
+
+⚠️ PARAMETERS:
+- file_path (for single file)
+- file_paths (for multiple files)
+- query (search terms)
+```
+
+#### Global KB Sync
+
+```
+Download knowledge base files locally
+Features:
+- Syncs all assigned KB files
+- Creates folder structure
+- Automatically searchable
+- Files ready for semantic_search
+
+⚠️ PARAMETERS: None
+```
+
+#### Semantic Search
+
+```
+Natural language search across files
+Features:
+- Searches /workspace by default
+- Specify file path for targeted search
+- Only searches indexed files
+- Large files may take time to index
+
+CRITICAL: Use ls_kb to check indexing status if no results
+
+⚠️ PARAMETERS:
+- queries (REQUIRED)
+- path (optional)
+```
+
+---
+
+### 5. Web Browser
+
+**Browse websites, click buttons, fill forms**
+
+4 / 4 capabilities enabled:
+
+#### Browser Act
+
+```
+Perform browser actions via natural language
+Features:
+- Automatic screenshots with every action
+- Verify displayed values match intentions
+- File upload support with filePath parameter
+
+CRITICAL FILE UPLOAD RULE:
+Any action involving:
+- Upload buttons
+- File inputs
+- Resume sections
+- Choose file dialogs
+
+MUST include filePath parameter
+
+⚠️ PARAMETERS:
+- action (REQUIRED, natural language)
+- variables (optional)
+- iframes (optional)
+- filePath (optional, REQUIRED for upload actions)
+```
+
+#### Browser Extract Content
+
+```
+Extract structured content from page
+Uses Stagehand for intelligent extraction
+
+⚠️ PARAMETERS:
+- instruction (REQUIRED)
+- iframes (optional)
+```
+
+#### Browser Navigate To
+
+```
+Go to specific URL
+⚠️ PARAMETERS:
+- url (REQUIRED)
+```
+
+#### Browser Screenshot
+
+```
+Take screenshot of current page
+⚠️ PARAMETERS:
+- name (optional)
+```
+
+---
+
+### 6. Presentations
+
+**Create and manage stunning slides**
+
+8 / 8 capabilities enabled:
+
+#### Create Slide
+
+```
+Create or update single slide
+WHEN TO USE: Custom theme presentations only
+WHEN TO SKIP: Not for template-based presentations
+            Use full_file_rewrite instead
+
+Features:
+- Parallel execution for fast completion
+- 1920x1080 dimensions (16:9 aspect)
+- Fixed pixel dimensions, absolute positioning
+- No responsive design patterns
+
+CRITICAL:
+- Complete Phase 3 BEFORE using (research, content, images)
+- Styling from custom color scheme in Phase 2
+- Design for presentations, not websites
+
+⚠️ PARAMETERS:
+- presentation_name (REQUIRED)
+- slide_number (REQUIRED)
+- slide_title (REQUIRED)
+- content (REQUIRED)
+- presentation_title (optional)
+
+❌ DO NOT USE: file_path (doesn't exist!)
+```
+
+#### Load Template Design
+
+```
+Reference design from presentation template
+Features:
+- Copy entire template to /workspace/presentations/{name}/
+- Extract style patterns (colors, fonts, layouts)
+- Preserve 100% of CSS styling
+- Update ONLY text content
+
+Use template as design inspiration OR edit directly
+
+⚠️ PARAMETERS:
+- presentation_name (REQUIRED)
+```
+
+#### Export Presentation
+
+```
+Export to PPTX and PDF simultaneously
+Features:
+- Both formats run in parallel
+- Store locally for repeated downloads
+- Or return directly
+
+⚠️ PARAMETERS:
+- store_locally (optional)
+```
+
+#### Delete Presentation, Delete Slide, List Presentations, List Slides
+
+```
+Management tools for presentations
+Self-explanatory functions for organization
+```
+
+---
+
+### 7. Image Processing
+
+**Generate, edit, and analyze images**
+
+#### Image Vision
+
+```
+View and analyze images
+Understand content, identify elements
+```
+
+#### Generate Media
+
+```
+Create, edit, upscale, or remove backgrounds
+Generate images and videos
+```
+
+#### Canvas Editor
+
+```
+Create interactive canvases for design
+Add frames for export regions
+AI processing (upscale, remove background)
+
+IMPORTANT: Call ONE AT A TIME (not parallel)
+Race conditions cause errors
+
+⚠️ KEY FUNCTIONS:
+- add_frame_to_canvas: Call FIRST for Instagram/TikTok sizes
+  Returns frame_id for use with image_edit_or_generate
+
+- add_image_to_canvas: NEVER parallel - one at a time
+
+- ai_process_canvas_element: Upscale or remove background
+
+- save_canvas: Persist all elements and frame colors
+```
+
+---
+
+### 8. Automation & Triggers
+
+**Set up automatic execution**
+
+7 / 7 capabilities enabled:
+
+#### Create Scheduled Trigger
+
+```
+Schedule agent to run automatically
+Features:
+- Cron expressions for timing
+- Template variables {{variable_name}}
+- Reusable for different users
+
+Example: 'Monitor {{company_name}} brand'
+Users provide their own company names
+
+⚠️ PARAMETERS:
+- cron_expression (REQUIRED)
+- prompt (REQUIRED)
+- variables (optional)
+```
+
+#### Create Event Trigger
+
+```
+Run agent on specific events
+Features:
+- Event-based automation
+- Compose event triggers
+- Pass trigger_slug and profile_id
+
+⚠️ PARAMETERS:
+- trigger_slug (REQUIRED)
+- profile_id (REQUIRED)
+- trigger_config (optional)
+```
+
+#### Toggle Scheduled Trigger, Delete Scheduled Trigger, Get Scheduled Tasks
+
+```
+Manage scheduled automation
+Enable/disable, delete, or view all scheduled runs
+```
+
+---
+
+### 9. Credentials & Authentication
+
+**Manage API keys and integrations**
+
+4 / 4 capabilities enabled:
+
+#### Create Credential Profile
+
+```
+Create authentication for toolkit
+Features:
+- Supports Composio toolkits
+- Returns authentication link
+- User completes connection
+
+⚠️ PARAMETERS:
+- toolkit (REQUIRED)
+- profile_name (optional)
+```
+
+#### Configure Profile For Agent
+
+```
+Add authenticated profile to agent
+Use after profile is connected
+Enables agent to use that service
+
+⚠️ PARAMETERS:
+- agent_id (REQUIRED)
+- profile_id (REQUIRED)
+```
+
+#### Get Credential Profiles, Delete Credential Profile
+
+```
+View or remove existing profiles
+Manage all integrations
+```
+
+---
+
+### 10. Research Tools
+
+**Find information about people, companies, academic research**
+
+#### People Research
+
+```
+Find professional background information
+Search and analyze people
+```
+
+#### Company Research
+
+```
+Find business information
+Detailed company analysis
+```
+
+#### Academic Research
+
+```
+Search academic papers and researchers
+Features:
+- FREE using Semantic Scholar
+- Search papers, authors, institutions
+- Get paper details, citations, references
+
+Functions:
+- paper_search: Find relevant papers
+- search_authors: Find researchers
+- get_paper_details: Full paper information
+- get_author_details: Researcher profiles
+- get_author_papers: All papers by author
+
+⚠️ PARAMETERS: Vary by function, see documentation
+```
+
+---
+
+### 11. Voice Calls
+
+**Make and manage phone calls**
+
+5 / 5 capabilities enabled:
+
+#### Make Phone Call
+
+```
+Initiate outbound call with AI agent
+Features:
+- AI conducts conversation
+- Based on provided configuration
+- Returns immediately
+
+SAFETY: Blocks emergency numbers and illegal activity
+
+Use: ALWAYS follow with wait_for_call_completion
+
+⚠️ PARAMETERS:
+- phone_number (REQUIRED)
+- system_prompt (REQUIRED)
+- configuration (optional)
+```
+
+#### Wait For Call Completion
+
+```
+Monitor call until complete
+Features:
+- Real-time conversation streaming
+- Live transcription
+- Continuous status checking
+
+MANDATORY: Use immediately after make_call
+
+Then: Use get_call_details for full transcript
+```
+
+#### Get Call Details, End Call, List Calls
+
+```
+Manage phone calls
+View transcripts, end calls, see history
+```
+
+---
+
+### 12. Knowledge Base
+
+**Store and retrieve information**
+
+9 / 9 capabilities enabled:
+
+#### Global KB Upload File
+
+```
+Add file to knowledge base
+Features:
+- Upload from sandbox
+- Organize in folders
+- Add description
+
+⚠️ PARAMETERS:
+- sandbox_file_path (REQUIRED)
+- folder_name (REQUIRED)
+- description (optional)
+```
+
+#### Global KB Create Folder
+
+```
+Create folder for organization
+⚠️ PARAMETERS:
+- name (REQUIRED)
+- description (optional)
+```
+
+#### List Contents, Enable Item, Delete Item
+
+```
+Manage knowledge base
+View, enable/disable, or remove items
+```
+
+---
+
+### 13. Agent Configuration
+
+**Modify agent settings**
+
+2 / 2 capabilities enabled:
+
+#### Get Current Agent Config
+
+```
+Check current agent configuration
+Use before making updates
+See what's already enabled
+```
+
+#### Update Agent
+
+```
+Modify agent configuration
+Can update:
+- Name and description
+- Tools and capabilities
+- MCP servers
+- System prompt (appended with high priority)
+
+Call whenever user wants changes
+
+⚠️ PARAMETERS:
+- agent_id (REQUIRED)
+- configuration (REQUIRED)
+```
+
+---
+
+### 14. Chat & Messages
+
+**Communicate with users**
+
+#### Ask
+
+```
+Request user input or confirmation
+CRITICAL for file deletion:
+1. Use ask() for confirmation
+2. User must explicitly approve
+3. Only then proceed with deletion
+
+Use when: User input essential to proceed
+
+BEST PRACTICE:
+- Provide follow_up_answers (2-4 clickable options)
+- Keep questions concise (1-2 sentences max)
+- Use natural, conversational language
+
+⚠️ PARAMETERS:
+- text (REQUIRED)
+- attachments (REQUIRED when sharing results)
+- follow_up_answers (optional, recommended)
+```
+
+---
+
+## Tool Configuration Best Practices
+
+### ✅ Do's
+
+```
+✓ Enable only needed tools
+  Focused agents are more reliable
+
+✓ Check current config before updating
+  Use get_current_agent_config first
+
+✓ Request user confirmation for destructive actions
+  Always ask before deleting or major changes
+
+✓ Use batch operations
+  Faster than individual calls
+  Multiple files, tasks, searches at once
+
+✓ Monitor long operations
+  Use wait_for_call_completion, get_actor_run_status
+
+✓ Provide clickable options
+  follow_up_answers when asking users
+
+✓ Attach files when sharing results
+  Never share about files without attaching them
+
+✓ Mark tasks complete immediately
+  After each task finishes
+```
+
+### ❌ Don'ts
+
+```
+✗ Don't enable unnecessary tools
+  Adds complexity, increases costs
+
+✗ Don't delete without confirmation
+  Always ask user first
+
+✗ Don't use old parameter names
+  Use EXACTLY the specified names
+
+✗ Don't pass JSON strings for arrays
+  Pass actual array objects
+
+✗ Don't run canvas operations in parallel
+  One at a time only (race conditions)
+
+✗ Don't skip extraction after Apify runs
+  Always use get_actor_run_results
+
+✗ Don't assume file indexing complete
+  Use ls_kb to check status
+
+✗ Don't proceed without user confirmation
+  Especially for destructive operations
+```
+
+---
+
+## Common Configuration Scenarios
+
+### Scenario 1: Research Agent
+
+```
+Enabled tools:
+✓ Web Search
+✓ Scrape Webpage
+✓ File Reader
+✓ Semantic Search
+✓ Task Management
+✗ Browser Act (not needed)
+✗ Voice Calls (not needed)
+
+Capabilities: Search, read, analyze research
+```
+
+### Scenario 2: Content Creation Agent
+
+```
+Enabled tools:
+✓ Presentations
+✓ Image Generation
+✓ Canvas Editor
+✓ Web Search
+✓ File Creation
+✓ Task Management
+✓ Web Browser (for research)
+
+Capabilities: Create content, presentations, images
+```
+
+### Scenario 3: Automation Agent
+
+```
+Enabled tools:
+✓ Scheduled Triggers
+✓ Event Triggers
+✓ Web Browser
+✓ Web Search
+✓ Task Management
+✓ Credentials Manager
+✓ File Creation
+
+Capabilities: Automate workflows, scheduled execution
+```
+
+### Scenario 4: Business Research Agent
+
+```
+Enabled tools:
+✓ People Research
+✓ Company Research
+✓ Web Search
+✓ File Reader
+✓ Presentations
+✓ Task Management
+
+Capabilities: Research businesses and people
+```
+
+---
+
+## Configuration Workflow
+
+### Step 1: Define Agent Purpose
+
+```
+What will this agent do?
+Example: "Research market trends and create reports"
+```
+
+### Step 2: Identify Needed Tools
+
+```
+What tools are necessary?
+Example: Web Search, Research, Presentations, Files
+```
+
+### Step 3: Get Current Config
+
+```
+Check what's already enabled
+Use get_current_agent_config
+```
+
+### Step 4: Update Configuration
+
+```
+Add needed tools
+Use update_agent with new tool list
+```
+
+### Step 5: Test Agent
+
+```
+Try agent with simple task
+Verify all needed tools work
+Adjust if necessary
+```
+
+---
+
+## Tool Parameter Reference
+
+### Critical Parameter Rules
+
+```
+ALWAYS use EXACT parameter names:
+- Typos cause failures
+- Refer to each tool's documentation
+- Example: "confirm" not "confirmation"
+
+Array vs String:
+- Queries: Pass as array [query1, query2]
+- NOT as JSON string "[query1, query2]"
+- num_results: Pass as integer 5
+- NOT as string "5"
+
+File paths:
+- Relative to /workspace
+- Example: 'src/main.py' not '/workspace/src/main.py'
+- Shell commands: Use /workspace path
+
+Batch operations:
+- Pass multiple items in single call
+- Faster than sequential calls
+- Check tool documentation for batch support
+```
+
+---
+
+## Security & Permissions
+
+### Tool Access Control
+
+```
+Restrict tools by agent role:
+
+Sales Agent:
+- Web Search (research)
+- Browser (company research)
+- NOT: Voice Calls (if not needed)
+
+Support Agent:
+- Task Management
+- File Reader
+- Knowledge Base
+- NOT: Presentations (if not needed)
+
+Marketing Agent:
+- Presentations
+- Image Generation
+- Web Search
+- Social Media tools
+```
+
+### Credential Management
+
+```
+Each tool may require authentication:
+1. Create credential profile
+2. User completes OAuth flow
+3. Configure profile for agent
+4. Agent can now use that service
+
+Example: Slack, Gmail, GitHub integrations
+```
+
+---
+
+## Troubleshooting
+
+### "Parameter not found"
+
+```
+Check exact parameter name
+Typos cause failures
+Refer to tool documentation
+```
+
+### "Array expected, string provided"
+
+```
+Don't pass JSON strings for arrays
+Pass actual array objects
+Example: ["query1", "query2"] not "['query1', 'query2']"
+```
+
+### "File not found"
+
+```
+Check file path
+Relative to /workspace
+Use /workspace/ prefix in shell commands
+```
+
+### "Tool not enabled"
+
+```
+Add tool to agent configuration
+Use get_current_agent_config
+Use update_agent to enable
+```
+
+### "File still indexing"
+
+```
+Large files take time to index
+Use ls_kb to check status
+Try again in a moment
+```
+
+---
+
+## Getting Started
+
+### 1. Choose Your Agent Type
+
+```
+Sales, Marketing, Research, Support, etc.
+```
+
+### 2. Identify Necessary Tools
+
+```
+What will agent actually need?
+```
+
+### 3. Enable Tools
+
+```
+Use update_agent to add tools
+```
+
+### 4. Test Configuration
+
+```
+Try agent with sample task
+Verify all tools work
+```
+
+### 5. Deploy
+
+```
+Agent ready for production use
+```
+
+---
+
+## FAQ
+
+**Can I enable all tools?**\
+Technically yes, but not recommended. Focused agents are more reliable and cost-effective, but Super Agent from NeuroAI has all tools on.
+
+**Can I change tools later?**\
+Yes. Use update_agent anytime to add/remove tools.
+
+**Do I pay for unused tools?**\
+Depends on the tool. Some charge per use, others are free. Check pricing.
+
+**How do I test a tool?**\
+Create test task that uses that tool. Monitor for errors or unexpected behavior.
+
+**Can tool access be restricted?**\
+Yes, through credential profiles and configuration. Some tools require authentication.
+
+**What if a tool fails?**\
+Check error message. Usually parameter or authentication issue. Verify configuration.
+
+**Can multiple agents share credentials?**\
+Yes. Create credential profile once, configure for multiple agents.
+
+**How do I remove a tool?**\
+Use update_agent to remove from configuration.
