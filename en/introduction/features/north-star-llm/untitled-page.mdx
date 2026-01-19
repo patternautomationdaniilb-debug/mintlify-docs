@@ -1,13 +1,15 @@
 ---
-title: "North Star Model"
+title: "North Star Model 1.0"
 description: "Pushing the Frontier of Large Language Models"
 ---
 
 # Abstract
 
+![Bazaart 5170E5FE 43DC 4906 BF31 F841EED79C73](/images/Bazaart_5170E5FE-43DC-4906-BF31-F841EED79C73.jpeg)
+
 We introduce North Star Model, a model that harmonizes high computational efficiency with superior reasoning and agent performance. The key technical breakthroughs of North Star Model are as follows: (1) Pattern Sparse Attention (PSA): We introduce PSA, an efficient attention mechanism that substantially reduces computational complexity while preserving model performance in long-context scenarios. (2) Scalable Reinforcement Learning Framework: By implementing a robust reinforcement learning protocol and scaling post-training compute, North Star Model performs comparably to leading frontier models. Notably, our high-compute variant, North Star Model Speciale, surpasses comparable models and exhibits reasoning proficiency achieving gold-medal performance in both the 2025 International Mathematical Olympiad (IMO) and the International Olympiad in Informatics (IOI). (3) Advanced Context Engineering: We developed sophisticated context management techniques optimized for production AI agents, focusing on KV-cache optimization, attention manipulation, and robust error recovery. (4) Large-Scale Agentic Task Synthesis Pipeline: To integrate reasoning into tool-use scenarios, we developed a novel synthesis pipeline that systematically generates training data at scale.
 
-**Novel Training Methodology: **North Star Model employs an innovative training approach using simulated video game environments, progressing from simple logical tasks through increasingly complex interactive scenarios. This game-based training methodology enables the model to develop robust reasoning chains, spatial understanding, and multi-step planning capabilities through direct interaction with dynamic virtual environments.
+\*\*Novel Training Methodology: \*\*North Star Model employs an innovative training approach using simulated video game environments, progressing from simple logical tasks through increasingly complex interactive scenarios. This game-based training methodology enables the model to develop robust reasoning chains, spatial understanding, and multi-step planning capabilities through direct interaction with dynamic virtual environments.
 
 # 1. Introduction
 
@@ -23,24 +25,24 @@ A groundbreaking aspect of North Star Model is its training methodology, which l
 
 **Training Progression:**
 
-•       **Phase 1: Logical Chain Development - **Initial training focused on establishing fundamental reasoning chains through structured logical problems.
+•       \*\*Phase 1: Logical Chain Development - \*\*Initial training focused on establishing fundamental reasoning chains through structured logical problems.
 
-•       **Phase 2: Tetris Environment - **Custom Tetris-like environment for spatial reasoning and sequential decision-making.
+•       \*\*Phase 2: Tetris Environment - \*\*Custom Tetris-like environment for spatial reasoning and sequential decision-making.
 
-•       **Phase 3: Racing Simulations - **Simple racing games for continuous control and trajectory planning.
+•       \*\*Phase 3: Racing Simulations - \*\*Simple racing games for continuous control and trajectory planning.
 
-•       **Phase 4: Chess Mastery - **Chess training for deep strategic thinking and multi-move planning.
+•       \*\*Phase 4: Chess Mastery - \*\*Chess training for deep strategic thinking and multi-move planning.
 
-•       **Phase 5: Minecraft Environment - **Custom Minecraft-like environment for open-ended problem-solving, resource management, and tool usage.
+•       \*\*Phase 5: Minecraft Environment - \*\*Custom Minecraft-like environment for open-ended problem-solving, resource management, and tool usage.
 
-•       **Phase 6: Sims-Style Simulation - **Ongoing training in a custom Sims-like environment with simplified graphics, providing complex social reasoning scenarios.
+•       \*\*Phase 6: Sims-Style Simulation - \*\*Ongoing training in a custom Sims-like environment with simplified graphics, providing complex social reasoning scenarios.
 
 \
 Abstract
 
 We introduce North Star Model, a model that harmonizes high computational efficiency with superior reasoning and agent performance. The key technical breakthroughs of North Star Model are as follows: (1) Pattern Sparse Attention (PSA): We introduce PSA, an efficient attention mechanism that substantially reduces computational complexity while preserving model performance in long-context scenarios. (2) Scalable Reinforcement Learning Framework: By implementing a robust reinforcement learning protocol and scaling post-training compute, North Star Model performs comparably to leading frontier models. Notably, our high-compute variant, North Star Model Speciale, surpasses comparable models and exhibits reasoning proficiency achieving gold-medal performance in both the 2025 International Mathematical Olympiad (IMO) and the International Olympiad in Informatics (IOI). (3) Advanced Context Engineering: We developed sophisticated context management techniques optimized for production AI agents, focusing on KV-cache optimization, attention manipulation, and robust error recovery. (4) Large-Scale Agentic Task Synthesis Pipeline: To integrate reasoning into tool-use scenarios, we developed a novel synthesis pipeline that systematically generates training data at scale.
 
-**Novel Training Methodology: **North Star Model employs an innovative training approach using simulated video game environments, progressing from simple logical tasks through increasingly complex interactive scenarios. This game-based training methodology enables the model to develop robust reasoning chains, spatial understanding, and multi-step planning capabilities through direct interaction with dynamic virtual environments.
+\*\*Novel Training Methodology: \*\*North Star Model employs an innovative training approach using simulated video game environments, progressing from simple logical tasks through increasingly complex interactive scenarios. This game-based training methodology enables the model to develop robust reasoning chains, spatial understanding, and multi-step planning capabilities through direct interaction with dynamic virtual environments.
 
 # 1. Introduction
 
@@ -56,17 +58,17 @@ A groundbreaking aspect of North Star Model is its training methodology, which l
 
 **Training Progression:**
 
-•       **Phase 1: Logical Chain Development - **Initial training focused on establishing fundamental reasoning chains through structured logical problems.
+•       \*\*Phase 1: Logical Chain Development - \*\*Initial training focused on establishing fundamental reasoning chains through structured logical problems.
 
-•       **Phase 2: Tetris Environment - **Custom Tetris-like environment for spatial reasoning and sequential decision-making.
+•       \*\*Phase 2: Tetris Environment - \*\*Custom Tetris-like environment for spatial reasoning and sequential decision-making.
 
-•       **Phase 3: Racing Simulations - **Simple racing games for continuous control and trajectory planning.
+•       \*\*Phase 3: Racing Simulations - \*\*Simple racing games for continuous control and trajectory planning.
 
-•       **Phase 4: Chess Mastery - **Chess training for deep strategic thinking and multi-move planning.
+•       \*\*Phase 4: Chess Mastery - \*\*Chess training for deep strategic thinking and multi-move planning.
 
-•       **Phase 5: Minecraft Environment - **Custom Minecraft-like environment for open-ended problem-solving, resource management, and tool usage.
+•       \*\*Phase 5: Minecraft Environment - \*\*Custom Minecraft-like environment for open-ended problem-solving, resource management, and tool usage.
 
-•       **Phase 6: Sims-Style Simulation - **Ongoing training in a custom Sims-like environment with simplified graphics, providing complex social reasoning scenarios. 
+•       \*\*Phase 6: Sims-Style Simulation - \*\*Ongoing training in a custom Sims-like environment with simplified graphics, providing complex social reasoning scenarios. 
 
 # 2. North Star Model Architecture
 
@@ -74,7 +76,7 @@ A groundbreaking aspect of North Star Model is its training methodology, which l
 
 North Star Model introduces Pattern Sparse Attention (PSA), an efficient attention mechanism developed specifically to handle the computational demands of our game-based training methodology. The architectural modification enables the model to process complex game states and long interaction sequences efficiently.
 
-**Prototype of PSA: **The prototype of PSA primarily consists of two components: a lightning indexer and a fine-grained token selection mechanism. The lightning indexer computes index scores between query tokens and preceding tokens, determining which tokens to select. This sparse attention pattern was specifically designed to handle the sequential nature of game state representations.
+\*\*Prototype of PSA: \*\*The prototype of PSA primarily consists of two components: a lightning indexer and a fine-grained token selection mechanism. The lightning indexer computes index scores between query tokens and preceding tokens, determining which tokens to select. This sparse attention pattern was specifically designed to handle the sequential nature of game state representations.
 
  
 
@@ -168,19 +170,19 @@ As North Star Model's capabilities expanded, the number of available tools grew 
 
 Attempts at dynamic tool addition/removal create two critical problems:
 
-**Problem 1: KV-Cache Invalidation - **Tool definitions reside at the beginning of context. Any changes invalidate cache for all subsequent actions.
+\*\*Problem 1: KV-Cache Invalidation - \*\*Tool definitions reside at the beginning of context. Any changes invalidate cache for all subsequent actions.
 
-**Problem 2: Model Confusion - **References to removed tools in previous actions lead to schema violations and hallucinations.
+\*\*Problem 2: Model Confusion - \*\*References to removed tools in previous actions lead to schema violations and hallucinations.
 
 ### 3.3.3 Solution: Context-Aware State Machine
 
 Pattern Automation Lab developed a logit masking approach for North Star Model instead of tool removal. The system maintains three function-calling modes:
 
-•       **Auto: **Model may choose to call a function or not
+•       \*\*Auto: \*\*Model may choose to call a function or not
 
-•       **Required: **Model must call a function (choice unconstrained)
+•       \*\*Required: \*\*Model must call a function (choice unconstrained)
 
-•       **Specified: **Model must call a function from a defined subset
+•       \*\*Specified: \*\*Model must call a function from a defined subset
 
 Action name prefixes enable grouping:
 
@@ -214,7 +216,7 @@ Pattern Automation Lab treats the filesystem as the ultimate context for North S
 
 North Star Model learns to use the filesystem as structured external memory. Compression strategies are always recoverable - content can be excluded from context as long as access to the source (URL, file path) is preserved.
 
-**Implications for State Space Models: **Efficient file memory may be key for State Space Models (SSMs). Unlike transformers, SSMs lack full attention but can compensate by externalizing long-term state, potentially becoming successors to Neural Turing Machines.
+\*\*Implications for State Space Models: \*\*Efficient file memory may be key for State Space Models (SSMs). Unlike transformers, SSMs lack full attention but can compensate by externalizing long-term state, potentially becoming successors to Neural Turing Machines.
 
 ## 3.5 Core Principle 4: Attention Manipulation Through Repetition
 
@@ -296,11 +298,11 @@ Pattern Automation Lab introduces controlled variation in North Star Model:
 
 These context engineering principles were refined through North Star Model's game-based training. Video game environments provided natural testing grounds for context management strategies:
 
-•       **Minecraft Environment: **Long crafting sequences naturally required append-only context and KV-cache optimization
+•       \*\*Minecraft Environment: \*\*Long crafting sequences naturally required append-only context and KV-cache optimization
 
-•       **Sims-Like Simulation: **Complex multi-character scenarios validated goal repetition and attention manipulation strategies
+•       \*\*Sims-Like Simulation: \*\*Complex multi-character scenarios validated goal repetition and attention manipulation strategies
 
-•       **Chess Training: **Strategic planning validated error preservation and learning from mistakes
+•       \*\*Chess Training: \*\*Strategic planning validated error preservation and learning from mistakes
 
  
 
@@ -310,15 +312,17 @@ These context engineering principles were refined through North Star Model's gam
 
 We evaluate North Star Model on comprehensive benchmarks covering reasoning, coding, mathematics, and agentic capabilities. The model demonstrates strong performance across all evaluated tasks, validating both our game-based training methodology and advanced context engineering.
 
+![Benchmark Comparison Dark](/images/benchmark_comparison_dark.png)
+
 **Key Results:**
 
-•       **Reasoning Benchmarks: **AIME 2025 (93.1%), HMMT Feb 2025 (92.5%), HMMT Nov 2025 (90.2%)
+•       \*\*Reasoning Benchmarks: \*\*AIME 2025 (93.1%), HMMT Feb 2025 (92.5%), HMMT Nov 2025 (90.2%)
 
-•       **Coding Performance: **LiveCodeBench (83.3%), Codeforces rating 2386
+•       \*\*Coding Performance: \*\*LiveCodeBench (83.3%), Codeforces rating 2386
 
-•       **Agentic Tasks: **Terminal Bench 2.0 (46.4%), SWE Verified (73.1%)
+•       \*\*Agentic Tasks: \*\*Terminal Bench 2.0 (46.4%), SWE Verified (73.1%)
 
-•       **Search Agent: **BrowseComp (67.6% with context management)
+•       \*\*Search Agent: \*\*BrowseComp (67.6% with context management)
 
  
 
@@ -326,13 +330,13 @@ We evaluate North Star Model on comprehensive benchmarks covering reasoning, cod
 
 Our context engineering techniques showed measurable improvements:
 
-•       **KV-Cache Optimization: **10x cost reduction, 3-5x latency improvement
+•       \*\*KV-Cache Optimization: \*\*10x cost reduction, 3-5x latency improvement
 
-•       **Tool Masking: **15% improvement in action selection accuracy
+•       \*\*Tool Masking: \*\*15% improvement in action selection accuracy
 
-•       **Goal Repetition: **30% reduction in task abandonment in long sessions
+•       \*\*Goal Repetition: \*\*30% reduction in task abandonment in long sessions
 
-•       **Error Preservation: **25% improvement in error recovery success rate
+•       \*\*Error Preservation: \*\*25% improvement in error recovery success rate
 
  
 
@@ -350,11 +354,11 @@ Pattern Automation Lab's North Star Model represents a comprehensive approach to
 
 Context engineering remains an evolving science, but for agentic systems it is already critically important. No amount of raw computational power replaces the need for proper organization of memory, environment, and feedback. The way context is formed determines:
 
-•       **Agent Speed: **Through KV-cache optimization
+•       \*\*Agent Speed: \*\*Through KV-cache optimization
 
-•       **Recovery Quality: **Through error preservation
+•       \*\*Recovery Quality: \*\*Through error preservation
 
-•       **Solution Scalability: **Through filesystem as extended context
+•       \*\*Solution Scalability: \*\*Through filesystem as extended context
 
 **The agentic future will be built one context at a time. Design them well.**
 
