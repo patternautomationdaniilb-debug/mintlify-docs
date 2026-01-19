@@ -21,9 +21,13 @@
           "href": "https://www.patternautomation.com/neuro-ai"
         },
         {
-          "anchor": "Blog",
+          "anchor": "Updates",
           "icon": "newspaper",
-          "href": "https://mintlify.com/blog"
+          "color": {
+            "light": "#1545a3",
+            "dark": "#1545a3"
+          },
+          "href": "https://www.patternautomation.com/neuro-update"
         }
       ]
     },
