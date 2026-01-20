@@ -298,13 +298,13 @@
                   {
                     "group": "FAQ",
                     "pages": [
+                      "en/help-center/privacy-policy/faq/untitled-page",
                       "en/protocol/privacy-policy/will-my-personal-data-be-deleted-after-i-delete-my-account",
                       "en/protocol/privacy-policy/will-manuss-privacy-policy-change",
                       "en/protocol/privacy-policy/how-can-manus-ensure-the-security-of-user-information",
                       "en/protocol/privacy-policy/can-minors-use-manus",
                       "en/protocol/privacy-policy/who-can-see-my-tasks",
                       "en/protocol/privacy-policy/will-manus-publicly-display-or-recommend-projects-templates-or-playbooks-created-by-users-without-explicit-consent",
-                      "en/protocol/do-i-own-the-assets-websites-images-videos-slides-generated-via-manus",
                       "en/protocol/will-manus-use-user-data-for-model-training-purposes"
                     ]
                   }
