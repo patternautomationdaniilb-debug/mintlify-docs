@@ -360,9 +360,9 @@
                   {
                     "group": "Refunds",
                     "pages": [
+                      "en/help-center/billing/refunds/untitled-page",
                       "en/help-center/billing/refunds/how-can-i-request-a-refund-for-a-purchased-membership-1",
-                      "en/help-center/billing/refunds/how-does-our-ai-agents-credit-refund-policy-work",
-                      "en/help-center/billing/refunds/how-can-i-request-a-refund-for-a-purchased-membership"
+                      "en/help-center/billing/refunds/how-does-our-ai-agents-credit-refund-policy-work"
                     ]
                   }
                 ]
