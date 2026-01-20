@@ -1,23 +1,23 @@
 ---
 title: "How can I delete documents from disk space？"
-description: "Understand Manus disk space management and the measures to take when encountering insufficient space issues."
+description: "Understand Neuro disk space management and the measures to take when encountering insufficient space issues."
 ---
 
-## **The Manus Workspace: Your Secure and Temporary Sandbox**
+### **The Neuro Workspace: Your Secure and Temporary Sandbox**
 
-To provide a secure and powerful environment for every task, Manus operates on a system of isolated, temporary workspaces, often called "sandboxes." When you initiate a task, we create a brand-new, clean workspace just for that job. This workspace includes its own dedicated CPU, memory, and a virtual disk for storing files.
+To provide a secure and powerful environment for every task, Neuro operates on a system of isolated, temporary workspaces, often called "sandboxes." When you initiate a task, we create a brand-new, clean workspace just for that job. This workspace includes its own dedicated CPU, memory, and a virtual disk for storing files.
 
 Because this entire environment is **temporary and is securely wiped clean after your task is completed**, the concept of managing disk space is different from a traditional computer.
 
 This guide explains our policy on file deletion and provides best practices for managing tasks that require significant resources.
 
-## **Our Policy on File Deletion**
+### **Our Policy on File Deletion**
 
 Direct deletion of files within a task's workspace is not a supported feature. This is by design. Since each workspace is ephemeral and automatically erased at the end of a task, there is no need for manual cleanup to free up long-term storage. The entire sandbox, including all generated files, **is securely disposed of**, ensuring data privacy and a fresh start for your next task.
 
 However, you may occasionally encounter an "insufficient disk space" error during a task. This does not mean your account is full; it means that a single, specific task has exceeded the resources allocated to its temporary workspace.
 
-## **Troubleshooting "Insufficient Disk Space" Errors**
+### **Troubleshooting "Insufficient Disk Space" Errors**
 
 An insufficient space error is almost always caused by a task attempting to handle an exceptionally large amount of data at one time. The key to resolving this is not to delete files, but to refine the scope of the task itself.
 
@@ -25,8 +25,8 @@ Here are the most common causes and their solutions:
 
 | Cause                                 | What Happens                                                                                                                                                                        | How to Solve It                                                                                                                                                                                                     |
 | :------------------------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Processing Very Large Input Files** | You have asked Manus to process an extremely large file, such as a high-resolution video, a massive dataset, or a PDF document that is thousands of pages long.                     | Break the task down by input. Instead of processing the entire file at once, divide it into smaller chunks. Example: Instead of "Summarize this 2,000-page book," try "Summarize chapters 1-5 of this book."        |
-| **Generating Excessive Output**       | Your prompt instructs Manus to generate a very large volume of data, such as thousands of image variations, extensive codebases, or extremely long text documents in a single step. | Refine the scope of the output. Focus on generating only the essential information needed. Example: Instead of "Generate 1,000 background images," try "Generate 50 background images with a blue, abstract theme." |
+| **Processing Very Large Input Files** | You have asked Neuro to process an extremely large file, such as a high-resolution video, a massive dataset, or a PDF document that is thousands of pages long.                     | Break the task down by input. Instead of processing the entire file at once, divide it into smaller chunks. Example: Instead of "Summarize this 2,000-page book," try "Summarize chapters 1-5 of this book."        |
+| **Generating Excessive Output**       | Your prompt instructs Neuro to generate a very large volume of data, such as thousands of image variations, extensive codebases, or extremely long text documents in a single step. | Refine the scope of the output. Focus on generating only the essential information needed. Example: Instead of "Generate 1,000 background images," try "Generate 50 background images with a blue, abstract theme." |
 | **Complex, Long-Running Tasks**       | A single task involves many complex steps (research, data analysis, code generation, report writing all in one), accumulating intermediate files and exhausting available space.    | Adopt a multi-task workflow. Break your project into logical, sequential tasks. Example: Task 1 - Research trends; Task 2 - Analyze data and create charts; Task 3 - Write summary report.                          |
 
 Common related FAQs:
@@ -34,6 +34,6 @@ Common related FAQs:
 - What should I do if I encounter insufficient space issues?
 - Why am I running out of disk space?
 - How can I improve insufficient space issues?
-- What causes insufficient disk space in Manus?
-- Is there a way to manage disk space in Manus?
+- What causes insufficient disk space in Neuro?
+- Is there a way to manage disk space in Neuro?
 - What is the recommended solution for disk space issues?
