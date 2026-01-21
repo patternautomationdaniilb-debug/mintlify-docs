@@ -4,4 +4,243 @@ description: "Build integrations/apps with your internal tools and proprietary s
 icon: "question"
 ---
 
-jj
+### What are Custom MCP Servers/Apps?
+
+Custom MCP servers/Apps allow you to extend Neuro’s integration capabilities beyond prebuilt connectors. If your organization uses internal tools, proprietary APIs, or specialized services not covered by standard MCP connectors/Apps, you can build a custom server that connects Neuro to those systems. A custom MCP server/Apps acts as a bridge between Neuro and your internal infrastructure, enabling the same seamless multi-app workflows you get with prebuilt connectors—but tailored to your specific tools and requirements.
+
+**Why Build Custom MCP Servers/Apps?**
+
+**Internal Systems**
+
+Many organizations rely on custom-built tools, internal databases, or proprietary software. Custom MCP/Apps servers allow Neuro to integrate with these systems, bringing internal data into your AI workflows.
+
+**Examples**:
+
+- Internal CRM or customer database
+- Proprietary project management tools
+- Custom analytics platforms
+- Legacy systems with APIs
+
+**Specialized Services**
+
+Some third-party services don’t have prebuilt MCP connectors. If you use a specialized tool or niche service, you can build a custom server to connect it to Neuro.
+
+**Examples**:
+
+- Industry-specific software
+- Regional services not covered by standard connectors
+- Emerging platforms without official integrations
+
+**Custom Business Logic**
+
+Custom MCP servers/ Apps can implement business-specific logic, data transformations, or validation rules that go beyond simple API calls. This allows you to enforce organizational policies and workflows within Apps integrations.
+
+**Examples**:
+
+- Approval workflows before data updates
+- Data validation against internal standards
+- Custom authentication or security requirements
+- Multi-step processes specific to your organization
+
+**How Custom MCP Servers Work**
+
+A custom MCP server is a lightweight service that implements the Model Context Protocol specification. It exposes endpoints that Neuro can call to read data, perform actions, or execute custom logic within your systems.
+
+**Architecture Your Internal System**↔**Custom MCP Server**↔**NeuroAI**
+
+The MCP server sits between Neuro and your internal systems, translating Neuro requests into actions within your tools and returning results in a format Neuro understands.
+
+**Protocol**
+
+Custom MCP servers implement a standardized protocol that defines:
+
+- **Tools**: Actions Neuro can perform (e.g., “get_customer_data”, “update_project_status”)
+- **Resources**: Data Neuro can read (e.g., documents, records, files)
+- **Prompts**: Predefined templates for common operations
+
+**Building a Custom MCP Server/Apps**
+
+An MCP (Model Context Protocol) URL is the endpoint where your MCP server listens for connections. Here's how to set one up:
+
+1. **Choose your transport method**: MCP servers typically use Server-Sent Events (SSE) over HTTP, which works well for web-based integrations.
+2. **Deploy your server**: Host your MCP server on a platform like some Cloud Provider, Render, or any cloud service that provides a public URL. Make sure it's accessible via HTTPS for security.
+3. **Define your endpoint**: Your server should expose an endpoint (commonly `/sse` or `/mcp`) that handles SSE connections. For example: `https://your-domain.com/sse`
+4. **Configure the URL**: When connecting to your MCP server, you'll need:
+   - The full URL (e.g., `https://mcp.yourservice.com/sse`)
+   - A name for the server (e.g., `my-mcp-server`)
+   - Any required authentication headers if needed
+5. **Test the connection**: Verify your URL works by attempting to connect from an MCP client and checking that tools are properly exposed.
+
+**Prerequisites**
+
+- **API access** to the system you want to integrate
+- **Development environment** (Node.js, Python, or any language that can run a web server)
+- **Understanding of the MCP specification/apps** (available in Neuro documentation)
+
+**Basic Implementation**
+
+A minimal custom MCP server/Apps includes:
+
+1. **Server endpoint**: A web service that responds to MCP protocol requests
+2. **Tool definitions**: Descriptions of actions Neuro can perform
+3. **Authentication**: Secure handling of credentials and API keys
+4. **Request handlers**: Logic that executes actions and returns results
+
+**Example: Internal CRM Integration**
+
+Here’s a conceptual example of a custom MCP server for an internal CRM:
+
+**Tools exposed**:
+
+- `get_customer_info(customer_id)`: Retrieve customer details
+- `update_customer_notes(customer_id, notes)`: Add notes to customer record
+- `search_customers(query)`: Search customer database
+- `create_follow_up_task(customer_id, task_description, due_date)`: Create task
+
+**Authentication**: API key or OAuth token for your internal CRM
+
+**Deployment**: Hosted on your infrastructure or a secure cloud environment
+
+Once deployed, you connect this custom server to Neuro, and it appears alongside prebuilt connectors. You can then use natural language prompts like:
+
+- “Get customer information for customer ID 12345”
+- “Search for customers in the Frankfurt area”
+- “Update notes for customer 67890 with our recent conversation”
+
+**Connecting a Custom MCP Server/Apps**
+
+**Step 1: Deploy Your Server**
+
+Host your custom MCP server on infrastructure you control. Ensure it’s accessible via HTTPS and has proper security measures in place.
+
+**Step 2: Add to Neuro**
+
+In Manus, navigate to **Settings → Apps/Integrations → Custom MCP Servers/Apps**
+
+and click
+
+**Add Server**.
+
+**Step 3: Provide Server Details**
+
+Enter the following information:
+
+- **Server name**: A descriptive name (e.g., “Internal CRM”, “Analytics Platform”)
+- **Server URL**: The HTTPS endpoint where your MCP server is hosted
+- **Authentication**: API key, Bearer token, or other credentials required
+
+**Step 4: Test Connection**
+
+Neuro will verify it can communicate with your server and retrieve the list of available tools.
+
+**Step 5: Start Using**
+
+Once connected, your custom tools appear in Neuro’s available integrations. Reference them in prompts just like prebuilt connectors.
+
+**Security Considerations**
+
+**Authentication**
+
+Custom MCP servers should implement robust authentication:
+
+- Use API keys, OAuth tokens, or other secure methods
+- Never expose credentials in URLs or logs
+- Rotate credentials regularly
+
+**Authorization**
+
+Implement proper authorization checks:
+
+- Verify that the requesting user has permission to access data
+- Enforce role-based access control (RBAC) if applicable
+- Log all access attempts for audit purposes[**​**](https://manus.im/docs/integrations/custom-mcp#data-transmission)
+
+**Data Transmission**
+
+- Use HTTPS for all communication
+- Encrypt sensitive data at rest and in transit
+- Implement rate limiting to prevent abuse
+
+### [**​**](https://manus.im/docs/integrations/custom-mcp#network-security)
+
+**Network Security**
+
+- Deploy MCP servers within your secure network perimeter
+- Use firewalls and access controls to restrict who can reach the server
+- Consider VPN or private network connections for highly sensitive integrations
+
+## [**​**](https://manus.im/docs/integrations/custom-mcp#best-practices)
+
+**Best Practices**
+
+### [**​**](https://manus.im/docs/integrations/custom-mcp#tool-design)
+
+**Tool Design**
+
+**Keep tools focused**: Each tool should perform one clear action. Instead of a single “manage_customer” tool, create separate tools for “get_customer”, “update_customer”, “delete_customer”.
+
+**Provide clear descriptions**: Neuro uses tool descriptions to understand when to use each tool. Write clear, specific descriptions that explain what the tool does and when it’s appropriate.
+
+**Handle errors gracefully**: Return meaningful error messages that help Neuro (and users) understand what went wrong and how to fix it.
+
+### [**​**](https://manus.im/docs/integrations/custom-mcp#performance)
+
+**Performance**
+
+**Optimize response times**: Neuro waits for MCP server responses. Keep operations fast by caching data, using efficient queries, and avoiding unnecessary processing.
+
+**Implement timeouts**: Set reasonable timeouts for API calls to prevent Neuro from waiting indefinitely if your internal system is slow or unresponsive.
+
+**Use async operations for long tasks**: If an operation takes more than a few seconds, consider returning immediately with a task ID and providing a separate tool to check status.
+
+### [**​**](https://manus.im/docs/integrations/custom-mcp#monitoring)
+
+**Monitoring**
+
+**Log all requests**: Track what Neuro is requesting and how your server responds. This helps with debugging and understanding usage patterns.
+
+**Monitor performance**: Track response times, error rates, and usage volume to identify issues before they impact users.
+
+**Set up alerts**: Get notified if your MCP server becomes unresponsive or starts returning errors.
+
+## [**​**](https://manus.im/docs/integrations/custom-mcp#example-use-cases)
+
+**Example Use Cases**
+
+### [**​**](https://manus.im/docs/integrations/custom-mcp#internal-knowledge-base)
+
+**Internal Knowledge Base Scenario**: Your organization has an internal wiki or knowledge base with company policies, procedures, and documentation.
+
+**Custom MCP Server**: Provides tools to search the knowledge base, retrieve specific articles, and find related documents.
+
+**Neuro Workflow**: “Search our internal knowledge base for the expense reimbursement policy and summarize the key points.”
+
+---
+
+### [**​**](https://manus.im/docs/integrations/custom-mcp#custom-analytics-platform)
+
+**Custom Analytics Platform Scenario**: You have a proprietary analytics platform that tracks business metrics not available in standard tools.
+
+**Custom MCP Server**: Exposes tools to query metrics, generate reports, and retrieve historical data.
+
+**Neuro Workflow**: “Pull our customer acquisition cost data for Q4 and create a trend analysis comparing it to Q3.”
+
+---
+
+### [**​**](https://manus.im/docs/integrations/custom-mcp#legacy-system-integration)
+
+**Legacy System Integration Scenario**: Your organization relies on a legacy system that doesn’t have modern APIs or integrations.
+
+**Custom MCP Server**: Acts as a wrapper around the legacy system, translating modern API calls into the format the legacy system understands.
+
+**Neuro Workflow**: “Check inventory levels in the legacy system for product SKU 98765 and create a reorder request if stock is below 100 units.”
+
+---
+
+### [**​**](https://manus.im/docs/integrations/custom-mcp#multi-step-approval-workflows)
+
+**Multi-Step Approval Workflows Scenario**: Your organization requires approval workflows for certain actions (e.g., budget requests, data access).
+
+**Custom MCP Server**: Implements tools that create approval requests, check approval status, and execute approved actions.
+
+**Neuro Workflow**: “Create a budget request for \$50,000 for the marketing campaign and notify the finance team for approval.”
