@@ -300,6 +300,7 @@
               "en/help-center/user-safety-and-content-policy",
               {
                 "group": "Privacy Policy",
+                "icon": "lock",
                 "pages": [
                   "en/protocol/untitled-page-1",
                   {
