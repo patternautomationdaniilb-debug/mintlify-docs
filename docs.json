@@ -120,6 +120,7 @@
                   },
                   {
                     "group": "Knowledge Base",
+                    "icon": "folder-closed",
                     "pages": [
                       "en/introduction/general-settings/knowledge-base",
                       "en/introduction/general-settings/knowledge-base/sorry-deleted-tasks-cannot-be-recovered-you-can-try-starting-a-new-conversation-common-related-faqs-can-deleted-tasks-be-recovered-what-should-i-do-if-i-deleted-a-task-is-task-deletion-permanent-can-i-restore-a-deleted-task-what-happens-when-i-delete-a-task-what-is-the-alternative-to-recovering-a-deleted-task-can-i-get-my-deleted-task-back-should-i-start-a-new-conversation-if-i-deleted-a-task"
