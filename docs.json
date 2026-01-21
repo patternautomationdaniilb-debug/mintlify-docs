@@ -92,7 +92,17 @@
                       "en/introduction/features/agents/tools",
                       "en/introduction/features/agents/apps",
                       "en/introduction/features/agents/knowledge",
-                      "en/introduction/features/agents/task"
+                      "en/introduction/features/agents/task",
+                      {
+                        "group": "North Star LLM",
+                        "icon": "star-christmas",
+                        "pages": [
+                          "en/protocol/north-star-llm/overview",
+                          "en/introduction/features/north-star-llm/north-star",
+                          "en/introduction/features/north-star-llm/untitled-page",
+                          "en/introduction/features/north-star-llm/north-star-lite-1-0"
+                        ]
+                      }
                     ]
                   },
                   {
@@ -139,16 +149,6 @@
                     "icon": "face-grin-stars",
                     "pages": [
                       "en/introduction/features/super-agent/overview"
-                    ]
-                  },
-                  {
-                    "group": "North Star LLM",
-                    "icon": "star-christmas",
-                    "pages": [
-                      "en/protocol/north-star-llm/overview",
-                      "en/introduction/features/north-star-llm/north-star",
-                      "en/introduction/features/north-star-llm/untitled-page",
-                      "en/introduction/features/north-star-llm/north-star-lite-1-0"
                     ]
                   }
                 ]
