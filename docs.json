@@ -159,6 +159,13 @@
             "icon": "hat-chef",
             "groups": [
               {
+                "group": "Prompting practices",
+                "icon": "book-bookmark",
+                "pages": [
+                  "en/cookbook/prompting-practices/untitled-page"
+                ]
+              },
+              {
                 "group": "Use Cases",
                 "icon": "align-justify",
                 "pages": [
@@ -261,10 +268,6 @@
               },
               {
                 "group": "Apps",
-                "pages": []
-              },
-              {
-                "group": "Prompting best practices",
                 "pages": []
               }
             ]
