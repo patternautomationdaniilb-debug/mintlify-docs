@@ -154,7 +154,8 @@
             ]
           },
           {
-            "tab": "Guides",
+            "tab": "Cookbook",
+            "icon": "hat-chef",
             "groups": [
               {
                 "group": "Use Cases",
