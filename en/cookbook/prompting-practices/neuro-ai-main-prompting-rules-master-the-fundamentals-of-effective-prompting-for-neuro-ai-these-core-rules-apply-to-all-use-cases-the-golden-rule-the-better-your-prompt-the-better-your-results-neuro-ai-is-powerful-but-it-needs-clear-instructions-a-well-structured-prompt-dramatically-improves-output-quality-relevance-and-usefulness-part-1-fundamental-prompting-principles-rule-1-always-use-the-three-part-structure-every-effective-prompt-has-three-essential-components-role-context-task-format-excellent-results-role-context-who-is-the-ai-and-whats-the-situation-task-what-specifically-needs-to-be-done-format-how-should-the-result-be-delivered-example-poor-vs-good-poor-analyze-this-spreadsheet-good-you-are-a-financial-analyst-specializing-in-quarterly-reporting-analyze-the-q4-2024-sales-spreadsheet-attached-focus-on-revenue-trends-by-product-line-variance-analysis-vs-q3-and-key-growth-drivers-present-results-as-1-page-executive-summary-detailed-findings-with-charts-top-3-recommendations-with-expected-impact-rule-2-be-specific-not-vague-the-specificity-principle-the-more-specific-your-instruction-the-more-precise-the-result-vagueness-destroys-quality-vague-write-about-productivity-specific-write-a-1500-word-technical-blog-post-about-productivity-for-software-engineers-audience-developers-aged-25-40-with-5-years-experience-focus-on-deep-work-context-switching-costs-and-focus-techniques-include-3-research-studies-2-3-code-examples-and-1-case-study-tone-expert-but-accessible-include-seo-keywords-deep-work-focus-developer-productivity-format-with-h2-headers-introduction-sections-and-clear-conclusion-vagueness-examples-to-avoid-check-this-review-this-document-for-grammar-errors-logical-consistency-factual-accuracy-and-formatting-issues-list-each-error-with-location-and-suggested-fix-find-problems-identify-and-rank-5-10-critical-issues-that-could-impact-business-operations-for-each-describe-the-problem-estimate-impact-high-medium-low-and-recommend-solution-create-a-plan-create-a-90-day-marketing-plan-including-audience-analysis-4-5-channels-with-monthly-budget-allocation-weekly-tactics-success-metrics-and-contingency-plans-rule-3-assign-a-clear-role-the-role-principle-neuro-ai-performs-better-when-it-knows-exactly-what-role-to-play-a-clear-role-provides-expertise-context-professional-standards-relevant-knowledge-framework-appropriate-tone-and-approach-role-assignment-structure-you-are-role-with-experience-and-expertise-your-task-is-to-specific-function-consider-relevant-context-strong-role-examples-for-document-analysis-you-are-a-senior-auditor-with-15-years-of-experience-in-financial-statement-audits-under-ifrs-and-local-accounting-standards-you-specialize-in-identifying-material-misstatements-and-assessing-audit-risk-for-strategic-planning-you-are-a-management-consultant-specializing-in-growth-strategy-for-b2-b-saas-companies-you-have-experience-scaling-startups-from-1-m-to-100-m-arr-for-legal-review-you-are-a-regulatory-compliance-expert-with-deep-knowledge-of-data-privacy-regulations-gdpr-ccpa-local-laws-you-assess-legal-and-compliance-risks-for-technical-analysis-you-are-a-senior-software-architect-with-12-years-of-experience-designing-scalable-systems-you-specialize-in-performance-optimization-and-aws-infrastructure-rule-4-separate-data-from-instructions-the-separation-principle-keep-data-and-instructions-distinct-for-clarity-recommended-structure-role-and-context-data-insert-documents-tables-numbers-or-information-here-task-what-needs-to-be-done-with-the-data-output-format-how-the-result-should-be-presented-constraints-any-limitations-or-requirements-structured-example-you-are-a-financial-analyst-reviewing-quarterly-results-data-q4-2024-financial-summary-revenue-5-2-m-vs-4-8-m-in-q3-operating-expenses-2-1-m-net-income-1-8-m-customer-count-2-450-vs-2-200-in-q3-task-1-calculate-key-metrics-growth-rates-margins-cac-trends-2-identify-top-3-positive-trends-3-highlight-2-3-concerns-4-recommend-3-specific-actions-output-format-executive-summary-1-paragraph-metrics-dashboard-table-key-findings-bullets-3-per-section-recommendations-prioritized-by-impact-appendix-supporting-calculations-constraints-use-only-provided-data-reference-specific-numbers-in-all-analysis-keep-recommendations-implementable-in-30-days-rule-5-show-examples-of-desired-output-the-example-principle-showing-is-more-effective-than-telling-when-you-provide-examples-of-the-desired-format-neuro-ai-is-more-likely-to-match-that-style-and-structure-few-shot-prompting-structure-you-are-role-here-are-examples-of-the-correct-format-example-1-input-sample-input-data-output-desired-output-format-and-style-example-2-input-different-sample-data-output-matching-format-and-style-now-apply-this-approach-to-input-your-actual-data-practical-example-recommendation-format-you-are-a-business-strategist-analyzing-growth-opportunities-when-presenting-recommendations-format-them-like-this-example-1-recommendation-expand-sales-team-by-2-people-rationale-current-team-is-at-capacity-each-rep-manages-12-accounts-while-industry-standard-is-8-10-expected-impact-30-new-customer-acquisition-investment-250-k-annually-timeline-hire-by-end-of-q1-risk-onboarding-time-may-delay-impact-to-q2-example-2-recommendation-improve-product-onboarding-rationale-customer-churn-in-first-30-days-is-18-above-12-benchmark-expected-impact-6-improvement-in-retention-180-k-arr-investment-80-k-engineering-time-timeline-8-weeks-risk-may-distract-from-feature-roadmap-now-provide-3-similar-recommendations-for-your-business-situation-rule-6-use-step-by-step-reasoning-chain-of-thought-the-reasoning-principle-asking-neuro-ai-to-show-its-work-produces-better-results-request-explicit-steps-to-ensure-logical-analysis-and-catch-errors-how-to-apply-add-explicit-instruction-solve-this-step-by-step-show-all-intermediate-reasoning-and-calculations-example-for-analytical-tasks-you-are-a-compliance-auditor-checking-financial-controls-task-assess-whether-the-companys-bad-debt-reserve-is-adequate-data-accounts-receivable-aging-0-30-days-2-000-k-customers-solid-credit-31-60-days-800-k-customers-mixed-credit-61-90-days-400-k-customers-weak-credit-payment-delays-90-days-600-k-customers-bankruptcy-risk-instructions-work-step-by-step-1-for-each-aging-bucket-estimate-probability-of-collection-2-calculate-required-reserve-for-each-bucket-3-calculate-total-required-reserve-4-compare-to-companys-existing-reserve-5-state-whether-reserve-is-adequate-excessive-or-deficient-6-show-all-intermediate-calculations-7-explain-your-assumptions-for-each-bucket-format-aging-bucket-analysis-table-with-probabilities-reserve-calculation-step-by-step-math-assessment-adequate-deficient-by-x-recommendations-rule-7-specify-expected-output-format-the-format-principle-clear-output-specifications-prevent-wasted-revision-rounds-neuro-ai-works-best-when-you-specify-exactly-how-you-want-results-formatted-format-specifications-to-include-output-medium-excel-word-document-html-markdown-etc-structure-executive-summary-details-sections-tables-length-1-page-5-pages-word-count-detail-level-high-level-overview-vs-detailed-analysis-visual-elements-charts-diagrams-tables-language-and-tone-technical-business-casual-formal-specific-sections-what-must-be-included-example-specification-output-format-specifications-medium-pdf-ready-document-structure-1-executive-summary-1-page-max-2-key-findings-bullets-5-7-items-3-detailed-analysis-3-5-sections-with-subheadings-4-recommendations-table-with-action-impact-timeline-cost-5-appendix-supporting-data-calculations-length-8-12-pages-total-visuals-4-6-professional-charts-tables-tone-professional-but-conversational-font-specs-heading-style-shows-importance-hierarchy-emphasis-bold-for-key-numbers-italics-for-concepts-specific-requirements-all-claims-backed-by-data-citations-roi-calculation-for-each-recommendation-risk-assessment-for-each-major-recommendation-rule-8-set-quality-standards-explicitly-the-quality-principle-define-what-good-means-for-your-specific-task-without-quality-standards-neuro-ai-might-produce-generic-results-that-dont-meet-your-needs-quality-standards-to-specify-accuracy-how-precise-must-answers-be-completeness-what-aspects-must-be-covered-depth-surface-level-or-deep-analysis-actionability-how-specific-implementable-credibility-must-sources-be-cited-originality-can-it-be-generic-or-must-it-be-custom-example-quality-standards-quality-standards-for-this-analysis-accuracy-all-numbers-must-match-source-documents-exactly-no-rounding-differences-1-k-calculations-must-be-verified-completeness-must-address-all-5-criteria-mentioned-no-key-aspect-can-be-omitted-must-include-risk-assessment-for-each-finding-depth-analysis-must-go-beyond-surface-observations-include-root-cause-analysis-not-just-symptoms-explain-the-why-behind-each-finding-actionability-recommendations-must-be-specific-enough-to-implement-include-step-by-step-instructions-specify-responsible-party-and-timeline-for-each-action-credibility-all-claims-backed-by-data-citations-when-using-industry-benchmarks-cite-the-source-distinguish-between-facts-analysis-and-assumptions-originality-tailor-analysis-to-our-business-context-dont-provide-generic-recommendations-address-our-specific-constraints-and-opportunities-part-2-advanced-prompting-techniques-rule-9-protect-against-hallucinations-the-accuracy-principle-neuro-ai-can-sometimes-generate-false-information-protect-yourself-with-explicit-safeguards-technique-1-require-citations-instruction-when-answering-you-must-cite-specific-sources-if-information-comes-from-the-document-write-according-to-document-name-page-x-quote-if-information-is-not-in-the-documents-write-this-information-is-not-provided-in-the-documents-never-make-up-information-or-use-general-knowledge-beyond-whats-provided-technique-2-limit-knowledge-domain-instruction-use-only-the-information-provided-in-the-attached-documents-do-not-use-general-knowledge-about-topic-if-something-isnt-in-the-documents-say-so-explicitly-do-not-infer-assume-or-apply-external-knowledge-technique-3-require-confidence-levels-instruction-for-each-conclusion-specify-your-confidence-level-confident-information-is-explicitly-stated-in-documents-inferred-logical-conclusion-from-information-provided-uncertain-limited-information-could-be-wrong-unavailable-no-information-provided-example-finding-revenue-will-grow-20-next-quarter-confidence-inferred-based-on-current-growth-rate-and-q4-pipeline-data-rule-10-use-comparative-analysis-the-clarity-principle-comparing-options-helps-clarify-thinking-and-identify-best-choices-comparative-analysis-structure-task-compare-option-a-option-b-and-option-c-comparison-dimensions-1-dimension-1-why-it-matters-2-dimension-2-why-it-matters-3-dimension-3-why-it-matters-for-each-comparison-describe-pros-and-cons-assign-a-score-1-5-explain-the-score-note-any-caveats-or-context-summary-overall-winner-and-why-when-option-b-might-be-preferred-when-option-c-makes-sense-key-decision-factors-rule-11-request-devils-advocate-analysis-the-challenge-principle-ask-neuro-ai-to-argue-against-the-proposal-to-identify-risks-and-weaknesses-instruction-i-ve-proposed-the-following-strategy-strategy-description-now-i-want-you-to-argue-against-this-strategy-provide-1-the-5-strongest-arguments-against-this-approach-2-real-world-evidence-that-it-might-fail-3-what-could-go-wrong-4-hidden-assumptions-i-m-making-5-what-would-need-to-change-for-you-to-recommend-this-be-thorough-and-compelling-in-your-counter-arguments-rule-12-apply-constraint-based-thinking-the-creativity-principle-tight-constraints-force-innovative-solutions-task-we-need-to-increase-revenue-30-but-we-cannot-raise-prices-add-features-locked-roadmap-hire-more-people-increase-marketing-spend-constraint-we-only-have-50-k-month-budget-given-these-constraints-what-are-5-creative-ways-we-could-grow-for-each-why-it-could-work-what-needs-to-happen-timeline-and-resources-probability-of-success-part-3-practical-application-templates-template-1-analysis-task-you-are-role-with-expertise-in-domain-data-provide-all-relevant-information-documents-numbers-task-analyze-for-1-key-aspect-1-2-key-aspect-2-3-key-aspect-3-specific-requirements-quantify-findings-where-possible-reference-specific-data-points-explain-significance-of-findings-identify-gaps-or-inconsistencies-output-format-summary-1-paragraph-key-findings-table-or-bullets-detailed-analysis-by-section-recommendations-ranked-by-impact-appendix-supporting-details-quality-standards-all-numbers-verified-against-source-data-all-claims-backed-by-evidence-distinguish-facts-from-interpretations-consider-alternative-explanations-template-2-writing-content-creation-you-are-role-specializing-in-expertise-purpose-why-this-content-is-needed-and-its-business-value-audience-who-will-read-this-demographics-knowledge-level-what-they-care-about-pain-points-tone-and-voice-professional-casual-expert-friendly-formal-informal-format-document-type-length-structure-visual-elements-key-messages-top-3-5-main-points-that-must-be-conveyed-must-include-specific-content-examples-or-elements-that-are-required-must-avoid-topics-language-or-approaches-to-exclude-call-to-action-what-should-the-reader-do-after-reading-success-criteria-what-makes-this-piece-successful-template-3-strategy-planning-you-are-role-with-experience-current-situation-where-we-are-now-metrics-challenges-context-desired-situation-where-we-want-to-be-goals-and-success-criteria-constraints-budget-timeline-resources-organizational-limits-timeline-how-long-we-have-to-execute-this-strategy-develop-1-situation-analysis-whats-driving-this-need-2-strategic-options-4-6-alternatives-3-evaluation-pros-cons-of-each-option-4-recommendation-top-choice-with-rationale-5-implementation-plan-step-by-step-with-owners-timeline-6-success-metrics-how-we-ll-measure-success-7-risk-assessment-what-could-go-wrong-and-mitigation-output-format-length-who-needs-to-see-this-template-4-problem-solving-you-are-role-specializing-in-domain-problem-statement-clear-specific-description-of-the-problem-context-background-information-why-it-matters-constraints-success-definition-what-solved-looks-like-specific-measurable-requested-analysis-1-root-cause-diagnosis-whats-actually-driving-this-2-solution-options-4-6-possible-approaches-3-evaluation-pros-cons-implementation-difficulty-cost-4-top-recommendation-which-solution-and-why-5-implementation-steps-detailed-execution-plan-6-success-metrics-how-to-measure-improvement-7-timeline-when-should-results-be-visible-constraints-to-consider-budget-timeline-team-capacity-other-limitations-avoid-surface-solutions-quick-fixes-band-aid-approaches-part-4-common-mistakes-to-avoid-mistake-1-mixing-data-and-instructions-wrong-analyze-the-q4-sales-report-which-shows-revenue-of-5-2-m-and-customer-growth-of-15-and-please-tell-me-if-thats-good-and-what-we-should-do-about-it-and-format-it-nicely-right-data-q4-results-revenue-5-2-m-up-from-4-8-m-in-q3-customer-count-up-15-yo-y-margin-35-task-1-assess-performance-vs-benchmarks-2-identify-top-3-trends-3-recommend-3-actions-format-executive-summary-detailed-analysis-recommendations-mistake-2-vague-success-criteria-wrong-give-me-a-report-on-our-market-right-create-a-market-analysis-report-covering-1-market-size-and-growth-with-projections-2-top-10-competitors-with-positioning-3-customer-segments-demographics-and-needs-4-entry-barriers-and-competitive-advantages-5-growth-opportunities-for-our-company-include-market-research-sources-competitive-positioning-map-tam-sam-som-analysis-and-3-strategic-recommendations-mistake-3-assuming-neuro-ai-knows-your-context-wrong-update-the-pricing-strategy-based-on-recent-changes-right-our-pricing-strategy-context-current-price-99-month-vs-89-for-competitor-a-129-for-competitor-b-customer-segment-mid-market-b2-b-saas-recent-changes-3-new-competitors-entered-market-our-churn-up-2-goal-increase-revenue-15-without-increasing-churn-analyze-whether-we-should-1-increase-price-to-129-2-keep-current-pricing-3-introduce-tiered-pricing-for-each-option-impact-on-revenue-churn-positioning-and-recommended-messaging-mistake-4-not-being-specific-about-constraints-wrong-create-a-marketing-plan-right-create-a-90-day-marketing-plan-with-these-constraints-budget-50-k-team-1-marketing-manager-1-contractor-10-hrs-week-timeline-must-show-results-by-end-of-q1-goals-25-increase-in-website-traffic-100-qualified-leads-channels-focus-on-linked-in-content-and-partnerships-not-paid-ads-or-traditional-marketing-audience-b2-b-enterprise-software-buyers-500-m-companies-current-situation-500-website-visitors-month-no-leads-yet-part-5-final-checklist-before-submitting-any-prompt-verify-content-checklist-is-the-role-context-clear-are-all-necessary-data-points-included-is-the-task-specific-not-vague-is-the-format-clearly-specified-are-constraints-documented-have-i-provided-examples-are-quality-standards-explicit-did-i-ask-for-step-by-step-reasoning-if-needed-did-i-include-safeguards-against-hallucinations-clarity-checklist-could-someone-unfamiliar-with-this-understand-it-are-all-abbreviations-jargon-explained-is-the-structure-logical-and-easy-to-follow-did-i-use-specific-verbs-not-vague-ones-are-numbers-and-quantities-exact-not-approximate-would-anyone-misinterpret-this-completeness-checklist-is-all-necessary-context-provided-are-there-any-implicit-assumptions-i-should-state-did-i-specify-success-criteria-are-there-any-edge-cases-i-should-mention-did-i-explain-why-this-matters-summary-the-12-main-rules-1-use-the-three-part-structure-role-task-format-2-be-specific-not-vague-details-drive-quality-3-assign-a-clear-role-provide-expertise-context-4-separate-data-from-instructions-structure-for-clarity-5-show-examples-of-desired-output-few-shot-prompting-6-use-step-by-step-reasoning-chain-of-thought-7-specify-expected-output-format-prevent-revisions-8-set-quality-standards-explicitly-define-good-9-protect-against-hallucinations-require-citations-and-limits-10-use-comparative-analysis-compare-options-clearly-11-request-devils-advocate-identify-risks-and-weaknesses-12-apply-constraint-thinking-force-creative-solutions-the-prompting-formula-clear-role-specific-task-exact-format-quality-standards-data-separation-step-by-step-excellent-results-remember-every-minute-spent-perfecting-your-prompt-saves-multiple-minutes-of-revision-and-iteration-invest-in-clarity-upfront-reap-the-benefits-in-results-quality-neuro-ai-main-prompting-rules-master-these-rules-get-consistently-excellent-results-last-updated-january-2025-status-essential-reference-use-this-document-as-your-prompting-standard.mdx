@@ -1,0 +1,845 @@
+---
+title: "Main Prompting Rules"
+description: "Master the fundamentals of effective prompting for Neuro AI. These core rules apply to all use cases."
+---
+
+## **The Golden Rule**
+
+**The better your prompt, the better your results.**
+
+Neuro AI is powerful, but it needs clear instructions. A well-structured prompt dramatically improves output quality, relevance, and usefulness.
+
+---
+
+## Part 1: Fundamental Prompting Principles
+
+### Rule 1: Always Use the Three-Part Structure
+
+Every effective prompt has three essential components:
+
+```
+[ROLE/CONTEXT] + [TASK] + [FORMAT] = Excellent Results
+```
+
+**ROLE/CONTEXT** — Who is the AI and what's the situation? **TASK** — What specifically needs to be done? **FORMAT** — How should the result be delivered?
+
+#### Example: Poor vs Good
+
+**❌ POOR:**
+
+```
+"Analyze this spreadsheet"
+```
+
+**✅ GOOD:**
+
+```
+"You are a financial analyst specializing in quarterly 
+reporting. Analyze the Q4 2024 sales spreadsheet attached. 
+Focus on: revenue trends by product line, variance analysis 
+vs Q3, and key growth drivers. 
+
+Present results as:
+- 1-page executive summary
+- Detailed findings with charts
+- Top 3 recommendations with expected impact"
+```
+
+---
+
+### Rule 2: Be Specific, Not Vague
+
+**The Specificity Principle:** The more specific your instruction, the more precise the result.
+
+#### Vagueness Destroys Quality
+
+```
+❌ VAGUE:
+"Write about productivity"
+
+✅ SPECIFIC:
+"Write a 1500-word technical blog post about productivity 
+for software engineers. Audience: developers aged 25-40 with 
+5+ years experience. Focus on: deep work, context-switching 
+costs, and focus techniques. Include: 3 research studies, 
+2-3 code examples, and 1 case study. Tone: expert but 
+accessible. Include SEO keywords: 'deep work', 'focus', 
+'developer productivity'. Format with H2 headers, 
+introduction, sections, and clear conclusion."
+```
+
+#### Vagueness Examples to Avoid
+
+```
+❌ "Check this"
+✅ "Review this document for: grammar errors, logical 
+   consistency, factual accuracy, and formatting issues. 
+   List each error with location and suggested fix."
+
+❌ "Find problems"
+✅ "Identify and rank 5-10 critical issues that could impact 
+   business operations. For each: describe the problem, 
+   estimate impact (high/medium/low), and recommend solution."
+
+❌ "Create a plan"
+✅ "Create a 90-day marketing plan including: audience analysis, 
+   4-5 channels with monthly budget allocation, weekly 
+   tactics, success metrics, and contingency plans."
+```
+
+---
+
+### Rule 3: Assign a Clear Role
+
+**The Role Principle:** Neuro AI performs better when it knows exactly what role to play.
+
+A clear role provides:
+
+- Expertise context
+- Professional standards
+- Relevant knowledge framework
+- Appropriate tone and approach
+
+#### Role Assignment Structure
+
+```
+You are [ROLE] with [EXPERIENCE] and [EXPERTISE].
+Your task is to [SPECIFIC FUNCTION].
+Consider [RELEVANT CONTEXT].
+```
+
+#### Strong Role Examples
+
+**For Document Analysis:**
+
+```
+"You are a senior auditor with 15 years of experience 
+in financial statement audits under IFRS and local 
+accounting standards. You specialize in identifying 
+material misstatements and assessing audit risk."
+```
+
+**For Strategic Planning:**
+
+```
+"You are a management consultant specializing in 
+growth strategy for B2B SaaS companies. You have 
+experience scaling startups from $1M to $100M ARR."
+```
+
+**For Legal Review:**
+
+```
+"You are a regulatory compliance expert with deep 
+knowledge of data privacy regulations (GDPR, CCPA, 
+local laws). You assess legal and compliance risks."
+```
+
+**For Technical Analysis:**
+
+```
+"You are a senior software architect with 12 years 
+of experience designing scalable systems. You 
+specialize in performance optimization and AWS 
+infrastructure."
+```
+
+---
+
+### Rule 4: Separate Data from Instructions
+
+**The Separation Principle:** Keep data and instructions distinct for clarity.
+
+#### Recommended Structure
+
+```
+[ROLE AND CONTEXT]
+
+DATA:
+[Insert documents, tables, numbers, or information here]
+
+TASK:
+[What needs to be done with the data]
+
+OUTPUT FORMAT:
+[How the result should be presented]
+
+CONSTRAINTS:
+[Any limitations or requirements]
+```
+
+#### Structured Example
+
+```
+You are a financial analyst reviewing quarterly results.
+
+DATA:
+Q4 2024 Financial Summary:
+- Revenue: $5.2M (vs $4.8M in Q3)
+- Operating expenses: $2.1M
+- Net income: $1.8M
+- Customer count: 2,450 (vs 2,200 in Q3)
+
+TASK:
+1. Calculate key metrics (growth rates, margins, CAC trends)
+2. Identify top 3 positive trends
+3. Highlight 2-3 concerns
+4. Recommend 3 specific actions
+
+OUTPUT FORMAT:
+- Executive Summary (1 paragraph)
+- Metrics Dashboard (table)
+- Key Findings (bullets, 3 per section)
+- Recommendations (prioritized by impact)
+- Appendix (supporting calculations)
+
+CONSTRAINTS:
+- Use only provided data
+- Reference specific numbers in all analysis
+- Keep recommendations implementable in 30 days
+```
+
+---
+
+### Rule 5: Show Examples of Desired Output
+
+**The Example Principle:** Showing is more effective than telling.
+
+When you provide examples of the desired format, Neuro AI is more likely to match that style and structure.
+
+#### Few-Shot Prompting Structure
+
+```
+You are [ROLE].
+
+Here are examples of the correct format:
+
+EXAMPLE 1:
+INPUT: [Sample input data]
+OUTPUT: [Desired output format and style]
+
+EXAMPLE 2:
+INPUT: [Different sample data]
+OUTPUT: [Matching format and style]
+
+Now apply this approach to:
+INPUT: [Your actual data]
+```
+
+#### Practical Example: Recommendation Format
+
+```
+You are a business strategist analyzing growth opportunities.
+
+When presenting recommendations, format them like this:
+
+EXAMPLE 1:
+RECOMMENDATION: Expand sales team by 2 people
+RATIONALE: Current team is at capacity; each rep manages 
+12 accounts, while industry standard is 8-10
+EXPECTED IMPACT: +30% new customer acquisition
+INVESTMENT: $250K annually
+TIMELINE: Hire by end of Q1
+RISK: Onboarding time may delay impact to Q2
+
+EXAMPLE 2:
+RECOMMENDATION: Improve product onboarding
+RATIONALE: Customer churn in first 30 days is 18%, 
+above 12% benchmark
+EXPECTED IMPACT: 6% improvement in retention (=$180K ARR)
+INVESTMENT: $80K engineering time
+TIMELINE: 8 weeks
+RISK: May distract from feature roadmap
+
+Now provide 3 similar recommendations for:
+[Your business situation]
+```
+
+---
+
+### Rule 6: Use Step-by-Step Reasoning (Chain of Thought)
+
+**The Reasoning Principle:** Asking Neuro AI to show its work produces better results.
+
+Request explicit steps to ensure logical analysis and catch errors.
+
+#### How to Apply
+
+Add explicit instruction: **"Solve this step-by-step. Show all intermediate reasoning and calculations."**
+
+#### Example for Analytical Tasks
+
+```
+You are a compliance auditor checking financial controls.
+
+TASK: Assess whether the company's bad debt reserve is adequate.
+
+DATA:
+Accounts receivable aging:
+- 0-30 days: $2,000K (customers: solid credit)
+- 31-60 days: $800K (customers: mixed credit)
+- 61-90 days: $400K (customers: weak credit, payment delays)
+- 90+ days: $600K (customers: bankruptcy risk)
+
+INSTRUCTIONS - WORK STEP BY STEP:
+1. For each aging bucket, estimate probability of collection
+2. Calculate required reserve for each bucket
+3. Calculate total required reserve
+4. Compare to company's existing reserve
+5. State whether reserve is adequate, excessive, or deficient
+6. Show all intermediate calculations
+7. Explain your assumptions for each bucket
+
+FORMAT:
+- Aging Bucket Analysis (table with probabilities)
+- Reserve Calculation (step-by-step math)
+- Assessment (adequate/deficient by $X)
+- Recommendations
+```
+
+---
+
+### Rule 7: Specify Expected Output Format
+
+**The Format Principle:** Clear output specifications prevent wasted revision rounds.
+
+Neuro AI works best when you specify exactly how you want results formatted.
+
+#### Format Specifications to Include
+
+```
+✅ Output medium: (Excel, Word document, HTML, Markdown, etc.)
+✅ Structure: (Executive summary + details, sections, tables)
+✅ Length: (1 page, 5 pages, word count)
+✅ Detail level: (High-level overview vs detailed analysis)
+✅ Visual elements: (Charts, diagrams, tables)
+✅ Language and tone: (Technical, business casual, formal)
+✅ Specific sections: (What must be included)
+```
+
+#### Example Specification
+
+```
+OUTPUT FORMAT SPECIFICATIONS:
+
+Medium: PDF-ready document
+Structure:
+  1. Executive Summary (1 page max)
+  2. Key Findings (bullets, 5-7 items)
+  3. Detailed Analysis (3-5 sections with subheadings)
+  4. Recommendations (table with: # | Action | Impact | Timeline | Cost)
+  5. Appendix (supporting data, calculations)
+
+Length: 8-12 pages total
+Visuals: 4-6 professional charts/tables
+Tone: Professional but conversational
+Font specs: Heading style shows importance hierarchy
+Emphasis: Bold for key numbers, italics for concepts
+
+Specific requirements:
+- All claims backed by data citations
+- ROI calculation for each recommendation
+- Risk assessment for each major recommendation
+```
+
+---
+
+### Rule 8: Set Quality Standards Explicitly
+
+**The Quality Principle:** Define what "good" means for your specific task.
+
+Without quality standards, Neuro AI might produce generic results that don't meet your needs.
+
+#### Quality Standards to Specify
+
+```
+✅ Accuracy: How precise must answers be?
+✅ Completeness: What aspects must be covered?
+✅ Depth: Surface level or deep analysis?
+✅ Actionability: How specific/implementable?
+✅ Credibility: Must sources be cited?
+✅ Originality: Can it be generic or must it be custom?
+```
+
+#### Example Quality Standards
+
+```
+QUALITY STANDARDS FOR THIS ANALYSIS:
+
+ACCURACY:
+- All numbers must match source documents exactly
+- No rounding differences > $1K
+- Calculations must be verified
+
+COMPLETENESS:
+- Must address all 5 criteria mentioned
+- No key aspect can be omitted
+- Must include risk assessment for each finding
+
+DEPTH:
+- Analysis must go beyond surface observations
+- Include root cause analysis, not just symptoms
+- Explain the "why" behind each finding
+
+ACTIONABILITY:
+- Recommendations must be specific enough to implement
+- Include step-by-step instructions
+- Specify responsible party and timeline for each action
+
+CREDIBILITY:
+- All claims backed by data citations
+- When using industry benchmarks, cite the source
+- Distinguish between facts, analysis, and assumptions
+
+ORIGINALITY:
+- Tailor analysis to OUR business context
+- Don't provide generic recommendations
+- Address our specific constraints and opportunities
+```
+
+---
+
+## Part 2: Advanced Prompting Techniques
+
+### Rule 9: Protect Against Hallucinations
+
+**The Accuracy Principle:** Neuro AI can sometimes generate false information. Protect yourself with explicit safeguards.
+
+#### Technique 1: Require Citations
+
+```
+INSTRUCTION:
+"When answering, you MUST cite specific sources. If information 
+comes from the document, write: 'According to [document name], 
+page X: [quote]'. If information is NOT in the documents, 
+write 'This information is not provided in the documents.' 
+NEVER make up information or use general knowledge beyond 
+what's provided."
+```
+
+#### Technique 2: Limit Knowledge Domain
+
+```
+INSTRUCTION:
+"Use ONLY the information provided in the attached documents. 
+Do not use general knowledge about [topic]. If something isn't 
+in the documents, say so explicitly. Do not infer, assume, or 
+apply external knowledge."
+```
+
+#### Technique 3: Require Confidence Levels
+
+```
+INSTRUCTION:
+"For each conclusion, specify your confidence level:
+
+- CONFIDENT: Information is explicitly stated in documents
+- INFERRED: Logical conclusion from information provided
+- UNCERTAIN: Limited information, could be wrong
+- UNAVAILABLE: No information provided
+
+Example:
+Finding: Revenue will grow 20% next quarter
+Confidence: INFERRED (based on current growth rate and 
+Q4 pipeline data)"
+```
+
+---
+
+### Rule 10: Use Comparative Analysis
+
+**The Clarity Principle:** Comparing options helps clarify thinking and identify best choices.
+
+#### Comparative Analysis Structure
+
+```
+TASK: Compare [Option A], [Option B], and [Option C]
+
+COMPARISON DIMENSIONS:
+1. [Dimension 1] - Why it matters
+2. [Dimension 2] - Why it matters
+3. [Dimension 3] - Why it matters
+
+For each comparison:
+- Describe pros and cons
+- Assign a score (1-5)
+- Explain the score
+- Note any caveats or context
+
+SUMMARY:
+- Overall winner and why
+- When Option B might be preferred
+- When Option C makes sense
+- Key decision factors
+```
+
+---
+
+### Rule 11: Request Devil's Advocate Analysis
+
+**The Challenge Principle:** Ask Neuro AI to argue against the proposal to identify risks and weaknesses.
+
+```
+INSTRUCTION:
+"I've proposed the following strategy: [Strategy description]
+
+Now I want you to argue AGAINST this strategy. Provide:
+
+1. The 5 strongest arguments against this approach
+2. Real-world evidence that it might fail
+3. What could go wrong
+4. Hidden assumptions I'm making
+5. What would need to change for you to recommend this
+
+Be thorough and compelling in your counter-arguments."
+```
+
+---
+
+### Rule 12: Apply Constraint-Based Thinking
+
+**The Creativity Principle:** Tight constraints force innovative solutions.
+
+```
+TASK: We need to increase revenue 30%, but we CANNOT:
+- Raise prices
+- Add features (locked roadmap)
+- Hire more people
+- Increase marketing spend
+
+CONSTRAINT: We only have $50K/month budget
+
+Given these constraints, what are 5 creative ways we could grow?
+
+For each:
+- Why it could work
+- What needs to happen
+- Timeline and resources
+- Probability of success
+```
+
+---
+
+## Part 3: Practical Application Templates
+
+### Template 1: Analysis Task
+
+```
+You are [ROLE] with expertise in [DOMAIN].
+
+DATA:
+[Provide all relevant information, documents, numbers]
+
+TASK - Analyze for:
+1. [Key aspect 1]
+2. [Key aspect 2]
+3. [Key aspect 3]
+
+SPECIFIC REQUIREMENTS:
+- Quantify findings where possible
+- Reference specific data points
+- Explain significance of findings
+- Identify gaps or inconsistencies
+
+OUTPUT FORMAT:
+- Summary (1 paragraph)
+- Key Findings (table or bullets)
+- Detailed Analysis (by section)
+- Recommendations (ranked by impact)
+- Appendix (supporting details)
+
+QUALITY STANDARDS:
+- All numbers verified against source data
+- All claims backed by evidence
+- Distinguish facts from interpretations
+- Consider alternative explanations
+```
+
+### Template 2: Writing/Content Creation
+
+```
+You are [ROLE] specializing in [EXPERTISE].
+
+PURPOSE:
+[Why this content is needed and its business value]
+
+AUDIENCE:
+[Who will read this - demographics, knowledge level, 
+what they care about, pain points]
+
+TONE & VOICE:
+[Professional/casual/expert/friendly, formal/informal]
+
+FORMAT:
+[Document type, length, structure, visual elements]
+
+KEY MESSAGES:
+[Top 3-5 main points that must be conveyed]
+
+MUST INCLUDE:
+[Specific content, examples, or elements that are required]
+
+MUST AVOID:
+[Topics, language, or approaches to exclude]
+
+CALL TO ACTION:
+[What should the reader do after reading]
+
+SUCCESS CRITERIA:
+[What makes this piece successful]
+```
+
+### Template 3: Strategy/Planning
+
+```
+You are [ROLE] with [EXPERIENCE].
+
+CURRENT SITUATION:
+[Where we are now - metrics, challenges, context]
+
+DESIRED SITUATION:
+[Where we want to be - goals and success criteria]
+
+CONSTRAINTS:
+[Budget, timeline, resources, organizational limits]
+
+TIMELINE:
+[How long we have to execute this strategy]
+
+DEVELOP:
+1. Situation analysis [What's driving this need?]
+2. Strategic options [4-6 alternatives]
+3. Evaluation [Pros/cons of each option]
+4. Recommendation [Top choice with rationale]
+5. Implementation plan [Step-by-step with owners, timeline]
+6. Success metrics [How we'll measure success]
+7. Risk assessment [What could go wrong and mitigation]
+
+OUTPUT:
+[Format, length, who needs to see this]
+```
+
+### Template 4: Problem Solving
+
+```
+You are [ROLE] specializing in [DOMAIN].
+
+PROBLEM STATEMENT:
+[Clear, specific description of the problem]
+
+CONTEXT:
+[Background information, why it matters, constraints]
+
+SUCCESS DEFINITION:
+[What solved looks like - specific, measurable]
+
+REQUESTED ANALYSIS:
+1. Root cause diagnosis [What's actually driving this?]
+2. Solution options [4-6 possible approaches]
+3. Evaluation [Pros/cons, implementation difficulty, cost]
+4. Top recommendation [Which solution and why]
+5. Implementation steps [Detailed execution plan]
+6. Success metrics [How to measure improvement]
+7. Timeline [When should results be visible]
+
+CONSTRAINTS TO CONSIDER:
+[Budget, timeline, team capacity, other limitations]
+
+AVOID:
+[Surface solutions, quick fixes, Band-Aid approaches]
+```
+
+---
+
+## Part 4: Common Mistakes to Avoid
+
+### Mistake 1: Mixing Data and Instructions
+
+**❌ WRONG:**
+
+```
+"Analyze the Q4 sales report which shows revenue of $5.2M
+and customer growth of 15% and please tell me if that's good
+and what we should do about it and format it nicely."
+```
+
+**✅ RIGHT:**
+
+```
+DATA:
+Q4 Results:
+- Revenue: $5.2M (up from $4.8M in Q3)
+- Customer count: up 15% YoY
+- Margin: 35%
+
+TASK:
+1. Assess performance vs benchmarks
+2. Identify top 3 trends
+3. Recommend 3 actions
+
+FORMAT:
+Executive summary + detailed analysis + recommendations
+```
+
+---
+
+### Mistake 2: Vague Success Criteria
+
+**❌ WRONG:**
+
+```
+"Give me a report on our market."
+```
+
+**✅ RIGHT:**
+
+```
+"Create a market analysis report covering:
+1. Market size and growth (with projections)
+2. Top 10 competitors (with positioning)
+3. Customer segments (demographics and needs)
+4. Entry barriers and competitive advantages
+5. Growth opportunities for our company
+
+Include: market research sources, competitive positioning 
+map, TAM/SAM/SOM analysis, and 3 strategic recommendations."
+```
+
+---
+
+### Mistake 3: Assuming Neuro AI Knows Your Context
+
+**❌ WRONG:**
+
+```
+"Update the pricing strategy based on recent changes."
+```
+
+**✅ RIGHT:**
+
+```
+"Our pricing strategy context:
+- Current price: $99/month (vs $89 for Competitor A, $129 for Competitor B)
+- Customer segment: Mid-market B2B SaaS
+- Recent changes: 3 new competitors entered market, our churn up 2%
+- Goal: Increase revenue 15% without increasing churn
+
+Analyze whether we should:
+1. Increase price to $129
+2. Keep current pricing
+3. Introduce tiered pricing
+
+For each option: impact on revenue, churn, positioning, 
+and recommended messaging."
+```
+
+---
+
+### Mistake 4: Not Being Specific About Constraints
+
+**❌ WRONG:**
+
+```
+"Create a marketing plan."
+```
+
+**✅ RIGHT:**
+
+```
+"Create a 90-day marketing plan with these constraints:
+- Budget: $50K
+- Team: 1 marketing manager + 1 contractor (10 hrs/week)
+- Timeline: Must show results by end of Q1
+- Goals: 25% increase in website traffic, 100 qualified leads
+- Channels: Focus on LinkedIn, content, and partnerships
+  (not paid ads or traditional marketing)
+- Audience: B2B enterprise software buyers, $500M+ companies
+- Current situation: 500 website visitors/month, no leads yet"
+```
+
+---
+
+## Part 5: Final Checklist
+
+Before submitting any prompt, verify:
+
+### Content Checklist
+
+```
+□ Is the role/context clear?
+□ Are all necessary data points included?
+□ Is the task specific (not vague)?
+□ Is the format clearly specified?
+□ Are constraints documented?
+□ Have I provided examples?
+□ Are quality standards explicit?
+□ Did I ask for step-by-step reasoning if needed?
+□ Did I include safeguards against hallucinations?
+```
+
+### Clarity Checklist
+
+```
+□ Could someone unfamiliar with this understand it?
+□ Are all abbreviations/jargon explained?
+□ Is the structure logical and easy to follow?
+□ Did I use specific verbs (not vague ones)?
+□ Are numbers and quantities exact (not approximate)?
+□ Would anyone misinterpret this?
+```
+
+### Completeness Checklist
+
+```
+□ Is all necessary context provided?
+□ Are there any implicit assumptions I should state?
+□ Did I specify success criteria?
+□ Are there any edge cases I should mention?
+□ Did I explain why this matters?
+```
+
+---
+
+## Summary: The 12 Main Rules
+
+ 1. **Use the three-part structure** — Role + Task + Format
+ 2. **Be specific, not vague** — Details drive quality
+ 3. **Assign a clear role** — Provide expertise context
+ 4. **Separate data from instructions** — Structure for clarity
+ 5. **Show examples of desired output** — Few-shot prompting
+ 6. **Use step-by-step reasoning** — Chain of thought
+ 7. **Specify expected output format** — Prevent revisions
+ 8. **Set quality standards explicitly** — Define "good"
+ 9. **Protect against hallucinations** — Require citations and limits
+10. **Use comparative analysis** — Compare options clearly
+11. **Request devil's advocate** — Identify risks and weaknesses
+12. **Apply constraint thinking** — Force creative solutions
+
+---
+
+## The Prompting Formula
+
+```
+Clear Role + Specific Task + Exact Format + Quality Standards 
++ Data Separation + Step-by-Step = Excellent Results
+```
+
+---
+
+## Remember
+
+Every minute spent perfecting your prompt saves multiple minutes of revision and iteration.
+
+**Invest in clarity upfront. Reap the benefits in results quality.**
+
+---
+
+_Neuro AI Main Prompting Rules_
+
+**Master these rules. Get consistently excellent results.**
+
+---
+
+_Last updated: January 2026_\
+_Status: Essential Reference_\
+_Use this document as your prompting standard._
