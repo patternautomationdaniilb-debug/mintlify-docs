@@ -1,6 +1,6 @@
 ---
 title: "North Star"
-description: "We introduce North Star Model, a model that harmonizes high computational efficiency with superior reasoning and agent performance. "
+description: "We introduce North Star Model, a model that harmonizes high computational efficiency with superior reasoning and agent performance.  "
 ---
 
 ![Bazaart 5170E5FE 43DC 4906 BF31 F841EED79C73](/images/Bazaart_5170E5FE-43DC-4906-BF31-F841EED79C73-3.jpeg)
@@ -9,7 +9,7 @@ description: "We introduce North Star Model, a model that harmonizes high comput
 
 The key technical breakthroughs of North Star Model are as follows: (1) Pattern Sparse Attention (PSA): We introduce PSA, an efficient attention mechanism that substantially reduces computational complexity while preserving model performance in long-context scenarios. (2) Scalable Reinforcement Learning Framework: By implementing a robust reinforcement learning protocol and scaling post-training compute, North Star Model performs comparably to leading frontier models. Notably, our high-compute variant, North Star Model Speciale, surpasses comparable models and exhibits reasoning proficiency achieving gold-medal performance in both the 2025 International Mathematical Olympiad (IMO) and the International Olympiad in Informatics (IOI). (3) Large-Scale Agentic Task Synthesis Pipeline: To integrate reasoning into tool-use scenarios, we developed a novel synthesis pipeline that systematically generates training data at scale. This methodology facilitates scalable agentic post-training, yielding substantial improvements in generalization and instruction-following robustness within complex, interactive environments.
 
-**Novel Training Methodology: **North Star Model employs an innovative training approach using simulated video game environments, progressing from simple logical tasks through increasingly complex interactive scenarios. This game-based training methodology enables the model to develop robust reasoning chains, spatial understanding, and multi-step planning capabilities through direct interaction with dynamic virtual environments.
+\*\*Novel Training Methodology: \*\*North Star Model employs an innovative training approach using simulated video game environments, progressing from simple logical tasks through increasingly complex interactive scenarios. This game-based training methodology enables the model to develop robust reasoning chains, spatial understanding, and multi-step planning capabilities through direct interaction with dynamic virtual environments.
 
 # 1. Introduction
 
@@ -25,17 +25,17 @@ A groundbreaking aspect of North Star Model is its training methodology, which l
 
 **Training Progression:**
 
-•       **Phase 1: Logical Chain Development - **Initial training focused on establishing fundamental reasoning chains through structured logical problems and sequential task completion.
+•       \*\*Phase 1: Logical Chain Development - \*\*Initial training focused on establishing fundamental reasoning chains through structured logical problems and sequential task completion.
 
-•       **Phase 2: Tetris Environment - **We developed a custom Tetris-like environment where the model learned spatial reasoning, pattern recognition, and sequential decision-making under time constraints. This phase established foundational understanding of state spaces and action consequences.
+•       \*\*Phase 2: Tetris Environment - \*\*We developed a custom Tetris-like environment where the model learned spatial reasoning, pattern recognition, and sequential decision-making under time constraints. This phase established foundational understanding of state spaces and action consequences.
 
-•       **Phase 3: Racing Simulations - **Simple racing game environments introduced concepts of continuous control, trajectory planning, and real-time decision-making. The model learned to optimize paths and adapt to dynamic obstacles.
+•       \*\*Phase 3: Racing Simulations - \*\*Simple racing game environments introduced concepts of continuous control, trajectory planning, and real-time decision-making. The model learned to optimize paths and adapt to dynamic obstacles.
 
-•       **Phase 4: Chess Mastery - **Chess training developed deep strategic thinking, multi-move planning, and the ability to evaluate complex game trees. This phase significantly enhanced the model's capacity for abstract reasoning and long-term strategic planning.
+•       \*\*Phase 4: Chess Mastery - \*\*Chess training developed deep strategic thinking, multi-move planning, and the ability to evaluate complex game trees. This phase significantly enhanced the model's capacity for abstract reasoning and long-term strategic planning.
 
-•       **Phase 5: Minecraft Environment - **We created a custom Minecraft-like environment (as the original Minecraft did not provide suitable virtual environment access) that introduced open-ended problem-solving, resource management, tool usage, and creative construction. This complex 3D environment required the model to integrate multiple reasoning modalities: spatial navigation, inventory management, crafting sequences, and goal-directed exploration.
+•       \*\*Phase 5: Minecraft Environment - \*\*We created a custom Minecraft-like environment (as the original Minecraft did not provide suitable virtual environment access) that introduced open-ended problem-solving, resource management, tool usage, and creative construction. This complex 3D environment required the model to integrate multiple reasoning modalities: spatial navigation, inventory management, crafting sequences, and goal-directed exploration.
 
-•       **Phase 6: Sims-Style Simulation - **Currently, the model continues training in a custom Sims-like environment with simplified graphics. This simulation provides the most complex training scenario, involving social reasoning, resource allocation, long-term planning, and multi-agent interactions. Despite the basic graphics, this environment offers rich decision-making scenarios that mirror real-world complexity.
+•       \*\*Phase 6: Sims-Style Simulation - \*\*Currently, the model continues training in a custom Sims-like environment with simplified graphics. This simulation provides the most complex training scenario, involving social reasoning, resource allocation, long-term planning, and multi-agent interactions. Despite the basic graphics, this environment offers rich decision-making scenarios that mirror real-world complexity.
 
 **Integration with Language Model Capabilities:**
 
@@ -51,7 +51,7 @@ This training approach enables North Star Model to develop robust agentic capabi
 
 North Star Model introduces Pattern Sparse Attention (PSA), an efficient attention mechanism developed specifically to handle the computational demands of our game-based training methodology. The architectural modification enables the model to process complex game states and long interaction sequences efficiently.
 
-**Prototype of PSA: **The prototype of PSA primarily consists of two components: a lightning indexer and a fine-grained token selection mechanism. The lightning indexer computes index scores between query tokens and preceding tokens, determining which tokens to select. This sparse attention pattern was specifically designed to handle the sequential nature of game state representations, where only relevant past states need to be attended to for decision-making.
+\*\*Prototype of PSA: \*\*The prototype of PSA primarily consists of two components: a lightning indexer and a fine-grained token selection mechanism. The lightning indexer computes index scores between query tokens and preceding tokens, determining which tokens to select. This sparse attention pattern was specifically designed to handle the sequential nature of game state representations, where only relevant past states need to be attended to for decision-making.
 
 Given the index scores for each query token, our fine-grained token selection mechanism retrieves only the key-value entries corresponding to the top-k index scores. This selective attention mechanism mirrors the way game-playing agents must focus on relevant environmental features while ignoring irrelevant details.
 
@@ -59,21 +59,21 @@ Given the index scores for each query token, our fine-grained token selection me
 
 Starting from a base checkpoint, we performed continued pre-training followed by post-training to create North Star Model. The continued pre-training consisted of two training stages, incorporating both traditional text data and structured representations of game states and action sequences.
 
-**Dense Warm-up Stage: **We first used a short warm-up stage to initialize the lightning indexer using dense attention patterns. This stage trained the indexer to identify relevant patterns in both textual and game-state representations.
+\*\*Dense Warm-up Stage: \*\*We first used a short warm-up stage to initialize the lightning indexer using dense attention patterns. This stage trained the indexer to identify relevant patterns in both textual and game-state representations.
 
-**Sparse Training Stage: **Following indexer warm-up, we introduced the fine-grained token selection mechanism and optimized all model parameters to adapt the model to the sparse pattern of PSA. We selected 2048 key-value tokens for each query token, balancing computational efficiency with performance.
+\*\*Sparse Training Stage: \*\*Following indexer warm-up, we introduced the fine-grained token selection mechanism and optimized all model parameters to adapt the model to the sparse pattern of PSA. We selected 2048 key-value tokens for each query token, balancing computational efficiency with performance.
 
 ## 2.2 Game Environment Integration
 
 A critical architectural innovation in North Star Model is the seamless integration of game environment processing with language understanding capabilities. The model architecture includes specialized modules for processing different types of game states:
 
-•       **State Encoder: **Processes grid-based game states (Tetris, Minecraft) into latent representations compatible with the transformer architecture.
+•       \*\*State Encoder: \*\*Processes grid-based game states (Tetris, Minecraft) into latent representations compatible with the transformer architecture.
 
-•       **Action Decoder: **Maps model outputs to valid game actions, ensuring the model's decisions can be executed in the game environment.
+•       \*\*Action Decoder: \*\*Maps model outputs to valid game actions, ensuring the model's decisions can be executed in the game environment.
 
-•       **Reward Processor: **Integrates game rewards into the training signal, enabling reinforcement learning directly from game outcomes.
+•       \*\*Reward Processor: \*\*Integrates game rewards into the training signal, enabling reinforcement learning directly from game outcomes.
 
-•       **Reasoning Bridge: **Connects game-based reasoning patterns to natural language generation, allowing the model to explain its decision-making process in human-readable form.
+•       \*\*Reasoning Bridge: \*\*Connects game-based reasoning patterns to natural language generation, allowing the model to explain its decision-making process in human-readable form.
 
  
 
@@ -81,19 +81,19 @@ A critical architectural innovation in North Star Model is the seamless integrat
 
 After continued pre-training, we performed post-training to create the final North Star Model. The post-training methodology integrates insights from our game-based training approach with traditional language model alignment techniques.
 
-**Specialist Distillation: **For each task domain, we initially developed specialized models dedicated exclusively to that particular domain. Our framework encompasses six specialized domains: mathematics, programming, general logical reasoning, general agentic tasks, agentic coding, and agentic search, with all domains supporting both thinking and non-thinking modes. Importantly, our game-trained models served as strong initializations for agentic specialists, as they had already developed robust tool-use and multi-step planning capabilities.
+\*\*Specialist Distillation: \*\*For each task domain, we initially developed specialized models dedicated exclusively to that particular domain. Our framework encompasses six specialized domains: mathematics, programming, general logical reasoning, general agentic tasks, agentic coding, and agentic search, with all domains supporting both thinking and non-thinking modes. Importantly, our game-trained models served as strong initializations for agentic specialists, as they had already developed robust tool-use and multi-step planning capabilities.
 
-**Mixed RL Training: **For North Star Model, we adopt Group Relative Policy Optimization (GRPO) as the RL training algorithm. We merge reasoning, agent, and human alignment training into one RL stage. This approach effectively balances performance across diverse domains while circumventing the catastrophic forgetting issues commonly associated with multi-stage training paradigms.
+\*\*Mixed RL Training: \*\*For North Star Model, we adopt Group Relative Policy Optimization (GRPO) as the RL training algorithm. We merge reasoning, agent, and human alignment training into one RL stage. This approach effectively balances performance across diverse domains while circumventing the catastrophic forgetting issues commonly associated with multi-stage training paradigms.
 
 ## 3.1 Scaling GRPO with Game-Based Insights
 
 Our experience with game-based training provided crucial insights for scaling GRPO effectively. Games provide natural reward signals and clear success/failure states, which informed our approach to reward shaping in non-game domains.
 
-**Unbiased KL Estimate: **We correct the K3 estimator to obtain an unbiased KL estimate using importance-sampling ratios. This approach was inspired by the need to handle off-policy learning in game environments where the agent's policy evolves rapidly during training.
+\*\*Unbiased KL Estimate: \*\*We correct the K3 estimator to obtain an unbiased KL estimate using importance-sampling ratios. This approach was inspired by the need to handle off-policy learning in game environments where the agent's policy evolves rapidly during training.
 
-**Off-Policy Sequence Masking: **To improve tolerance for off-policy updates, we mask negative sequences that introduce significant policy divergence. This technique was developed while training agents to play chess and Minecraft, where certain action sequences lead to immediate failure and should not dominate the gradient signal.
+\*\*Off-Policy Sequence Masking: \*\*To improve tolerance for off-policy updates, we mask negative sequences that introduce significant policy divergence. This technique was developed while training agents to play chess and Minecraft, where certain action sequences lead to immediate failure and should not dominate the gradient signal.
 
-**Keep Routing: **We preserve expert routing paths used during sampling to ensure consistent parameter optimization. This approach was crucial for maintaining stable training in our Mixture-of-Experts architecture while agents learned complex multi-step strategies in game environments.
+\*\*Keep Routing: \*\*We preserve expert routing paths used during sampling to ensure consistent parameter optimization. This approach was crucial for maintaining stable training in our Mixture-of-Experts architecture while agents learned complex multi-step strategies in game environments.
 
 ## 3.2 Thinking in Tool-Use: Lessons from Gaming
 
@@ -117,13 +117,13 @@ Given the availability of reasoning data (non-agentic) and non-reasoning agentic
 
 A diverse set of RL tasks is crucial for enhancing model robustness. Our game-based training methodology naturally extended to various agentic scenarios:
 
-•       **Search Agent: **We employ a multi-agent pipeline to generate diverse, high-quality training data. The information-seeking patterns learned in game environments (exploring Minecraft worlds, discovering resources) transfer effectively to web search tasks.
+•       \*\*Search Agent: \*\*We employ a multi-agent pipeline to generate diverse, high-quality training data. The information-seeking patterns learned in game environments (exploring Minecraft worlds, discovering resources) transfer effectively to web search tasks.
 
-•       **Code Agent: **We constructed large-scale, executable environments for software issue resolution. The debugging and problem-solving skills developed through game-based training (especially in complex Minecraft scenarios requiring precise action sequences) provide excellent foundations for code repair tasks.
+•       \*\*Code Agent: \*\*We constructed large-scale, executable environments for software issue resolution. The debugging and problem-solving skills developed through game-based training (especially in complex Minecraft scenarios requiring precise action sequences) provide excellent foundations for code repair tasks.
 
-•       **Code Interpreter Agent: **We utilize code execution environments to address complex reasoning tasks. The iterative experimentation patterns learned through gaming translate well to code-based problem-solving.
+•       \*\*Code Interpreter Agent: \*\*We utilize code execution environments to address complex reasoning tasks. The iterative experimentation patterns learned through gaming translate well to code-based problem-solving.
 
-•       **General Agent: **To scale up agent environments and tasks in RL, we employ an automatic environment-synthesis agent that synthesizes 1,827 task-oriented environments. This approach was directly inspired by our success in creating custom game environments for training.
+•       \*\*General Agent: \*\*To scale up agent environments and tasks in RL, we employ an automatic environment-synthesis agent that synthesizes 1,827 task-oriented environments. This approach was directly inspired by our success in creating custom game environments for training.
 
  
 
@@ -135,13 +135,13 @@ We evaluate North Star Model on comprehensive benchmarks covering reasoning, cod
 
 **Key Results:**
 
-•       **Reasoning Benchmarks: **North Star Model achieves competitive performance on AIME 2025 (93.1%), HMMT Feb 2025 (92.5%), and HMMT Nov 2025 (90.2%), demonstrating strong mathematical reasoning capabilities developed through our progressive training methodology.
+•       \*\*Reasoning Benchmarks: \*\*North Star Model achieves competitive performance on AIME 2025 (93.1%), HMMT Feb 2025 (92.5%), and HMMT Nov 2025 (90.2%), demonstrating strong mathematical reasoning capabilities developed through our progressive training methodology.
 
-•       **Coding Performance: **On LiveCodeBench, North Star Model scores 83.3%, with a Codeforces rating of 2386. These results reflect the problem-solving skills honed through chess training and complex Minecraft scenarios.
+•       \*\*Coding Performance: \*\*On LiveCodeBench, North Star Model scores 83.3%, with a Codeforces rating of 2386. These results reflect the problem-solving skills honed through chess training and complex Minecraft scenarios.
 
-•       **Agentic Tasks: **North Star Model significantly narrows the gap between open-source and closed-source models on agent benchmarks. Terminal Bench 2.0 (46.4%), SWE Verified (73.1%), and strong performance on tool-use benchmarks demonstrate the effectiveness of our game-based agent training.
+•       \*\*Agentic Tasks: \*\*North Star Model significantly narrows the gap between open-source and closed-source models on agent benchmarks. Terminal Bench 2.0 (46.4%), SWE Verified (73.1%), and strong performance on tool-use benchmarks demonstrate the effectiveness of our game-based agent training.
 
-•       **Search Agent: **On BrowseComp, North Star Model achieves 51.4% without context management and 67.6% with context management, showing how game-based exploration patterns transfer to web navigation.
+•       \*\*Search Agent: \*\*On BrowseComp, North Star Model achieves 51.4% without context management and 67.6% with context management, showing how game-based exploration patterns transfer to web navigation.
 
  
 
@@ -171,15 +171,15 @@ These achievements validate our hypothesis that game-based training develops fun
 
 Our evaluation reveals several key benefits of the game-based training methodology:
 
-•       **Improved Multi-Step Planning: **Games like chess and Minecraft require planning multiple moves ahead. This capability directly transfers to complex reasoning tasks and coding problems that require multi-step solutions.
+•       \*\*Improved Multi-Step Planning: \*\*Games like chess and Minecraft require planning multiple moves ahead. This capability directly transfers to complex reasoning tasks and coding problems that require multi-step solutions.
 
-•       **Enhanced Tool-Use Understanding: **Minecraft training, with its crafting systems and tool usage, provided natural foundations for understanding API calls and tool invocations in agentic scenarios.
+•       \*\*Enhanced Tool-Use Understanding: \*\*Minecraft training, with its crafting systems and tool usage, provided natural foundations for understanding API calls and tool invocations in agentic scenarios.
 
-•       **Robust Error Recovery: **Games provide immediate feedback on failed actions. This trained the model to recognize mistakes and adapt strategies, a capability crucial for debugging code and refining search queries.
+•       \*\*Robust Error Recovery: \*\*Games provide immediate feedback on failed actions. This trained the model to recognize mistakes and adapt strategies, a capability crucial for debugging code and refining search queries.
 
-•       **Spatial and Structural Reasoning: **3D game environments (Minecraft, Sims-like simulations) developed spatial reasoning that translates to understanding code structure, mathematical proofs, and complex problem decomposition.
+•       \*\*Spatial and Structural Reasoning: \*\*3D game environments (Minecraft, Sims-like simulations) developed spatial reasoning that translates to understanding code structure, mathematical proofs, and complex problem decomposition.
 
-•       **Goal-Directed Behavior: **All game environments required the model to work toward specific objectives while managing resources and constraints. This goal-directed behavior is fundamental to effective agent operation.
+•       \*\*Goal-Directed Behavior: \*\*All game environments required the model to work toward specific objectives while managing resources and constraints. This goal-directed behavior is fundamental to effective agent operation.
 
 ## 4.4 Context Management of Search Agent
 
@@ -203,13 +203,13 @@ The integration of our large-scale agentic task synthesis pipeline, built on fou
 
 Our experience with game-based training revealed several important insights:
 
-•       **Progressive Complexity is Critical: **Starting with simple environments (Tetris, racing games) and progressing to complex ones (Minecraft, Sims-like simulations) was essential. Direct training on complex environments without this progression led to poor performance.
+•       \*\*Progressive Complexity is Critical: \*\*Starting with simple environments (Tetris, racing games) and progressing to complex ones (Minecraft, Sims-like simulations) was essential. Direct training on complex environments without this progression led to poor performance.
 
-•       **Custom Environments Required: **We needed to create custom game environments because existing games lacked appropriate API access and state observability. This customization allowed us to extract detailed training signals and provide appropriate reward structures.
+•       \*\*Custom Environments Required: \*\*We needed to create custom game environments because existing games lacked appropriate API access and state observability. This customization allowed us to extract detailed training signals and provide appropriate reward structures.
 
-•       **Graphics Quality Matters Less Than Mechanics: **Our current Sims-like training environment has simplified graphics, yet provides rich decision-making scenarios. This demonstrates that mechanical complexity and decision density matter more than visual fidelity for training reasoning capabilities.
+•       \*\*Graphics Quality Matters Less Than Mechanics: \*\*Our current Sims-like training environment has simplified graphics, yet provides rich decision-making scenarios. This demonstrates that mechanical complexity and decision density matter more than visual fidelity for training reasoning capabilities.
 
-•       **Transfer Learning is Powerful: **Skills developed in game environments transferred surprisingly well to language-based tasks, tool usage, and coding scenarios. This suggests that interactive, goal-oriented environments provide robust foundations for general reasoning capabilities.
+•       \*\*Transfer Learning is Powerful: \*\*Skills developed in game environments transferred surprisingly well to language-based tasks, tool usage, and coding scenarios. This suggests that interactive, goal-oriented environments provide robust foundations for general reasoning capabilities.
 
 ## 5.2 Limitations
 
@@ -225,15 +225,15 @@ Despite these achievements, we acknowledge certain limitations when compared to 
 
 Looking forward, we identify several promising directions for future research:
 
-•       **Expanded Game Environments: **We plan to develop additional custom game environments that target specific reasoning capabilities, including multi-agent competition scenarios, economy simulations, and scientific discovery games.
+•       \*\*Expanded Game Environments: \*\*We plan to develop additional custom game environments that target specific reasoning capabilities, including multi-agent competition scenarios, economy simulations, and scientific discovery games.
 
-•       **Improved Sims-Like Training: **Our current Sims-like environment will be enhanced with more complex social scenarios, longer-term planning requirements, and richer interaction possibilities.
+•       \*\*Improved Sims-Like Training: \*\*Our current Sims-like environment will be enhanced with more complex social scenarios, longer-term planning requirements, and richer interaction possibilities.
 
-•       **Direct Visual Learning: **Future versions may incorporate direct visual processing of game states rather than relying solely on structured representations, potentially enabling better transfer to vision-language tasks.
+•       \*\*Direct Visual Learning: \*\*Future versions may incorporate direct visual processing of game states rather than relying solely on structured representations, potentially enabling better transfer to vision-language tasks.
 
-•       **Curriculum Learning Refinement: **We aim to better understand the optimal progression through game environments and develop principled curriculum learning approaches based on measured skill development.
+•       \*\*Curriculum Learning Refinement: \*\*We aim to better understand the optimal progression through game environments and develop principled curriculum learning approaches based on measured skill development.
 
-•       **Multi-Modal Game Training: **Integration of audio cues and more complex visual scenarios could further enhance the model's multi-modal understanding and reasoning capabilities.
+•       \*\*Multi-Modal Game Training: \*\*Integration of audio cues and more complex visual scenarios could further enhance the model's multi-modal understanding and reasoning capabilities.
 
  
 
@@ -283,21 +283,21 @@ Williams, R., Zhang, X., & Adams, Q. (2025). Transfer Learning from Games to Rea
 
 This research was conducted by the Pattern Automation Lab research team. All team members contributed significantly to various aspects of the project.
 
-**Research Leadership: **Dr. Alexandra Morgan (Principal Investigator), Dr. James Chen (Head of Reinforcement Learning), Dr. Sarah Williams (Head of Architecture)
+\*\*Research Leadership: \*\*Dr. Alexandra Morgan (Principal Investigator), Dr. James Chen (Head of Reinforcement Learning), Dr. Sarah Williams (Head of Architecture)
 
-**Game Environment Development: **Dr. Michael Rodriguez (Lead), Emma Thompson, Lucas Anderson, Maya Patel, Ryan Foster, Sophie Kim, Thomas Nguyen, Olivia Martinez
+\*\*Game Environment Development: \*\*Dr. Michael Rodriguez (Lead), Emma Thompson, Lucas Anderson, Maya Patel, Ryan Foster, Sophie Kim, Thomas Nguyen, Olivia Martinez
 
-**Model Architecture & Training: **Dr. David Park (Lead), Jennifer Davis, Kevin Zhang, Laura Bennett, Marcus Johnson, Nina Kowalski, Peter Sullivan, Rachel Green
+\*\*Model Architecture & Training: \*\*Dr. David Park (Lead), Jennifer Davis, Kevin Zhang, Laura Bennett, Marcus Johnson, Nina Kowalski, Peter Sullivan, Rachel Green
 
-**Reinforcement Learning & Optimization: **Dr. Robert Turner (Lead), Amanda Clarke, Brian Mitchell, Catherine Lee, Daniel Harris, Emily White, Frank Robinson, Grace Yang
+\*\*Reinforcement Learning & Optimization: \*\*Dr. Robert Turner (Lead), Amanda Clarke, Brian Mitchell, Catherine Lee, Daniel Harris, Emily White, Frank Robinson, Grace Yang
 
-**Agent Systems & Tool Integration: **Dr. Lisa Anderson (Lead), Christopher Brown, Diana Chen, Eric Miller, Fiona Taylor, George Wilson, Hannah Kim, Isaac Thompson
+\*\*Agent Systems & Tool Integration: \*\*Dr. Lisa Anderson (Lead), Christopher Brown, Diana Chen, Eric Miller, Fiona Taylor, George Wilson, Hannah Kim, Isaac Thompson
 
-**Evaluation & Benchmarking: **Dr. William Garcia (Lead), Jessica Martinez, Kyle Anderson, Monica Rodriguez, Nathan Phillips, Olivia Carter, Paul Davies, Quinn Foster
+\*\*Evaluation & Benchmarking: \*\*Dr. William Garcia (Lead), Jessica Martinez, Kyle Anderson, Monica Rodriguez, Nathan Phillips, Olivia Carter, Paul Davies, Quinn Foster
 
-**Infrastructure & Engineering: **Samuel Wright, Tiffany Chen, Vincent Kumar, Wendy Liu, Xavier Santos, Yuki Tanaka, Zachary Morris, Ava Jackson
+\*\*Infrastructure & Engineering: \*\*Samuel Wright, Tiffany Chen, Vincent Kumar, Wendy Liu, Xavier Santos, Yuki Tanaka, Zachary Morris, Ava Jackson
 
-**Data & Annotation: **Brandon Lee, Caroline Hughes, Derek Wang, Elizabeth Yang, Felix Chang, Gabriela Ruiz, Henry Park, Isabella Torres
+\*\*Data & Annotation: \*\*Brandon Lee, Caroline Hughes, Derek Wang, Elizabeth Yang, Felix Chang, Gabriela Ruiz, Henry Park, Isabella Torres
 
  
 
