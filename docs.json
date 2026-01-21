@@ -314,7 +314,6 @@
                 "group": "Billing",
                 "icon": "money-bill-wave",
                 "pages": [
-                  "en/introduction/general-settings/billing",
                   {
                     "group": "Subscriptions",
                     "pages": [
