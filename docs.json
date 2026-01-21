@@ -37,6 +37,7 @@
         "tabs": [
           {
             "tab": "Introduction",
+            "icon": "flag",
             "pages": [
               {
                 "group": "First Steps",
@@ -270,6 +271,7 @@
           },
           {
             "tab": "API reference",
+            "icon": "code-simple",
             "groups": [
               {
                 "group": "API documentation",
@@ -282,6 +284,7 @@
           },
           {
             "tab": "Help center",
+            "icon": "headset",
             "pages": [
               "en/protocol/untitled-page",
               "en/introduction/general-settings/status-page",
