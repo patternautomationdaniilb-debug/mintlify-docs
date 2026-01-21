@@ -60,6 +60,17 @@ Custom MCP servers implement a standardized protocol that defines:
 
 **Building a Custom MCP Server/Apps**
 
+An MCP (Model Context Protocol) URL is the endpoint where your MCP server listens for connections. Here's how to set one up:
+
+1. **Choose your transport method**: MCP servers typically use Server-Sent Events (SSE) over HTTP, which works well for web-based integrations.
+2. **Deploy your server**: Host your MCP server on a platform like some Cloud Provider, Render, or any cloud service that provides a public URL. Make sure it's accessible via HTTPS for security.
+3. **Define your endpoint**: Your server should expose an endpoint (commonly `/sse` or `/mcp`) that handles SSE connections. For example: `https://your-domain.com/sse`
+4. **Configure the URL**: When connecting to your MCP server, you'll need:
+   - The full URL (e.g., `https://mcp.yourservice.com/sse`)
+   - A name for the server (e.g., `my-mcp-server`)
+   - Any required authentication headers if needed
+5. **Test the connection**: Verify your URL works by attempting to connect from an MCP client and checking that tools are properly exposed.
+
 **Prerequisites**
 
 - **API access** to the system you want to integrate
@@ -104,7 +115,7 @@ Host your custom MCP server on infrastructure you control. Ensure it’s accessi
 
 **Step 2: Add to Neuro**
 
-In Manus, navigate to **Settings → Integrations → Custom MCP Servers/Neuro**
+In Manus, navigate to **Settings → Apps/Integrations → Custom MCP Servers/Apps**
 
 and click
 
@@ -164,15 +175,33 @@ Implement proper authorization checks:
 
 ### [**​**](https://manus.im/docs/integrations/custom-mcp#tool-design)
 
-**Tool DesignKeep tools focused**: Each tool should perform one clear action. Instead of a single “manage_customer” tool, create separate tools for “get_customer”, “update_customer”, “delete_customer”.**Provide clear descriptions**: Manus uses tool descriptions to understand when to use each tool. Write clear, specific descriptions that explain what the tool does and when it’s appropriate.**Handle errors gracefully**: Return meaningful error messages that help Manus (and users) understand what went wrong and how to fix it.
+**Tool Design**
+
+**Keep tools focused**: Each tool should perform one clear action. Instead of a single “manage_customer” tool, create separate tools for “get_customer”, “update_customer”, “delete_customer”.
+
+**Provide clear descriptions**: Neuro uses tool descriptions to understand when to use each tool. Write clear, specific descriptions that explain what the tool does and when it’s appropriate.
+
+**Handle errors gracefully**: Return meaningful error messages that help Neuro (and users) understand what went wrong and how to fix it.
 
 ### [**​**](https://manus.im/docs/integrations/custom-mcp#performance)
 
-**PerformanceOptimize response times**: Manus waits for MCP server responses. Keep operations fast by caching data, using efficient queries, and avoiding unnecessary processing.**Implement timeouts**: Set reasonable timeouts for API calls to prevent Manus from waiting indefinitely if your internal system is slow or unresponsive.**Use async operations for long tasks**: If an operation takes more than a few seconds, consider returning immediately with a task ID and providing a separate tool to check status.
+**Performance**
+
+**Optimize response times**: Neuro waits for MCP server responses. Keep operations fast by caching data, using efficient queries, and avoiding unnecessary processing.
+
+**Implement timeouts**: Set reasonable timeouts for API calls to prevent Neuro from waiting indefinitely if your internal system is slow or unresponsive.
+
+**Use async operations for long tasks**: If an operation takes more than a few seconds, consider returning immediately with a task ID and providing a separate tool to check status.
 
 ### [**​**](https://manus.im/docs/integrations/custom-mcp#monitoring)
 
-**MonitoringLog all requests**: Track what Manus is requesting and how your server responds. This helps with debugging and understanding usage patterns.**Monitor performance**: Track response times, error rates, and usage volume to identify issues before they impact users.**Set up alerts**: Get notified if your MCP server becomes unresponsive or starts returning errors.
+**Monitoring**
+
+**Log all requests**: Track what Neuro is requesting and how your server responds. This helps with debugging and understanding usage patterns.
+
+**Monitor performance**: Track response times, error rates, and usage volume to identify issues before they impact users.
+
+**Set up alerts**: Get notified if your MCP server becomes unresponsive or starts returning errors.
 
 ## [**​**](https://manus.im/docs/integrations/custom-mcp#example-use-cases)
 
@@ -180,22 +209,38 @@ Implement proper authorization checks:
 
 ### [**​**](https://manus.im/docs/integrations/custom-mcp#internal-knowledge-base)
 
-**Internal Knowledge BaseScenario**: Your organization has an internal wiki or knowledge base with company policies, procedures, and documentation.**Custom MCP Server**: Provides tools to search the knowledge base, retrieve specific articles, and find related documents.**Manus Workflow**: “Search our internal knowledge base for the expense reimbursement policy and summarize the key points.”
+**Internal Knowledge Base Scenario**: Your organization has an internal wiki or knowledge base with company policies, procedures, and documentation.
+
+**Custom MCP Server**: Provides tools to search the knowledge base, retrieve specific articles, and find related documents.
+
+**Neuro Workflow**: “Search our internal knowledge base for the expense reimbursement policy and summarize the key points.”
 
 ---
 
 ### [**​**](https://manus.im/docs/integrations/custom-mcp#custom-analytics-platform)
 
-**Custom Analytics PlatformScenario**: You have a proprietary analytics platform that tracks business metrics not available in standard tools.**Custom MCP Server**: Exposes tools to query metrics, generate reports, and retrieve historical data.**Manus Workflow**: “Pull our customer acquisition cost data for Q4 and create a trend analysis comparing it to Q3.”
+**Custom Analytics Platform Scenario**: You have a proprietary analytics platform that tracks business metrics not available in standard tools.
+
+**Custom MCP Server**: Exposes tools to query metrics, generate reports, and retrieve historical data.
+
+**Neuro Workflow**: “Pull our customer acquisition cost data for Q4 and create a trend analysis comparing it to Q3.”
 
 ---
 
 ### [**​**](https://manus.im/docs/integrations/custom-mcp#legacy-system-integration)
 
-**Legacy System IntegrationScenario**: Your organization relies on a legacy system that doesn’t have modern APIs or integrations.**Custom MCP Server**: Acts as a wrapper around the legacy system, translating modern API calls into the format the legacy system understands.**Manus Workflow**: “Check inventory levels in the legacy system for product SKU 98765 and create a reorder request if stock is below 100 units.”
+**Legacy System Integration Scenario**: Your organization relies on a legacy system that doesn’t have modern APIs or integrations.
+
+**Custom MCP Server**: Acts as a wrapper around the legacy system, translating modern API calls into the format the legacy system understands.
+
+**Neuro Workflow**: “Check inventory levels in the legacy system for product SKU 98765 and create a reorder request if stock is below 100 units.”
 
 ---
 
 ### [**​**](https://manus.im/docs/integrations/custom-mcp#multi-step-approval-workflows)
 
-**Multi-Step Approval WorkflowsScenario**: Your organization requires approval workflows for certain actions (e.g., budget requests, data access).**Custom MCP Server**: Implements tools that create approval requests, check approval status, and execute approved actions.**Manus Workflow**: “Create a budget request for \$50,000 for the marketing campaign and notify the finance team for approval.”
+**Multi-Step Approval Workflows Scenario**: Your organization requires approval workflows for certain actions (e.g., budget requests, data access).
+
+**Custom MCP Server**: Implements tools that create approval requests, check approval status, and execute approved actions.
+
+**Neuro Workflow**: “Create a budget request for \$50,000 for the marketing campaign and notify the finance team for approval.”
