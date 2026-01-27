@@ -158,7 +158,8 @@
           {
             "tab": "Cookbook",
             "icon": "hat-chef",
-            "groups": [
+            "pages": [
+              "en/cookbook/agents-for-real-work",
               {
                 "group": "Prompting practices",
                 "icon": "book-bookmark",
