@@ -291,12 +291,12 @@
             "tab": "Help center",
             "icon": "headset",
             "pages": [
-              "en/help-center/refferal-program",
               "en/protocol/untitled-page",
               "en/introduction/general-settings/status-page",
               "en/help-center/enterprise-implementation",
               "en/protocol/untitled-page-2",
               "en/help-center/cookie-policy",
+              "en/help-center/refferal-program",
               "en/protocol/usage-policy",
               "en/help-center/user-safety-and-content-policy",
               {
