@@ -291,6 +291,7 @@
             "tab": "Help center",
             "icon": "headset",
             "pages": [
+              "en/help-center/refferal-program",
               "en/protocol/untitled-page",
               "en/introduction/general-settings/status-page",
               "en/help-center/enterprise-implementation",
