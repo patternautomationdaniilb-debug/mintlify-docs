@@ -110,6 +110,7 @@
                     "group": "Tasks",
                     "icon": "timer",
                     "pages": [
+                      "en/introduction/features/tasks/untitled-page",
                       "en/introduction/features/tasks/overview",
                       "en/introduction/features/tasks/how-can-i-recover-a-deleted-task",
                       "en/introduction/features/tasks/what-can-i-do-if-i-encounter-a-sandbox-issue-in-the-task",
