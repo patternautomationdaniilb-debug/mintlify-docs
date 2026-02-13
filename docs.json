@@ -1,0 +1,83 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "NeuroAI",
+  "colors": {
+    "primary": "#146eaf",
+    "light": "#038af1",
+    "dark": "#0b0f80"
+  },
+  "favicon": "/images/Bazaart_C0831A1C-80C9-4E6-AA6D-7933263A68A3.png",
+  "navigation": {
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Home",
+          "icon": "house",
+          "color": {
+            "light": "#1545a3",
+            "dark": "#1545a3"
+          },
+          "href": "https://www.patternautomation.com/products/neuro-ai"
+        },
+        {
+          "anchor": "Updates",
+          "icon": "newspaper",
+          "color": {
+            "light": "#1545a3",
+            "dark": "#1545a3"
+          },
+          "href": "https://www.patternautomation.com/neuro/neuro-update"
+        }
+      ]
+    },
+    "tabs": [
+      {
+        "tab": "Neuro AI",
+        "icon": "stars",
+        "href": "https://www.neuro-agent.ru/"
+      },
+      {
+        "tab": "Untitled Tab"
+      }
+    ]
+  },
+  "logo": "/images/Bazaart_C0831A1C-80C9-4E96-AA6D-7933263A68A3.png",
+  "navbar": {
+    "links": [
+      {
+        "label": "Support",
+        "href": "mailto:info@patternautomation.com"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Dashboard",
+      "href": "https://dashboard.mintlify.com"
+    }
+  },
+  "contextual": {
+    "options": [
+     "copy",
+     "view",
+     "chatgpt",
+     "claude",
+     "perplexity",
+     "mcp",
+     "cursor",
+     "vscode"
+   ]
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com/PATTERN-AUTOMATION-LAB",
+      "linkedin": "https://www.linkedin.com/in/daniil-biryukov-a283b81b6/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      "website": "https://www.patternautomation.com/neuro-ai",
+      "instagram": "https://www.instagram.com/tryneuroai?igsh=ZHVxdmt0MGY0aWZm&utm_source=qr"
+    }
+  },
+  "appearance": {
+    "default": "system"
+  },
+  "description": "Documentation about NeuroAI"
+}

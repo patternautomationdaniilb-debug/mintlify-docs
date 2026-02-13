@@ -1,0 +1,199 @@
+---
+title: "Understanding NeuroAI sandbox - your cloud computer"
+description: "Among the “hands” we’ve given to AI models, the most powerful is a real cloud computer — the Neuro Sandbox.   "
+icon: "align-justify"
+---
+
+### What is Neuro Computer - Sandbox?
+
+Neuro Sandbox is a fully isolated cloud virtual machine that Neuro allocates for each task. Each Sandbox runs in its own environment, does not affect other tasks, and can execute in parallel.
+
+The power of Sandbox lies in its completeness—just like the personal computer you use, it has full capabilities: networking, file system, browser, various software tools. Our AI Agent has been designed and trained to effectively choose and correctly use these tools to help you complete tasks. Moreover, with this computer, the AI can solve problems through what it does best—writing code—and can even help you create complete websites and mobile apps soon. All of this happens on the virtualization platform behind Neuro. These Sandboxes can work 24/7 to complete the tasks you assign without consuming your local resources.
+
+### Definition
+
+**A Sandbox** in NeuroAI is an isolated computing environment that runs independently with its own CPU, memory, and storage. Sandboxes allow you to run code, execute tasks, and deploy applications without affecting other systems or using your local machine resources.
+
+### Key Characteristics
+
+✅ **Isolated** - Each sandbox runs in its own environment ✅ **Independent** - No interference from other sandboxes ✅ **Managed** - Automatic lifecycle management ✅ **Scalable** - Add more resources as needed ✅ **Cost-Efficient** - Pay only for what you use ✅ **Multi-Language** - Supports Python, TypeScript, JavaScript ✅ **Persistent** - Filesystem preserved across stops/starts
+
+### Why Use Sandboxes?
+
+| Use Case               | Benefit                                       |
+| :--------------------- | :-------------------------------------------- |
+| **Testing Code**       | Safe environment without affecting production |
+| **Running AI Models**  | Dedicated resources for ML workloads          |
+| **Background Jobs**    | 24/7 execution without your computer          |
+| **Temporary Tasks**    | Quick, isolated environments for one-off work |
+| **Team Collaboration** | Shared environment for team projects          |
+| **Resource Isolation** | Prevent one task from impacting others        |
+
+---
+
+## Sandbox Lifecycle
+
+### State Diagram
+
+```
+CREATE
+  ↓
+RUNNING (Uses CPU + Memory + Storage)
+  ↓
+STOP ← → START
+  ↓
+STOPPED (Uses Storage only)
+  ↓
+ARCHIVE
+  ↓
+ARCHIVED (No active resource usage)
+  ↓
+RECOVER
+  ↓
+STOPPED
+  ↓
+DELETE
+  ↓
+DELETED (All resources freed)
+```
+
+### Sandbox States Explained
+
+| State        | Description                             | Resource Usage                | Use Case                            |
+| :----------- | :-------------------------------------- | :---------------------------- | :---------------------------------- |
+| **Running**  | Sandbox is active and executing         | Full (CPU + Memory + Storage) | Active development, background jobs |
+| **Stopped**  | Sandbox is paused, filesystem preserved | Storage only                  | Temporary pause, cost savings       |
+| **Archived** | Filesystem moved to cold storage        | None (moved to cold storage)  | Long-term storage, minimal costs    |
+| **Deleted**  | Permanently removed                     | None (completely freed)       | Cleanup, no longer needed           |
+| **Error**    | Sandbox encountered an error            | Variable                      | Needs intervention                  |
+
+---
+
+## Computing Resources
+
+### What Are Computing Resources?
+
+**Computing Resources** are the computational power and storage space available to your organization to run sandboxes.
+
+```
+Your Organization's Compute Pool
+├─ vCPU (Virtual CPU Cores)
+│  └─ Shared across all running sandboxes
+├─ RAM (Random Access Memory)
+│  └─ Shared across all running sandboxes
+└─ Storage (Disk Space)
+   └─ Used by running, stopped, and archived sandboxes
+```
+
+### Default Sandbox Resources
+
+When you create a sandbox, it gets these default resources:
+
+```
+CPU: 1 vCPU (1 virtual core)
+Memory: 1 GB RAM
+Storage: 3 GB disk space
+```
+
+### Custom Sandbox Resources
+
+You can customize resources per sandbox based on your needs.
+
+### Resource Types Explained
+
+**vCPU (Virtual CPU):**
+
+- 1 vCPU = Equivalent to 1 physical CPU core
+- More vCPU = Faster execution
+- Example: 2 vCPU runs code ~2x faster than 1 vCPU
+
+**RAM (Memory):**
+
+- Measured in GB
+- Needed for: Data processing, large models, concurrent operations
+- More RAM = Handle larger datasets
+- Example: ML model training needs 4GB+ RAM
+
+**Storage (Disk):**
+
+- Measured in GB
+- Persistent across stops/starts
+- Used for: Code files, data, models, databases
+- Example: Large dataset needs 50GB+ storage
+
+### Sandbox Lifecycle
+
+The Sandbox follows a predictable lifecycle that balances resource efficiency with persistence:
+
+•Create: A Sandbox is created on demand in a new session
+
+•Sleep/Awake: When the Sandbox is inactive (no operations, file edits, etc.), it will automatically go to sleep. When you return to the task and Neuro needs to operate the Sandbox, it will be automatically woken up. During the sleep/wake cycle, the files and data in the Sandbox remain unchanged
+
+•Recycle/Recreate: A continuously sleeping Sandbox may be recycled (depends on your Plan). When you reopen the task after it has been recycled, a new Sandbox will be created automatically. Neuro will also restore some files from the previous Sandbox into the new one: Neuro artifacts, uploaded attachments, and important files such as Slides/WebDev will be restored automatically; intermediate code and temporary files created during execution will not be restored
+
+Because Sandboxes can sleep, if you need to deploy a long-running backend service, you can use Neuro's web development capability to build the frontend/backend and deploy it to the public internet (soon).
+
+### Sandbox Security
+
+Our Neuro Sandbox follows the [Zero Trust](https://en.wikipedia.org/wiki/Zero_trust_architecture) principle. Like a cloud VM you purchase from a cloud provider, you and Neuro have full control over this computer—you can perform unrestricted operations (for example, gaining root access, modifying system files, or even formatting the entire disk). This allows Neuro to complete tasks with minimal permission constraints.
+
+Don't worry: any operations inside a Sandbox only affect that Sandbox. They do not impact the security or stability of the Neuro service, and your session/account data cannot be accessed from the Sandbox. If an unrecoverable error occurs, Neuro will automatically create a new Sandbox to replace it so the task can continue.
+
+## Avoiding Accidental Sharing of Sensitive Data in Sandbox
+
+As your private computer, the Sandbox may contain your personal sensitive information and data. Neuro has strict privacy protection policies and measures in place and will not read or share any user data without user authorization. However, you still need to take measures to avoid accidental sharing of data in the Sandbox.
+
+It's important to distinguish between two scenarios: "sharing" and "collaboration."
+
+### Sharing (soon)
+
+For task sharing (through the "Share" button in the upper right corner of Neuro), the recipient will only see the messages in the task conversation and the output artifacts. The Sandbox is completely invisible to them. Therefore, you only need to be concerned about whether the conversation contains sensitive information, without worrying about the contents of the Sandbox being leaked.
+
+### Collaboration (Soon)
+
+For task collaboration (through the collaboration button in the upper right corner of Neuro, inviting specific users to participate), once a collaborator joins the session, they gain permission to participate in the task. This means collaborators can send instructions to the AI and control task execution. At this point, the Sandbox is also open to collaborators—they can access or modify files and data in the Sandbox through the AI, which may cause unexpected data leakage.
+
+Additionally, Connectors/Apps will be automatically disabled once collaboration is enabled, so you don't need to worry about collaborators accessing your Connectors/Apps.
+
+You can use the table above to understand the accessibility of task content to other users in different scenarios, and confirm that your private data will not be leaked before sharing or collaborating.
+
+## Privacy Best Practices
+
+•Since the Sandbox is essentially your private computer, double-check whether it contains sensitive content you don't want collaborators to access before adding collaborators
+
+•If the task already contains sensitive content, create a new task, copy only the necessary content and artifacts, and then invite collaborators to that task
+
+•Avoid sending personal sensitive information in a collaboration session
+
+## Availability
+
+The Neuro Sandbox is a core component of our platform and is available to all users across all subscription tiers.
+
+## Common Questions
+
+Q: What happens to my files when a Sandbox is recycled?
+
+A: Neuro automatically restores your most important files—artifacts, uploaded attachments, and project files like Slides —to the new Sandbox. Intermediate code and temporary files are not restored.
+
+Q: How long before my Sandbox is recycled?
+
+A: Depends on your Plan
+
+Q: Can collaborators access my Connectors/Sandbox through the Sandbox?
+
+A: No. Connectors/Sandbox are automatically disabled when collaboration is enabled, ensuring collaborators cannot access your connected services.
+
+The Neuro Sandbox represents the foundation of how Neuro takes action on your behalf. By providing a persistent, secure, and fully-featured cloud computing environment, we're enabling a new class of AI-powered work that goes beyond conversation into real execution.
+
+Once the task starts, your agents will run in parallel on the Canvas:
+
+- Click a subtask to view logs:
+  - **Reasoning Steps:** The agent’s logic for how it’s approaching the subtask.
+  - **Tool Calls:** Which specific tool the agent is using (e.g., `search_google`, `load_files`).
+  - **Task Results:** The output or conclusion of the subtask.
+- Hover over tasks to see status details
+
+Click on an agent icon to open its **Workspace**:
+
+- Example: open **Search Agent**, launch embedded browser
+  - Use **“NeuroAI Computer”** to take over Computer (e.g., accept cookies), then return control to the agent.
