@@ -10,21 +10,116 @@ Neuro Sandbox is a fully isolated cloud virtual machine that Neuro allocates for
 
 The power of Sandbox lies in its completeness—just like the personal computer you use, it has full capabilities: networking, file system, browser, various software tools. Our AI Agent has been designed and trained to effectively choose and correctly use these tools to help you complete tasks. Moreover, with this computer, the AI can solve problems through what it does best—writing code—and can even help you create complete websites and mobile apps soon. All of this happens on the virtualization platform behind Neuro. These Sandboxes can work 24/7 to complete the tasks you assign without consuming your local resources.
 
-### Neuro Sandbox Features
+### Definition
 
-**What's in Your Neuro Sandbox**
+**A Sandbox** in NeuroAI is an isolated computing environment that runs independently with its own CPU, memory, and storage. Sandboxes allow you to run code, execute tasks, and deploy applications without affecting other systems or using your local machine resources.
 
-Your Neuro Sandbox stores the files needed during task execution, including:
+### Key Characteristics
 
-1.Attachments uploaded by you
+✅ **Isolated** - Each sandbox runs in its own environment ✅ **Independent** - No interference from other sandboxes ✅ **Managed** - Automatic lifecycle management ✅ **Scalable** - Add more resources as needed ✅ **Cost-Efficient** - Pay only for what you use ✅ **Multi-Language** - Supports Python, TypeScript, JavaScript ✅ **Persistent** - Filesystem preserved across stops/starts
 
-2.Files and artifacts created and written by Neuro during execution
+### Why Use Sandboxes?
 
-3.Configurations needed by Neuro to execute specific tasks (such as tokens uploaded by users, or tokens assigned by Neuro to users for calling related APIs)
+| Use Case               | Benefit                                       |
+| :--------------------- | :-------------------------------------------- |
+| **Testing Code**       | Safe environment without affecting production |
+| **Running AI Models**  | Dedicated resources for ML workloads          |
+| **Background Jobs**    | 24/7 execution without your computer          |
+| **Temporary Tasks**    | Quick, isolated environments for one-off work |
+| **Team Collaboration** | Shared environment for team projects          |
+| **Resource Isolation** | Prevent one task from impacting others        |
 
-You can view all artifact files in the Sandbox via the "View all files in this task" entry in the top-right corner.
+---
 
-You can also simply ask Neuro about the current Sandbox status and contents—for example, "Zip up all the code you've written so far and send it to me"—and Neuro will access the Sandbox to fulfill your request.
+## Sandbox Lifecycle
+
+### State Diagram
+
+```
+CREATE
+  ↓
+RUNNING (Uses CPU + Memory + Storage)
+  ↓
+STOP ← → START
+  ↓
+STOPPED (Uses Storage only)
+  ↓
+ARCHIVE
+  ↓
+ARCHIVED (No active resource usage)
+  ↓
+RECOVER
+  ↓
+STOPPED
+  ↓
+DELETE
+  ↓
+DELETED (All resources freed)
+```
+
+### Sandbox States Explained
+
+| State        | Description                             | Resource Usage                | Use Case                            |
+| :----------- | :-------------------------------------- | :---------------------------- | :---------------------------------- |
+| **Running**  | Sandbox is active and executing         | Full (CPU + Memory + Storage) | Active development, background jobs |
+| **Stopped**  | Sandbox is paused, filesystem preserved | Storage only                  | Temporary pause, cost savings       |
+| **Archived** | Filesystem moved to cold storage        | None (moved to cold storage)  | Long-term storage, minimal costs    |
+| **Deleted**  | Permanently removed                     | None (completely freed)       | Cleanup, no longer needed           |
+| **Error**    | Sandbox encountered an error            | Variable                      | Needs intervention                  |
+
+---
+
+## Computing Resources
+
+### What Are Computing Resources?
+
+**Computing Resources** are the computational power and storage space available to your organization to run sandboxes.
+
+```
+Your Organization's Compute Pool
+├─ vCPU (Virtual CPU Cores)
+│  └─ Shared across all running sandboxes
+├─ RAM (Random Access Memory)
+│  └─ Shared across all running sandboxes
+└─ Storage (Disk Space)
+   └─ Used by running, stopped, and archived sandboxes
+```
+
+### Default Sandbox Resources
+
+When you create a sandbox, it gets these default resources:
+
+```
+CPU: 1 vCPU (1 virtual core)
+Memory: 1 GB RAM
+Storage: 3 GB disk space
+```
+
+### Custom Sandbox Resources
+
+You can customize resources per sandbox based on your needs.
+
+### Resource Types Explained
+
+**vCPU (Virtual CPU):**
+
+- 1 vCPU = Equivalent to 1 physical CPU core
+- More vCPU = Faster execution
+- Example: 2 vCPU runs code ~2x faster than 1 vCPU
+
+**RAM (Memory):**
+
+- Measured in GB
+- Needed for: Data processing, large models, concurrent operations
+- More RAM = Handle larger datasets
+- Example: ML model training needs 4GB+ RAM
+
+**Storage (Disk):**
+
+- Measured in GB
+- Persistent across stops/starts
+- Used for: Code files, data, models, databases
+- Example: Large dataset needs 50GB+ storage
 
 ### Sandbox Lifecycle
 
