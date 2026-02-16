@@ -79,5 +79,35 @@
   "appearance": {
     "default": "system"
   },
-  "description": "Documentation about NeuroAI"
+  "description": "Documentation about NeuroAI",
+  "redirects": [
+    {
+      "source": "/en/help-center/account/learn-how-to-delete-or-edit-your-bank-card-information-in-manus-manage-your-payment-methods-and-billing-information",
+      "destination": "/en/help-center/account/delete-edit-bank-card-payment-methods"
+    },
+    {
+      "source": "/en/protocol/privacy-policy/will-manus-publicly-display-or-recommend-projects-templates-or-playbooks-created-by-users-without-explicit-consent",
+      "destination": "/en/protocol/privacy-policy/public-display-user-projects-without-consent"
+    },
+    {
+      "source": "/en/help-center/billing/payments/what-should-i-do-if-payment-shows-there-is-a-past-due-subscription-payment-that-prevents-current-payment",
+      "destination": "/en/help-center/billing/payments/past-due-payment-prevents-current-payment"
+    },
+    {
+      "source": "/en/help-center/how-to-automatically-land-on-my-manus-team-account-upon-logging-in-with-single-sign-on-sso",
+      "destination": "/en/help-center/auto-login-to-team-account-with-sso"
+    },
+    {
+      "source": "/en/help-center/billing/credits/what-happens-to-my-credits-after-canceling-or-letting-my-manus-subscription-expire",
+      "destination": "/en/help-center/billing/credits/credits-after-subscription-cancellation"
+    },
+    {
+      "source": "/en/help-center/events-and-plans/where-can-i-enable-subscribe-to-a-single-sign-on-sso-subscription-for-manus-team",
+      "destination": "/en/help-center/events-and-plans/enable-sso-subscription-for-team"
+    },
+    {
+      "source": "/en/introduction/features/tasks/how-can-i-learn-about-the-virtual-machine-disk-model-performance-specifications",
+      "destination": "/en/introduction/features/tasks/vm-disk-performance-specs"
+    }
+  ]
 }
