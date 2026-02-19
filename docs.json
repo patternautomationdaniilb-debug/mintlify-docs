@@ -84,6 +84,7 @@
                 "icon": "message-bot",
                 "pages": [
                   "en/introduction/features/agents/overview",
+                  "en/introduction/features/agents/what-is-ai-soul",
                   "en/introduction/features/custom-ai-agents",
                   "en/introduction/features/agents/untitled-page",
                   "en/introduction/features/agents/persona",
