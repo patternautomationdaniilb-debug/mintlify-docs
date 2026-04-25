@@ -1,6 +1,6 @@
 ---
 title: "Overview"
-description: "Secure authentication and access management for NeuroAI platform"
+description: "Secure authentication and access management for NeuroAI platform."
 icon: "align-justify"
 ---
 
@@ -22,12 +22,15 @@ API keys are long-lived access tokens that authenticate requests to NeuroAI serv
   <Card title="Seamless Integration" icon="plug">
     Connect NeuroAI with external tools and services effortlessly
   </Card>
+
   <Card title="Automated Access" icon="robot">
     Enable scripts, CI/CD pipelines, and automated workflows
   </Card>
+
   <Card title="Granular Permissions" icon="shield-check">
     Control access levels through role-based permissions
   </Card>
+
   <Card title="Secure Communication" icon="lock">
     Authenticate without exposing user credentials
   </Card>
@@ -88,9 +91,11 @@ To create and manage API keys:
   <Card title="Personal Keys" icon="user">
     Individual user keys for personal projects and testing
   </Card>
+
   <Card title="Team Keys" icon="users">
     Shared keys for production applications and team integrations
   </Card>
+
   <Card title="Service Keys" icon="server">
     Dedicated keys for service-to-service authentication
   </Card>
@@ -175,9 +180,11 @@ Dedicated keys for service-to-service authentication and data ingestion.
   <Card title="Python" icon="python" href="#python-example">
     Integrate with Python applications
   </Card>
+
   <Card title="Node.js" icon="node" href="#nodejs-example">
     Integrate with Node.js applications
   </Card>
+
   <Card title="cURL" icon="terminal" href="#curl-example">
     Test with command line
   </Card>
@@ -255,6 +262,7 @@ curl "https://api.neuroai.com/v1/agents" \
   <Card title="Role-Based Access" icon="user-shield">
     Assign predefined roles with specific permission sets
   </Card>
+
   <Card title="Custom Permissions" icon="sliders">
     Create custom roles for fine-grained access control
   </Card>
@@ -262,12 +270,12 @@ curl "https://api.neuroai.com/v1/agents" \
 
 ### Available Roles
 
-| Role              | Permissions                           | Use Case                         |
-| ----------------- | ------------------------------------- | -------------------------------- |
-| **Viewer**        | Read-only access                      | Monitoring, analytics, reporting |
-| **Developer**     | Create and modify agents              | Development, testing             |
-| **Administrator** | Full access including user management | Production deployments           |
-| **API Manager**   | Manage API keys and integrations      | DevOps, security                 |
+| Role | Permissions | Use Case |
+| --- | --- | --- |
+| **Viewer** | Read-only access | Monitoring, analytics, reporting |
+| **Developer** | Create and modify agents | Development, testing |
+| **Administrator** | Full access including user management | Production deployments |
+| **API Manager** | Manage API keys and integrations | DevOps, security |
 
 ### Custom Permissions
 
@@ -296,6 +304,7 @@ For fine-grained control, create custom roles:
       -H "Authorization: Bearer YOUR_ACCESS_TOKEN"
     ```
   </Accordion>
+
   <Accordion title="Updating API Keys">
     Modify API key properties (name, description, permissions):
 
@@ -310,6 +319,7 @@ For fine-grained control, create custom roles:
       }'
     ```
   </Accordion>
+
   <Accordion title="Rotating API Keys">
     Regular key rotation enhances security:
 
@@ -320,6 +330,7 @@ For fine-grained control, create custom roles:
 
     This generates a new key while invalidating the old one.
   </Accordion>
+
   <Accordion title="Revoking API Keys">
     Delete an API key when it's no longer needed:
 
@@ -343,12 +354,15 @@ For fine-grained control, create custom roles:
   <Card title="Storage & Handling" icon="database">
     Secure storage and environment configuration
   </Card>
+
   <Card title="Access Control" icon="shield-halved">
     Principle of least privilege and role management
   </Card>
+
   <Card title="Key Rotation" icon="rotate">
     Regular rotation schedule and automated processes
   </Card>
+
   <Card title="Monitoring" icon="chart-line">
     Usage tracking and suspicious activity alerts
   </Card>
@@ -413,6 +427,7 @@ Configure automatic expiration and rotation:
     }
     ```
   </Accordion>
+
   <Accordion title="Rate Limiting">
     Protect against abuse with rate limits:
 
@@ -425,6 +440,7 @@ Configure automatic expiration and rotation:
     }
     ```
   </Accordion>
+
   <Accordion title="Hide Credentials">
     Prevent keys from being forwarded to upstream services:
 
@@ -442,9 +458,11 @@ Configure automatic expiration and rotation:
   <Card title="Usage Tracking" icon="chart-simple">
     Monitor request volume and patterns
   </Card>
+
   <Card title="Audit Logs" icon="file-lines">
     Access comprehensive security logs
   </Card>
+
   <Card title="Alerts" icon="bell">
     Get notified of suspicious activity
   </Card>
@@ -483,6 +501,7 @@ Monitor for:
       -H "Authorization: Bearer YOUR_API_KEY"
     ```
   </Accordion>
+
   <Accordion title="403 Forbidden">
     **Common causes:**
 
@@ -492,6 +511,7 @@ Monitor for:
 
     **Solution:** Review and update key permissions or use a key with appropriate access level.
   </Accordion>
+
   <Accordion title="429 Too Many Requests">
     **Common causes:**
 
@@ -504,6 +524,7 @@ Monitor for:
     - Review and optimize request patterns
     - Consider upgrading your plan for higher limits
   </Accordion>
+
   <Accordion title="Expired API Key">
     **Common causes:**
 
@@ -541,28 +562,31 @@ Expected response:
   <Card title="Create API Key" icon="plus" href="#create-api-key">
     POST /v1/api-keys
   </Card>
+
   <Card title="List API Keys" icon="list" href="#list-api-keys">
     GET /v1/api-keys
   </Card>
+
   <Card title="Update API Key" icon="pen" href="#update-api-key">
-    PATCH /v1/api-keys/key_id
+    PATCH /v1/api-keys/key\_id
   </Card>
+
   <Card title="Delete API Key" icon="trash" href="#delete-api-key">
-    DELETE /v1/api-keys/key_id
+    DELETE /v1/api-keys/key\_id
   </Card>
 </CardGroup>
 
 ### Endpoints Summary
 
-| Endpoint                       | Method | Description             |
-| ------------------------------ | ------ | ----------------------- |
-| `/v1/api-keys`                 | POST   | Create a new API key    |
-| `/v1/api-keys`                 | GET    | List all API keys       |
-| `/v1/api-keys/{key_id}`        | GET    | Get API key details     |
-| `/v1/api-keys/{key_id}`        | PATCH  | Update API key          |
-| `/v1/api-keys/{key_id}/rotate` | POST   | Rotate API key          |
-| `/v1/api-keys/{key_id}`        | DELETE | Delete API key          |
-| `/v1/auth/verify`              | GET    | Verify API key validity |
+| Endpoint | Method | Description |
+| --- | --- | --- |
+| `/v1/api-keys` | POST | Create a new API key |
+| `/v1/api-keys` | GET | List all API keys |
+| `/v1/api-keys/{key_id}` | GET | Get API key details |
+| `/v1/api-keys/{key_id}` | PATCH | Update API key |
+| `/v1/api-keys/{key_id}/rotate` | POST | Rotate API key |
+| `/v1/api-keys/{key_id}` | DELETE | Delete API key |
+| `/v1/auth/verify` | GET | Verify API key validity |
 
 ## Migration Guide
 
@@ -594,18 +618,23 @@ Expected response:
   <Accordion title="How many API keys can I create?">
     There is no strict limit on the number of API keys per account. However, we recommend creating only the keys you need and following the principle of least privilege.
   </Accordion>
+
   <Accordion title="Can I use the same key across multiple environments?">
     While technically possible, it's strongly discouraged. Use separate API keys for development, staging, and production environments for better security and access control.
   </Accordion>
+
   <Accordion title="What happens if my API key is compromised?">
     Immediately revoke the compromised key through the dashboard or API. Create a new key with different credentials and update all applications. Review audit logs to assess potential unauthorized access.
   </Accordion>
+
   <Accordion title="Do API keys expire?">
     By default, API keys do not expire unless you explicitly set an expiration date during creation. For enhanced security, consider setting expiration dates and implementing regular key rotation.
   </Accordion>
+
   <Accordion title="Can I recover a deleted API key?">
     No, deleted API keys cannot be recovered. You must create a new API key if one is accidentally deleted.
   </Accordion>
+
   <Accordion title="How do I know which permissions my API key needs?">
     Start with minimal permissions required for your use case. Test thoroughly and add permissions as needed. Review the permissions documentation for detailed information about each role.
   </Accordion>
@@ -617,12 +646,15 @@ Expected response:
   <Card title="Documentation" icon="book">
     Comprehensive guides and tutorials
   </Card>
+
   <Card title="Support Portal" icon="headset">
     Submit tickets and get help
   </Card>
+
   <Card title="API Status" icon="signal">
     Check real-time API status
   </Card>
+
   <Card title="Community" icon="comments">
     Join the discussion
   </Card>
